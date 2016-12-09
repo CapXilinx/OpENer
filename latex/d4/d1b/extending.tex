@@ -1,8 +1,0 @@
-\-Op\-E\-Ner provides an \-A\-P\-I for adding own \-C\-I\-P objects and instances with specific services and attributes. \-Therefore \-Op\-E\-Ner can be easily adapted to support different device profiles and specific \-C\-I\-P objects needed for your device. \-The functions to be used are\-:
-\begin{DoxyItemize}
-\item \-S\-\_\-\-C\-I\-P\-\_\-\-Class $\ast$\-Create\-C\-I\-P\-Class(\-E\-I\-P\-\_\-\-U\-I\-N\-T32 class\-\_\-id, int number\-\_\-of\-\_\-class\-\_\-attributes, \-E\-I\-P\-\_\-\-U\-I\-N\-T32 class\-\_\-get\-\_\-attribute\-\_\-all\-\_\-mask, int number\-\_\-of\-\_\-class\-\_\-services, int number\-\_\-of\-\_\-instance\-\_\-attributes, \-E\-I\-P\-\_\-\-U\-I\-N\-T32 instance\-\_\-get\-\_\-attribute\-\_\-all\-\_\-mask, int number\-\_\-of\-\_\-instance\-\_\-services, int number\-\_\-of\-\_\-instances, char $\ast$class\-\_\-name, \-E\-I\-P\-\_\-\-U\-I\-N\-T16 revision);
-\item \-S\-\_\-\-C\-I\-P\-\_\-\-Instance $\ast$\-Add\-C\-I\-P\-Instances(\-S\-\_\-\-C\-I\-P\-\_\-\-Class $\ast$cip\-\_\-object, int number\-\_\-of\-\_\-instances);
-\item \-S\-\_\-\-C\-I\-P\-\_\-\-Instance $\ast$\-Add\-C\-I\-P\-Instance(\-S\-\_\-\-C\-I\-P\-\_\-\-Class $\ast$ \hyperlink{structcip__class}{cip\-\_\-class}, \-E\-I\-P\-\_\-\-U\-I\-N\-T32 instance\-\_\-id);
-\item void \-Insert\-Attribute(\-S\-\_\-\-C\-I\-P\-\_\-\-Instance $\ast$instance, \-E\-I\-P\-\_\-\-U\-I\-N\-T16 attribute\-\_\-number, \-E\-I\-P\-\_\-\-U\-I\-N\-T8 cip\-\_\-type, void$\ast$ data);
-\item void \-Insert\-Service(\-S\-\_\-\-C\-I\-P\-\_\-\-Class $\ast$class, \-E\-I\-P\-\_\-\-U\-I\-N\-T8 service\-\_\-number, \-Cip\-Service\-Function service\-\_\-function, char $\ast$service\-\_\-name); 
-\end{DoxyItemize}
