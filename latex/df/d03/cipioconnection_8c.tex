@@ -1,0 +1,735 @@
+\hypertarget{cipioconnection_8c}{\section{src/cip/cipioconnection.c \-File \-Reference}
+\label{df/d03/cipioconnection_8c}\index{src/cip/cipioconnection.\-c@{src/cip/cipioconnection.\-c}}
+}
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include \char`\"{}cipioconnection.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}generic\-\_\-networkhandler.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipconnectionmanager.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipassembly.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ciptcpipinterface.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipcommon.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}appcontype.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cpf.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}trace.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}endianconv.\-h\char`\"{}}\*
+\-Include dependency graph for cipioconnection.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/daa/cipioconnection_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{cipioconnection_8c_ac135b4e48a22ceabff84d2147f00e73d}{\-Communication\-Endpoint\-Cardinality} \{ \hyperlink{cipioconnection_8c_ac135b4e48a22ceabff84d2147f00e73daed5eda863b8019d3edca8fdac1df8bba}{\-Point\-To\-Multipoint} =  1, 
+\hyperlink{cipioconnection_8c_ac135b4e48a22ceabff84d2147f00e73dae393317b471be5998af43963b2683ec9}{\-Point\-To\-Point} =  2
+ \}
+\begin{DoxyCompactList}\small\item\em \-Gives the cardinality of a connection endpoint, either point to point or point to multipoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{cipioconnection_8c_ab63a9cebd7f44ee474ac1fd446d5bc66}{\-Close\-Communication\-Channels\-And\-Remove\-From\-Active\-Connections\-List} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em close the communication channels of the given connection and remove it from the active connections list. \end{DoxyCompactList}\item 
+void \hyperlink{cipioconnection_8c_adb77dcdc1545600764cd212783f5c4e2}{\-Close\-Io\-Connection} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipioconnection_8c_aacd202b378a3fa8d5770536b698a0f51}{\-Establish\-Io\-Connction} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const \hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} $\ast$const extended\-\_\-error)
+\begin{DoxyCompactList}\small\item\em \-Setup all data in order to establish an \-I\-O connection. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} \hyperlink{cipioconnection_8c_ac2780fe755d65a4c3093a559ebbc6d10}{\-Handle\-Config\-Data} (\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$assembly\-\_\-class, \hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\item 
+void \hyperlink{cipioconnection_8c_a043e7b682698cb5a50ced76b6ce10293}{\-Handle\-Io\-Connection\-Time\-Out} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipioconnection_8c_aca3c7cb7fc5d8d3f86698cb4c31f108f}{\-Handle\-Received\-Io\-Connection\-Data} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object}, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$data, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} data\-\_\-length)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipioconnection_8c_adbb39670c736df4ef89589a3b4e4df4e}{\-Open\-Communication\-Channels} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Take the data given in the connection object structure and open the necessary communication channels. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipioconnection_8c_a6a6634d74fcc5bd0eb35ec8d8c740fb6}{\-Open\-Consuming\-Point\-To\-Point\-Connection} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data)
+\begin{DoxyCompactList}\small\item\em \-Open a \-Point2\-Point connection dependent on pa\-\_\-direction. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipioconnection_8c_a9937b2aeb5fd393c7861e25f04c9f1c1}{\-Open\-Multicast\-Connection} (\hyperlink{typedefs_8h_a354b9a030f385814dac5d61a8eec2e42}{\-Udp\-Communcation\-Direction} direction, \hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipioconnection_8c_a281f0a261db50e297593dd3383093fb0}{\-Open\-Producing\-Multicast\-Connection} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipioconnection_8c_ab5ba6f9cb3103c1db76c2bf7ae3cce8d}{\-Open\-Producing\-Point\-To\-Point\-Connection} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipioconnection_8c_a41f8d71772b5defa587ac0da6124cc47}{\-Send\-Connected\-Data} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Send the data from the produced \-C\-I\-P \-Object of the connection via the socket of the connection object on \-U\-D\-P. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$ \hyperlink{cipioconnection_8c_a534c0a24266039f7ced0d36b7c5496bc}{g\-\_\-config\-\_\-data\-\_\-buffer} = \-N\-U\-L\-L
+\item 
+unsigned int \hyperlink{cipioconnection_8c_ad20328302a359540d55f48ae36f7237d}{g\-\_\-config\-\_\-data\-\_\-length} = 0
+\item 
+\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} \hyperlink{cipioconnection_8c_a4901ec04ad1ac886626e556c60f12196}{g\-\_\-run\-\_\-idle\-\_\-state}
+\item 
+const int \hyperlink{cipioconnection_8c_a46f1aa5e4d7142036318ba3c9f2707ea}{k\-Opener\-Eip\-Io\-Udp\-Port} = 0x08\-A\-E
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{cipioconnection_8c_ac135b4e48a22ceabff84d2147f00e73d}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Communication\-Endpoint\-Cardinality@{\-Communication\-Endpoint\-Cardinality}}
+\index{\-Communication\-Endpoint\-Cardinality@{\-Communication\-Endpoint\-Cardinality}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Communication\-Endpoint\-Cardinality}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Communication\-Endpoint\-Cardinality}}}\label{df/d03/cipioconnection_8c_ac135b4e48a22ceabff84d2147f00e73d}
+
+
+\-Gives the cardinality of a connection endpoint, either point to point or point to multipoint. 
+
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-Point\-To\-Multipoint@{\-Point\-To\-Multipoint}!cipioconnection.\-c@{cipioconnection.\-c}}\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Point\-To\-Multipoint@{\-Point\-To\-Multipoint}}\item[{\em 
+\hypertarget{cipioconnection_8c_ac135b4e48a22ceabff84d2147f00e73daed5eda863b8019d3edca8fdac1df8bba}{\-Point\-To\-Multipoint}\label{df/d03/cipioconnection_8c_ac135b4e48a22ceabff84d2147f00e73daed5eda863b8019d3edca8fdac1df8bba}
+}]\-Connection is a point to multi-\/point connection \index{\-Point\-To\-Point@{\-Point\-To\-Point}!cipioconnection.\-c@{cipioconnection.\-c}}\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Point\-To\-Point@{\-Point\-To\-Point}}\item[{\em 
+\hypertarget{cipioconnection_8c_ac135b4e48a22ceabff84d2147f00e73dae393317b471be5998af43963b2683ec9}{\-Point\-To\-Point}\label{df/d03/cipioconnection_8c_ac135b4e48a22ceabff84d2147f00e73dae393317b471be5998af43963b2683ec9}
+}]\-Connection is a point to point connection \end{description}
+\end{Desc}
+
+
+
+\-Definition at line 25 of file cipioconnection.\-c.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{cipioconnection_8c_ab63a9cebd7f44ee474ac1fd446d5bc66}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Close\-Communication\-Channels\-And\-Remove\-From\-Active\-Connections\-List@{\-Close\-Communication\-Channels\-And\-Remove\-From\-Active\-Connections\-List}}
+\index{\-Close\-Communication\-Channels\-And\-Remove\-From\-Active\-Connections\-List@{\-Close\-Communication\-Channels\-And\-Remove\-From\-Active\-Connections\-List}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Close\-Communication\-Channels\-And\-Remove\-From\-Active\-Connections\-List}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Close\-Communication\-Channels\-And\-Remove\-From\-Active\-Connections\-List} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_ab63a9cebd7f44ee474ac1fd446d5bc66}
+
+
+close the communication channels of the given connection and remove it from the active connections list. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & pointer to the connection object data \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 764 of file cipioconnection.\-c.
+
+
+
+\-References \-I\-App\-\_\-\-Close\-Socket\-\_\-udp(), k\-Udp\-Communcation\-Direction\-Consuming, k\-Udp\-Communcation\-Direction\-Producing, \-Remove\-From\-Active\-Connections(), and connection\-\_\-object\-::socket.
+
+
+
+\-Referenced by \-Close\-Io\-Connection().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_ab63a9cebd7f44ee474ac1fd446d5bc66_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_ab63a9cebd7f44ee474ac1fd446d5bc66_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_adb77dcdc1545600764cd212783f5c4e2}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Close\-Io\-Connection@{\-Close\-Io\-Connection}}
+\index{\-Close\-Io\-Connection@{\-Close\-Io\-Connection}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Close\-Io\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Close\-Io\-Connection} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_adb77dcdc1545600764cd212783f5c4e2}
+
+
+\-Definition at line 515 of file cipioconnection.\-c.
+
+
+
+\-References \-Check\-Io\-Connection\-Event(), \-Close\-All\-Connections\-For\-Input\-With\-Same\-Type(), \-Close\-Communication\-Channels\-And\-Remove\-From\-Active\-Connections\-List(), connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, connection\-\_\-object\-::eip\-\_\-level\-\_\-sequence\-\_\-count\-\_\-producing, \-Get\-Next\-Non\-Control\-Master\-Connection(), connection\-\_\-object\-::instance\-\_\-type, k\-Connection\-Type\-Io\-Exclusive\-Owner, k\-Connection\-Type\-Io\-Input\-Only, k\-Connection\-Type\-Io\-Listen\-Only, k\-Io\-Connection\-Event\-Closed, k\-Routing\-Type\-Multicast\-Connection, k\-Udp\-Communcation\-Direction\-Producing, connection\-\_\-object\-::remote\-\_\-address, connection\-\_\-object\-::sequence\-\_\-count\-\_\-producing, connection\-\_\-object\-::socket, connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-network\-\_\-connection\-\_\-parameter, and connection\-\_\-object\-::transmission\-\_\-trigger\-\_\-timer.
+
+
+
+\-Referenced by \-Establish\-Io\-Connction().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_adb77dcdc1545600764cd212783f5c4e2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_adb77dcdc1545600764cd212783f5c4e2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_aacd202b378a3fa8d5770536b698a0f51}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Establish\-Io\-Connction@{\-Establish\-Io\-Connction}}
+\index{\-Establish\-Io\-Connction@{\-Establish\-Io\-Connction}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Establish\-Io\-Connction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Establish\-Io\-Connction} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{connection\-\_\-object, }
+\item[{{\bf \-Eip\-Uint16} $\ast$const}]{extended\-\_\-error}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_aacd202b378a3fa8d5770536b698a0f51}
+
+
+\-Setup all data in order to establish an \-I\-O connection. 
+
+\-This function can be called after all data has been parsed from the forward open request 
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & pointer to the connection object structure holding the parsed data from the forward open request \\
+\hline
+{\em extended\-\_\-error} & the extended error code in case an error happened \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+general status on the establishment
+\begin{DoxyItemize}
+\item \-E\-I\-P\-\_\-\-O\-K ... on success
+\item \-On an error the general status code to be put into the response 
+\end{DoxyItemize}
+\end{DoxyReturn}
+$<$ \-R\-P\-I not supported. \-Extended \-Error code deprecated 
+
+\-Definition at line 80 of file cipioconnection.\-c.
+
+
+
+\-References \-Add\-New\-Active\-Connection(), \-Cip\-Epath\-::attribute\-\_\-number, \-Check\-Io\-Connection\-Event(), \-Cip\-Epath\-::class\-\_\-id, \-Cip\-Connection\-Path\-::class\-\_\-id, \-Close\-Io\-Connection(), connection\-\_\-object\-::connection\-\_\-close\-\_\-function, connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, connection\-\_\-object\-::connection\-\_\-receive\-\_\-data\-\_\-function, connection\-\_\-object\-::connection\-\_\-send\-\_\-data\-\_\-function, connection\-\_\-object\-::connection\-\_\-timeout\-\_\-function, connection\-\_\-object\-::consumed\-\_\-connection\-\_\-path, connection\-\_\-object\-::consumed\-\_\-connection\-\_\-path\-\_\-length, connection\-\_\-object\-::consumed\-\_\-connection\-\_\-size, connection\-\_\-object\-::consuming\-\_\-instance, \-Cip\-Attribute\-Struct\-::data, g\-\_\-config\-\_\-data\-\_\-buffer, \-General\-Connection\-Configuration(), \-Get\-Cip\-Attribute(), \-Get\-Cip\-Class(), \-Get\-Cip\-Instance(), \-Get\-Io\-Connection\-For\-Connection\-Data(), \-Handle\-Config\-Data(), \-Handle\-Io\-Connection\-Time\-Out(), \-Handle\-Received\-Io\-Connection\-Data(), \-Cip\-Epath\-::instance\-\_\-number, k\-Cip\-Error\-Connection\-Failure, k\-Connection\-Manager\-Status\-Code\-Error\-Invalid\-O\-To\-T\-Connection\-Size, k\-Connection\-Manager\-Status\-Code\-Error\-Invalid\-T\-To\-O\-Connection\-Size, k\-Connection\-Manager\-Status\-Code\-Invalid\-Consuming\-Apllication\-Path, k\-Connection\-Manager\-Status\-Code\-Invalid\-Producing\-Application\-Path, k\-Connection\-Trigger\-Type\-Cyclic\-Connection, k\-Connection\-Trigger\-Type\-Production\-Trigger\-Mask, k\-Eip\-Status\-Ok, k\-Io\-Connection\-Event\-Opened, connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-network\-\_\-connection\-\_\-parameter, \-Open\-Communication\-Channels(), \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T, \-Cip\-Epath\-::path\-\_\-size, connection\-\_\-object\-::produced\-\_\-connection\-\_\-path, connection\-\_\-object\-::produced\-\_\-connection\-\_\-path\-\_\-length, connection\-\_\-object\-::produced\-\_\-connection\-\_\-size, connection\-\_\-object\-::producing\-\_\-instance, connection\-\_\-object\-::production\-\_\-inhibit\-\_\-time, \-Send\-Connected\-Data(), connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-network\-\_\-connection\-\_\-parameter, connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-requested\-\_\-packet\-\_\-interval, and connection\-\_\-object\-::transport\-\_\-type\-\_\-class\-\_\-trigger.
+
+
+
+\-Referenced by \-Connection\-Manager\-Init().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_aacd202b378a3fa8d5770536b698a0f51_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_aacd202b378a3fa8d5770536b698a0f51_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_ac2780fe755d65a4c3093a559ebbc6d10}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Handle\-Config\-Data@{\-Handle\-Config\-Data}}
+\index{\-Handle\-Config\-Data@{\-Handle\-Config\-Data}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Handle\-Config\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint16} {\bf \-Handle\-Config\-Data} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Class} $\ast$}]{assembly\-\_\-class, }
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_ac2780fe755d65a4c3093a559ebbc6d10}
+
+
+\-Definition at line 477 of file cipioconnection.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, \-Connection\-With\-Same\-Config\-Point\-Exists(), \-Cip\-Byte\-Array\-::data, \-Cip\-Attribute\-Struct\-::data, g\-\_\-config\-\_\-data\-\_\-buffer, g\-\_\-config\-\_\-data\-\_\-length, \-Get\-Cip\-Attribute(), \-Get\-Cip\-Instance(), k\-Connection\-Manager\-Status\-Code\-Error\-Ownership\-Conflict, k\-Connection\-Manager\-Status\-Code\-Invalid\-Configuration\-Application\-Path, k\-Eip\-Status\-Ok, \-Cip\-Byte\-Array\-::length, \-Notify\-Assembly\-Connected\-Data\-Received(), and \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-W\-A\-R\-N.
+
+
+
+\-Referenced by \-Establish\-Io\-Connction().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_ac2780fe755d65a4c3093a559ebbc6d10_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_ac2780fe755d65a4c3093a559ebbc6d10_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_a043e7b682698cb5a50ced76b6ce10293}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Handle\-Io\-Connection\-Time\-Out@{\-Handle\-Io\-Connection\-Time\-Out}}
+\index{\-Handle\-Io\-Connection\-Time\-Out@{\-Handle\-Io\-Connection\-Time\-Out}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Handle\-Io\-Connection\-Time\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Handle\-Io\-Connection\-Time\-Out} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_a043e7b682698cb5a50ced76b6ce10293}
+
+
+\-Definition at line 556 of file cipioconnection.\-c.
+
+
+
+\-References \-Check\-Io\-Connection\-Event(), \-Close\-All\-Connections\-For\-Input\-With\-Same\-Type(), connection\-\_\-object\-::connection\-\_\-close\-\_\-function, connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, \-Get\-Next\-Non\-Control\-Master\-Connection(), connection\-\_\-object\-::instance\-\_\-type, k\-Connection\-Type\-Io\-Exclusive\-Owner, k\-Connection\-Type\-Io\-Input\-Only, k\-Connection\-Type\-Io\-Listen\-Only, k\-Io\-Connection\-Event\-Timed\-Out, k\-Routing\-Type\-Multicast\-Connection, k\-Udp\-Communcation\-Direction\-Producing, \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T, connection\-\_\-object\-::socket, connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-network\-\_\-connection\-\_\-parameter, and connection\-\_\-object\-::transmission\-\_\-trigger\-\_\-timer.
+
+
+
+\-Referenced by \-Establish\-Io\-Connction().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a043e7b682698cb5a50ced76b6ce10293_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a043e7b682698cb5a50ced76b6ce10293_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_aca3c7cb7fc5d8d3f86698cb4c31f108f}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Handle\-Received\-Io\-Connection\-Data@{\-Handle\-Received\-Io\-Connection\-Data}}
+\index{\-Handle\-Received\-Io\-Connection\-Data@{\-Handle\-Received\-Io\-Connection\-Data}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Handle\-Received\-Io\-Connection\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Handle\-Received\-Io\-Connection\-Data} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object, }
+\item[{const {\bf \-Eip\-Uint8} $\ast$}]{data, }
+\item[{{\bf \-Eip\-Uint16}}]{data\-\_\-length}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_aca3c7cb7fc5d8d3f86698cb4c31f108f}
+
+
+\-Definition at line 678 of file cipioconnection.\-c.
+
+
+
+\-References connection\-\_\-object\-::consuming\-\_\-instance, g\-\_\-run\-\_\-idle\-\_\-state, \-Get\-Dint\-From\-Message(), \-Get\-Int\-From\-Message(), k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, \-Notify\-Assembly\-Connected\-Data\-Received(), \-Run\-Idle\-Changed(), \-S\-E\-Q\-\_\-\-L\-E\-Q16, connection\-\_\-object\-::sequence\-\_\-count\-\_\-consuming, and connection\-\_\-object\-::transport\-\_\-type\-\_\-class\-\_\-trigger.
+
+
+
+\-Referenced by \-Establish\-Io\-Connction().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_aca3c7cb7fc5d8d3f86698cb4c31f108f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_aca3c7cb7fc5d8d3f86698cb4c31f108f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_adbb39670c736df4ef89589a3b4e4df4e}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Open\-Communication\-Channels@{\-Open\-Communication\-Channels}}
+\index{\-Open\-Communication\-Channels@{\-Open\-Communication\-Channels}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Open\-Communication\-Channels}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Open\-Communication\-Channels} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_adbb39670c736df4ef89589a3b4e4df4e}
+
+
+\-Take the data given in the connection object structure and open the necessary communication channels. 
+
+\-This function will use the g\-\_\-st\-C\-P\-F\-Data\-Item! 
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & pointer to the connection object data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+general status on the open process
+\begin{DoxyItemize}
+\item \-E\-I\-P\-\_\-\-O\-K ... on success
+\item \-On an error the general status code to be put into the response 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+\-Definition at line 711 of file cipioconnection.\-c.
+
+
+
+\-References g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, k\-Cip\-Error\-Connection\-Failure, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Udp\-Communcation\-Direction\-Consuming, connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-network\-\_\-connection\-\_\-parameter, \-Open\-Consuming\-Point\-To\-Point\-Connection(), \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, \-Open\-Multicast\-Connection(), \-Open\-Producing\-Multicast\-Connection(), \-Open\-Producing\-Point\-To\-Point\-Connection(), \-Point\-To\-Multipoint, \-Point\-To\-Point, and connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-network\-\_\-connection\-\_\-parameter.
+
+
+
+\-Referenced by \-Establish\-Io\-Connction().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_adbb39670c736df4ef89589a3b4e4df4e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_adbb39670c736df4ef89589a3b4e4df4e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_a6a6634d74fcc5bd0eb35ec8d8c740fb6}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Open\-Consuming\-Point\-To\-Point\-Connection@{\-Open\-Consuming\-Point\-To\-Point\-Connection}}
+\index{\-Open\-Consuming\-Point\-To\-Point\-Connection@{\-Open\-Consuming\-Point\-To\-Point\-Connection}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Open\-Consuming\-Point\-To\-Point\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Open\-Consuming\-Point\-To\-Point\-Connection} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object, }
+\item[{{\bf \-Cip\-Common\-Packet\-Format\-Data} $\ast$}]{common\-\_\-packet\-\_\-format\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_a6a6634d74fcc5bd0eb35ec8d8c740fb6}
+
+
+\-Open a \-Point2\-Point connection dependent on pa\-\_\-direction. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & \-Pointer to registered \-Object in \-Connection\-Manager. \\
+\hline
+{\em common\-\_\-packet\-\_\-format\-\_\-data} & \-Index of the connection object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+k\-Eip\-Status\-Ok on success, otherwise k\-Eip\-Status\-Error 
+\end{DoxyReturn}
+
+
+\-Definition at line 274 of file cipioconnection.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-info\-\_\-item, \-Create\-Udp\-Socket(), k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Opener\-Eip\-Io\-Udp\-Port, k\-Udp\-Communcation\-Direction\-Consuming, \-Socket\-Address\-Info\-Item\-::length, \-Socket\-Address\-Info\-Item\-::nasin\-\_\-zero, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, connection\-\_\-object\-::originator\-\_\-address, \-Socket\-Address\-Info\-Item\-::sin\-\_\-addr, \-Socket\-Address\-Info\-Item\-::sin\-\_\-family, \-Socket\-Address\-Info\-Item\-::sin\-\_\-port, connection\-\_\-object\-::socket, and \-Socket\-Address\-Info\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Open\-Communication\-Channels().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a6a6634d74fcc5bd0eb35ec8d8c740fb6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a6a6634d74fcc5bd0eb35ec8d8c740fb6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_a9937b2aeb5fd393c7861e25f04c9f1c1}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Open\-Multicast\-Connection@{\-Open\-Multicast\-Connection}}
+\index{\-Open\-Multicast\-Connection@{\-Open\-Multicast\-Connection}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Open\-Multicast\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Open\-Multicast\-Connection} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Udp\-Communcation\-Direction}}]{direction, }
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object, }
+\item[{{\bf \-Cip\-Common\-Packet\-Format\-Data} $\ast$}]{common\-\_\-packet\-\_\-format\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_a9937b2aeb5fd393c7861e25f04c9f1c1}
+
+
+\-Definition at line 406 of file cipioconnection.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-info\-\_\-item, \-Create\-Udp\-Socket(), g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, g\-\_\-multicast\-\_\-configuration, k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target, k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Opener\-Eip\-Io\-Udp\-Port, k\-Udp\-Communcation\-Direction\-Consuming, \-Socket\-Address\-Info\-Item\-::length, \-Socket\-Address\-Info\-Item\-::nasin\-\_\-zero, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, connection\-\_\-object\-::originator\-\_\-address, connection\-\_\-object\-::remote\-\_\-address, \-Socket\-Address\-Info\-Item\-::sin\-\_\-addr, \-Socket\-Address\-Info\-Item\-::sin\-\_\-family, \-Socket\-Address\-Info\-Item\-::sin\-\_\-port, connection\-\_\-object\-::socket, multicast\-\_\-address\-\_\-configuration\-::starting\-\_\-multicast\-\_\-address, and \-Socket\-Address\-Info\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Open\-Communication\-Channels(), and \-Open\-Producing\-Multicast\-Connection().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a9937b2aeb5fd393c7861e25f04c9f1c1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a9937b2aeb5fd393c7861e25f04c9f1c1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_a281f0a261db50e297593dd3383093fb0}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Open\-Producing\-Multicast\-Connection@{\-Open\-Producing\-Multicast\-Connection}}
+\index{\-Open\-Producing\-Multicast\-Connection@{\-Open\-Producing\-Multicast\-Connection}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Open\-Producing\-Multicast\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Open\-Producing\-Multicast\-Connection} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object, }
+\item[{{\bf \-Cip\-Common\-Packet\-Format\-Data} $\ast$}]{common\-\_\-packet\-\_\-format\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_a281f0a261db50e297593dd3383093fb0}
+
+
+\-Definition at line 345 of file cipioconnection.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-info\-\_\-item, connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, g\-\_\-multicast\-\_\-configuration, \-Get\-Existing\-Producer\-Multicast\-Connection(), connection\-\_\-object\-::instance\-\_\-type, k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator, k\-Connection\-Type\-Io\-Exclusive\-Owner, k\-Eip\-Status\-Ok, k\-Opener\-Eip\-Io\-Udp\-Port, k\-Udp\-Communcation\-Direction\-Producing, \-Socket\-Address\-Info\-Item\-::length, \-Socket\-Address\-Info\-Item\-::nasin\-\_\-zero, \-Open\-Multicast\-Connection(), connection\-\_\-object\-::produced\-\_\-connection\-\_\-id, connection\-\_\-object\-::remote\-\_\-address, \-Socket\-Address\-Info\-Item\-::sin\-\_\-addr, \-Socket\-Address\-Info\-Item\-::sin\-\_\-family, \-Socket\-Address\-Info\-Item\-::sin\-\_\-port, connection\-\_\-object\-::socket, multicast\-\_\-address\-\_\-configuration\-::starting\-\_\-multicast\-\_\-address, and \-Socket\-Address\-Info\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Open\-Communication\-Channels().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a281f0a261db50e297593dd3383093fb0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a281f0a261db50e297593dd3383093fb0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_ab5ba6f9cb3103c1db76c2bf7ae3cce8d}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Open\-Producing\-Point\-To\-Point\-Connection@{\-Open\-Producing\-Point\-To\-Point\-Connection}}
+\index{\-Open\-Producing\-Point\-To\-Point\-Connection@{\-Open\-Producing\-Point\-To\-Point\-Connection}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Open\-Producing\-Point\-To\-Point\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Open\-Producing\-Point\-To\-Point\-Connection} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object, }
+\item[{{\bf \-Cip\-Common\-Packet\-Format\-Data} $\ast$}]{common\-\_\-packet\-\_\-format\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_ab5ba6f9cb3103c1db76c2bf7ae3cce8d}
+
+
+\-Definition at line 313 of file cipioconnection.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-info\-\_\-item, \-Create\-Udp\-Socket(), k\-Cip\-Error\-Connection\-Failure, k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator, k\-Eip\-Status\-Ok, k\-Opener\-Eip\-Io\-Udp\-Port, k\-Udp\-Communcation\-Direction\-Producing, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, connection\-\_\-object\-::remote\-\_\-address, \-Socket\-Address\-Info\-Item\-::sin\-\_\-port, connection\-\_\-object\-::socket, and \-Socket\-Address\-Info\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Open\-Communication\-Channels().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_ab5ba6f9cb3103c1db76c2bf7ae3cce8d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_ab5ba6f9cb3103c1db76c2bf7ae3cce8d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipioconnection_8c_a41f8d71772b5defa587ac0da6124cc47}{\index{cipioconnection.\-c@{cipioconnection.\-c}!\-Send\-Connected\-Data@{\-Send\-Connected\-Data}}
+\index{\-Send\-Connected\-Data@{\-Send\-Connected\-Data}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{\-Send\-Connected\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Send\-Connected\-Data} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{df/d03/cipioconnection_8c_a41f8d71772b5defa587ac0da6124cc47}
+
+
+\-Send the data from the produced \-C\-I\-P \-Object of the connection via the socket of the connection object on \-U\-D\-P. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & pointer to the connection object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+status \-E\-I\-P\-\_\-\-O\-K .. success \-E\-I\-P\-\_\-\-E\-R\-R\-O\-R .. error 
+\end{DoxyReturn}
+
+
+\-Definition at line 603 of file cipioconnection.\-c.
+
+
+
+\-References \-Add\-Dint\-To\-Message(), \-Add\-Int\-To\-Message(), \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-info\-\_\-item, \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-item, \-Assemble\-I\-O\-Message(), cip\-\_\-instance\-::attributes, \-Before\-Assembly\-Data\-Send(), \-Address\-Data\-::connection\-\_\-identifier, \-Address\-Item\-::data, \-Cip\-Byte\-Array\-::data, \-Cip\-Attribute\-Struct\-::data, \-Cip\-Common\-Packet\-Format\-Data\-::data\-\_\-item, connection\-\_\-object\-::eip\-\_\-level\-\_\-sequence\-\_\-count\-\_\-producing, g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, g\-\_\-message\-\_\-data\-\_\-reply\-\_\-buffer, g\-\_\-run\-\_\-idle\-\_\-state, \-Cip\-Common\-Packet\-Format\-Data\-::item\-\_\-count, k\-Cip\-Item\-Id\-Connected\-Data\-Item, k\-Cip\-Item\-Id\-Connection\-Address, k\-Cip\-Item\-Id\-Sequenced\-Address\-Item, k\-Udp\-Communcation\-Direction\-Producing, \-Address\-Item\-::length, \-Data\-Item\-::length, \-Cip\-Byte\-Array\-::length, connection\-\_\-object\-::produced\-\_\-connection\-\_\-id, connection\-\_\-object\-::producing\-\_\-instance, connection\-\_\-object\-::remote\-\_\-address, \-Send\-Udp\-Data(), connection\-\_\-object\-::sequence\-\_\-count\-\_\-producing, \-Address\-Data\-::sequence\-\_\-number, connection\-\_\-object\-::socket, connection\-\_\-object\-::transport\-\_\-type\-\_\-class\-\_\-trigger, \-Address\-Item\-::type\-\_\-id, \-Data\-Item\-::type\-\_\-id, and \-Socket\-Address\-Info\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Establish\-Io\-Connction().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a41f8d71772b5defa587ac0da6124cc47_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d03/cipioconnection_8c_a41f8d71772b5defa587ac0da6124cc47_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{cipioconnection_8c_a534c0a24266039f7ced0d36b7c5496bc}{\index{cipioconnection.\-c@{cipioconnection.\-c}!g\-\_\-config\-\_\-data\-\_\-buffer@{g\-\_\-config\-\_\-data\-\_\-buffer}}
+\index{g\-\_\-config\-\_\-data\-\_\-buffer@{g\-\_\-config\-\_\-data\-\_\-buffer}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{g\-\_\-config\-\_\-data\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint8}$\ast$ {\bf g\-\_\-config\-\_\-data\-\_\-buffer} = \-N\-U\-L\-L}}\label{df/d03/cipioconnection_8c_a534c0a24266039f7ced0d36b7c5496bc}
+buffers for the config data coming with a forward open request. 
+
+\-Definition at line 74 of file cipioconnection.\-c.
+
+
+
+\-Referenced by \-Establish\-Io\-Connction(), \-Handle\-Config\-Data(), and \-Parse\-Connection\-Path().
+
+\hypertarget{cipioconnection_8c_ad20328302a359540d55f48ae36f7237d}{\index{cipioconnection.\-c@{cipioconnection.\-c}!g\-\_\-config\-\_\-data\-\_\-length@{g\-\_\-config\-\_\-data\-\_\-length}}
+\index{g\-\_\-config\-\_\-data\-\_\-length@{g\-\_\-config\-\_\-data\-\_\-length}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{g\-\_\-config\-\_\-data\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf g\-\_\-config\-\_\-data\-\_\-length} = 0}}\label{df/d03/cipioconnection_8c_ad20328302a359540d55f48ae36f7237d}
+
+
+\-Definition at line 75 of file cipioconnection.\-c.
+
+
+
+\-Referenced by \-Handle\-Config\-Data(), and \-Parse\-Connection\-Path().
+
+\hypertarget{cipioconnection_8c_a4901ec04ad1ac886626e556c60f12196}{\index{cipioconnection.\-c@{cipioconnection.\-c}!g\-\_\-run\-\_\-idle\-\_\-state@{g\-\_\-run\-\_\-idle\-\_\-state}}
+\index{g\-\_\-run\-\_\-idle\-\_\-state@{g\-\_\-run\-\_\-idle\-\_\-state}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{g\-\_\-run\-\_\-idle\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint32} {\bf g\-\_\-run\-\_\-idle\-\_\-state}}}\label{df/d03/cipioconnection_8c_a4901ec04ad1ac886626e556c60f12196}
+buffer for holding the run idle information. 
+
+\-Definition at line 77 of file cipioconnection.\-c.
+
+
+
+\-Referenced by \-Handle\-Received\-Io\-Connection\-Data(), and \-Send\-Connected\-Data().
+
+\hypertarget{cipioconnection_8c_a46f1aa5e4d7142036318ba3c9f2707ea}{\index{cipioconnection.\-c@{cipioconnection.\-c}!k\-Opener\-Eip\-Io\-Udp\-Port@{k\-Opener\-Eip\-Io\-Udp\-Port}}
+\index{k\-Opener\-Eip\-Io\-Udp\-Port@{k\-Opener\-Eip\-Io\-Udp\-Port}!cipioconnection.c@{cipioconnection.\-c}}
+\subsubsection[{k\-Opener\-Eip\-Io\-Udp\-Port}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf k\-Opener\-Eip\-Io\-Udp\-Port} = 0x08\-A\-E}}\label{df/d03/cipioconnection_8c_a46f1aa5e4d7142036318ba3c9f2707ea}
+
+
+\-Definition at line 31 of file cipioconnection.\-c.
+
+
+
+\-Referenced by \-Open\-Consuming\-Point\-To\-Point\-Connection(), \-Open\-Multicast\-Connection(), \-Open\-Producing\-Multicast\-Connection(), and \-Open\-Producing\-Point\-To\-Point\-Connection().
+

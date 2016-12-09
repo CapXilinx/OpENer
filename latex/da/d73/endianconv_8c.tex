@@ -1,0 +1,287 @@
+\hypertarget{endianconv_8c}{\section{src/enet\-\_\-encap/endianconv.c \-File \-Reference}
+\label{da/d73/endianconv_8c}\index{src/enet\-\_\-encap/endianconv.\-c@{src/enet\-\_\-encap/endianconv.\-c}}
+}
+{\ttfamily \#include $<$netinet/in.\-h$>$}\*
+{\ttfamily \#include $<$sys/socket.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include \char`\"{}endianconv.\-h\char`\"{}}\*
+\-Include dependency graph for endianconv.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d95/endianconv_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__ENCAP_gaafc3c9e3ff582c9b7e438ae2b1fdf822}{\-Add\-Dint\-To\-Message} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em \-Converts \-U\-I\-N\-T32 data from host to little endian and writes it to buffer. \end{DoxyCompactList}\item 
+int \hyperlink{group__ENCAP_gae689aac2a85bf49fb356ec94c8800799}{\-Add\-Int\-To\-Message} (const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em converts \-U\-I\-N\-T16 data from host to little endian an writes it to buffer. \end{DoxyCompactList}\item 
+int \hyperlink{group__ENCAP_gae267a8684cc6ee1b3bd83df03260b7aa}{\-Add\-Sint\-To\-Message} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em converts \-U\-I\-N\-T8 data from host to little endian an writes it to buffer. \end{DoxyCompactList}\item 
+void \hyperlink{endianconv_8c_a7389bb58f3547b10d7ad15fbfc26411b}{\-Determine\-Endianess} ()
+\begin{DoxyCompactList}\small\item\em \-Detects \-Endianess of the platform and sets global g\-\_\-n\-Op\-E\-Ner\-Platform\-Endianess variable accordingly. \end{DoxyCompactList}\item 
+int \hyperlink{endianconv_8c_a2e8bf172dd5ecba3cc0871278ab06538}{\-Encapsulate\-Ip\-Address} (\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} port, \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} address, \hyperlink{typedefs_8h_a168bac8db7e7e6d944700e1ac4717ae3}{\-Eip\-Byte} $\ast$$\ast$communication\-\_\-buffer)
+\begin{DoxyCompactList}\small\item\em \-Encapsulate the sockaddr information as necessary for the \-Common \-Packet \-Format data items. \end{DoxyCompactList}\item 
+int \hyperlink{endianconv_8c_ae391d0308d5eebd8221d3fde59872b7c}{\-Fill\-Next\-N\-Message\-Octets\-With} (\hyperlink{typedefs_8h_ab1d6828b2df519496de8762b3ffd54b1}{\-Cip\-Octet} value, unsigned int amount\-\_\-of\-\_\-bytes\-\_\-written, \hyperlink{typedefs_8h_ab1d6828b2df519496de8762b3ffd54b1}{\-Cip\-Octet} $\ast$$\ast$message)
+\item 
+int \hyperlink{endianconv_8c_af9669c6d673d3d653b5f0569fee71822}{\-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position} (\hyperlink{typedefs_8h_ab1d6828b2df519496de8762b3ffd54b1}{\-Cip\-Octet} value, unsigned int amount\-\_\-of\-\_\-filled\-\_\-bytes, \hyperlink{typedefs_8h_ab1d6828b2df519496de8762b3ffd54b1}{\-Cip\-Octet} $\ast$$\ast$message)
+\item 
+\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} \hyperlink{group__ENCAP_ga668f92389ee06510864585b97955f6f8}{\-Get\-Dint\-From\-Message} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em \-Reads \-E\-I\-P\-\_\-\-U\-I\-N\-T32 from $\ast$buffer and converts little endian to host. \end{DoxyCompactList}\item 
+int \hyperlink{endianconv_8c_a3de93b9acffbb19d75ceaf93caa6617c}{\-Get\-Endianess} ()
+\begin{DoxyCompactList}\small\item\em \-Returns global variable g\-\_\-n\-Op\-E\-Ner\-Platform\-Endianess, whereas 0 equals little endian and 1 equals big endian. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} \hyperlink{group__ENCAP_ga70322f970709ca9c9a1a1d474cfe2302}{\-Get\-Int\-From\-Message} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em \-Reads \-E\-I\-P\-\_\-\-U\-I\-N\-T16 from $\ast$buffer and converts little endian to host. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} \hyperlink{group__ENCAP_ga0a45608ad12bae48152cb1cfafef1a4c}{\-Get\-Sint\-From\-Message} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em \-Reads \-E\-I\-P\-\_\-\-U\-I\-N\-T8 from $\ast$buffer and converts little endian to host. \end{DoxyCompactList}\item 
+void \hyperlink{endianconv_8c_acf9215562e7f33994170721bbed9fa4d}{\-Move\-Message\-N\-Octets} (int amount\-\_\-of\-\_\-bytes\-\_\-moved, \hyperlink{typedefs_8h_ab1d6828b2df519496de8762b3ffd54b1}{\-Cip\-Octet} $\ast$$\ast$message\-\_\-runner)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{endianconv_8h_aa618e5df0cf6fdf77ad6f82263688f42}{\-Opener\-Endianess} \hyperlink{endianconv_8c_a474ff19cc3d26eef2448d77f787e0df7}{g\-\_\-opener\-\_\-platform\-\_\-endianess} = \hyperlink{endianconv_8h_aa618e5df0cf6fdf77ad6f82263688f42a3c1682c85526a33d552c319de0f0378e}{k\-Opener\-Endianess\-Unknown}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{endianconv_8c_a7389bb58f3547b10d7ad15fbfc26411b}{\index{endianconv.\-c@{endianconv.\-c}!\-Determine\-Endianess@{\-Determine\-Endianess}}
+\index{\-Determine\-Endianess@{\-Determine\-Endianess}!endianconv.c@{endianconv.\-c}}
+\subsubsection[{\-Determine\-Endianess}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Determine\-Endianess} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{da/d73/endianconv_8c_a7389bb58f3547b10d7ad15fbfc26411b}
+
+
+\-Detects \-Endianess of the platform and sets global g\-\_\-n\-Op\-E\-Ner\-Platform\-Endianess variable accordingly. 
+
+\-Detects \-Endianess of the platform and sets global variable g\-\_\-n\-Op\-E\-Ner\-Platform\-Endianess accordingly, whereas 0 equals little endian and 1 equals big endian 
+
+\-Definition at line 191 of file endianconv.\-c.
+
+
+
+\-References g\-\_\-opener\-\_\-platform\-\_\-endianess, k\-Op\-E\-Ner\-Endianess\-Big, and k\-Op\-E\-Ner\-Endianess\-Little.
+
+
+
+\-Referenced by \-Encapsulation\-Init().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d73/endianconv_8c_a7389bb58f3547b10d7ad15fbfc26411b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{endianconv_8c_a2e8bf172dd5ecba3cc0871278ab06538}{\index{endianconv.\-c@{endianconv.\-c}!\-Encapsulate\-Ip\-Address@{\-Encapsulate\-Ip\-Address}}
+\index{\-Encapsulate\-Ip\-Address@{\-Encapsulate\-Ip\-Address}!endianconv.c@{endianconv.\-c}}
+\subsubsection[{\-Encapsulate\-Ip\-Address}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Encapsulate\-Ip\-Address} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eip\-Uint16}}]{port, }
+\item[{{\bf \-Eip\-Uint32}}]{address, }
+\item[{{\bf \-Eip\-Byte} $\ast$$\ast$}]{communication\-\_\-buffer}
+\end{DoxyParamCaption}
+)}}\label{da/d73/endianconv_8c_a2e8bf172dd5ecba3cc0871278ab06538}
+
+
+\-Encapsulate the sockaddr information as necessary for the \-Common \-Packet \-Format data items. 
+
+\-Converts and adds the provided port and \-I\-P address into an common packet format message
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em port} & \-Port of the socket, has to be provided in big-\/endian \\
+\hline
+{\em address} & \-I\-P address of the socket, has to be provided in big-\/endian \\
+\hline
+{\em communcation\-\_\-buffer} & \-The message buffer for sending the message \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 151 of file endianconv.\-c.
+
+
+
+\-References \-Add\-Dint\-To\-Message(), \-Add\-Int\-To\-Message(), g\-\_\-opener\-\_\-platform\-\_\-endianess, k\-Op\-E\-Ner\-Endianess\-Big, and k\-Op\-E\-Ner\-Endianess\-Little.
+
+
+
+\-Referenced by \-Assemble\-Linear\-Message(), and \-Encapsulate\-List\-Identy\-Response\-Message().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{da/d73/endianconv_8c_a2e8bf172dd5ecba3cc0871278ab06538_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d73/endianconv_8c_a2e8bf172dd5ecba3cc0871278ab06538_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{endianconv_8c_ae391d0308d5eebd8221d3fde59872b7c}{\index{endianconv.\-c@{endianconv.\-c}!\-Fill\-Next\-N\-Message\-Octets\-With@{\-Fill\-Next\-N\-Message\-Octets\-With}}
+\index{\-Fill\-Next\-N\-Message\-Octets\-With@{\-Fill\-Next\-N\-Message\-Octets\-With}!endianconv.c@{endianconv.\-c}}
+\subsubsection[{\-Fill\-Next\-N\-Message\-Octets\-With}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Fill\-Next\-N\-Message\-Octets\-With} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Octet}}]{value, }
+\item[{unsigned int}]{amount\-\_\-of\-\_\-bytes\-\_\-written, }
+\item[{{\bf \-Cip\-Octet} $\ast$$\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{da/d73/endianconv_8c_ae391d0308d5eebd8221d3fde59872b7c}
+
+
+\-Definition at line 214 of file endianconv.\-c.
+
+
+
+\-Referenced by \-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d73/endianconv_8c_ae391d0308d5eebd8221d3fde59872b7c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{endianconv_8c_af9669c6d673d3d653b5f0569fee71822}{\index{endianconv.\-c@{endianconv.\-c}!\-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position@{\-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position}}
+\index{\-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position@{\-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position}!endianconv.c@{endianconv.\-c}}
+\subsubsection[{\-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Octet}}]{value, }
+\item[{unsigned int}]{amount\-\_\-of\-\_\-filled\-\_\-bytes, }
+\item[{{\bf \-Cip\-Octet} $\ast$$\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{da/d73/endianconv_8c_af9669c6d673d3d653b5f0569fee71822}
+
+
+\-Definition at line 219 of file endianconv.\-c.
+
+
+
+\-References \-Fill\-Next\-N\-Message\-Octets\-With(), and \-Move\-Message\-N\-Octets().
+
+
+
+\-Referenced by \-Assemble\-Linear\-Message().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d73/endianconv_8c_af9669c6d673d3d653b5f0569fee71822_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d73/endianconv_8c_af9669c6d673d3d653b5f0569fee71822_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{endianconv_8c_a3de93b9acffbb19d75ceaf93caa6617c}{\index{endianconv.\-c@{endianconv.\-c}!\-Get\-Endianess@{\-Get\-Endianess}}
+\index{\-Get\-Endianess@{\-Get\-Endianess}!endianconv.c@{endianconv.\-c}}
+\subsubsection[{\-Get\-Endianess}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Get\-Endianess} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{da/d73/endianconv_8c_a3de93b9acffbb19d75ceaf93caa6617c}
+
+
+\-Returns global variable g\-\_\-n\-Op\-E\-Ner\-Platform\-Endianess, whereas 0 equals little endian and 1 equals big endian. 
+
+\-Return the endianess identified on system startup.
+
+\begin{DoxyReturn}{\-Returns}
+0 equals little endian and 1 equals big endian 
+\end{DoxyReturn}
+
+
+\-Definition at line 206 of file endianconv.\-c.
+
+
+
+\-References g\-\_\-opener\-\_\-platform\-\_\-endianess.
+
+\hypertarget{endianconv_8c_acf9215562e7f33994170721bbed9fa4d}{\index{endianconv.\-c@{endianconv.\-c}!\-Move\-Message\-N\-Octets@{\-Move\-Message\-N\-Octets}}
+\index{\-Move\-Message\-N\-Octets@{\-Move\-Message\-N\-Octets}!endianconv.c@{endianconv.\-c}}
+\subsubsection[{\-Move\-Message\-N\-Octets}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Move\-Message\-N\-Octets} (
+\begin{DoxyParamCaption}
+\item[{int}]{amount\-\_\-of\-\_\-bytes\-\_\-moved, }
+\item[{{\bf \-Cip\-Octet} $\ast$$\ast$}]{message\-\_\-runner}
+\end{DoxyParamCaption}
+)}}\label{da/d73/endianconv_8c_acf9215562e7f33994170721bbed9fa4d}
+
+
+\-Definition at line 210 of file endianconv.\-c.
+
+
+
+\-Referenced by \-Encapsulate\-Data(), and \-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d73/endianconv_8c_acf9215562e7f33994170721bbed9fa4d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{endianconv_8c_a474ff19cc3d26eef2448d77f787e0df7}{\index{endianconv.\-c@{endianconv.\-c}!g\-\_\-opener\-\_\-platform\-\_\-endianess@{g\-\_\-opener\-\_\-platform\-\_\-endianess}}
+\index{g\-\_\-opener\-\_\-platform\-\_\-endianess@{g\-\_\-opener\-\_\-platform\-\_\-endianess}!endianconv.c@{endianconv.\-c}}
+\subsubsection[{g\-\_\-opener\-\_\-platform\-\_\-endianess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Opener\-Endianess} {\bf g\-\_\-opener\-\_\-platform\-\_\-endianess} = {\bf k\-Opener\-Endianess\-Unknown}}}\label{da/d73/endianconv_8c_a474ff19cc3d26eef2448d77f787e0df7}
+
+
+\-Definition at line 20 of file endianconv.\-c.
+
+
+
+\-Referenced by \-Determine\-Endianess(), \-Encapsulate\-Ip\-Address(), and \-Get\-Endianess().
+

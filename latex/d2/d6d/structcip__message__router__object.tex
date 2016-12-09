@@ -1,0 +1,64 @@
+\hypertarget{structcip__message__router__object}{\section{cip\-\_\-message\-\_\-router\-\_\-object \-Struct \-Reference}
+\label{d2/d6d/structcip__message__router__object}\index{cip\-\_\-message\-\_\-router\-\_\-object@{cip\-\_\-message\-\_\-router\-\_\-object}}
+}
+
+
+\-A class registry list node.  
+
+
+
+
+\-Collaboration diagram for cip\-\_\-message\-\_\-router\-\_\-object\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d05/structcip__message__router__object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$ \hyperlink{structcip__message__router__object_a440815cdd66b94380266bbc5e1a9a459}{cip\-\_\-class}
+\item 
+struct \hyperlink{structcip__message__router__object}{cip\-\_\-message\-\_\-router\-\_\-object} $\ast$ \hyperlink{structcip__message__router__object_ae5fe968ec24697e92f45cceb93cc437f}{next}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class registry list node. 
+
+\-A linked list of this object is the registry of classes known to the message router for small devices with very limited memory it could make sense to change this list into an array with a given max size for removing the need for having to dynamically allocate memory. \-The size of the array could be a parameter in the platform config file. 
+
+\-Definition at line 23 of file cipmessagerouter.\-c.
+
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structcip__message__router__object_a440815cdd66b94380266bbc5e1a9a459}{\index{cip\-\_\-message\-\_\-router\-\_\-object@{cip\-\_\-message\-\_\-router\-\_\-object}!cip\-\_\-class@{cip\-\_\-class}}
+\index{cip\-\_\-class@{cip\-\_\-class}!cip_message_router_object@{cip\-\_\-message\-\_\-router\-\_\-object}}
+\subsubsection[{cip\-\_\-class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Class}$\ast$ {\bf cip\-\_\-message\-\_\-router\-\_\-object\-::cip\-\_\-class}}}\label{d2/d6d/structcip__message__router__object_a440815cdd66b94380266bbc5e1a9a459}
+
+
+\-Definition at line 25 of file cipmessagerouter.\-c.
+
+
+
+\-Referenced by \-Delete\-All\-Classes(), \-Get\-Cip\-Class(), \-Get\-Cip\-Instance(), \-Get\-Registered\-Object(), \-Notify\-Message\-Router(), and \-Register\-Cip\-Class().
+
+\hypertarget{structcip__message__router__object_ae5fe968ec24697e92f45cceb93cc437f}{\index{cip\-\_\-message\-\_\-router\-\_\-object@{cip\-\_\-message\-\_\-router\-\_\-object}!next@{next}}
+\index{next@{next}!cip_message_router_object@{cip\-\_\-message\-\_\-router\-\_\-object}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf cip\-\_\-message\-\_\-router\-\_\-object}$\ast$ {\bf cip\-\_\-message\-\_\-router\-\_\-object\-::next}}}\label{d2/d6d/structcip__message__router__object_ae5fe968ec24697e92f45cceb93cc437f}
+
+
+\-Definition at line 24 of file cipmessagerouter.\-c.
+
+
+
+\-Referenced by \-Delete\-All\-Classes(), \-Get\-Registered\-Object(), and \-Register\-Cip\-Class().
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/cip/\hyperlink{cipmessagerouter_8c}{cipmessagerouter.\-c}\end{DoxyCompactItemize}

@@ -1,0 +1,835 @@
+\hypertarget{group__ENCAP}{\section{\-Op\-E\-Ner \-Ethernet encapsulation layer}
+\label{d4/d91/group__ENCAP}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__ENCAP_gafdcff621008b5e305165424c6ac4ea25}{\-Cip\-Item\-Id} \{ \*
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a7d3d1f2d6b2f4ed65dc34b792bfdaa4f}{k\-Cip\-Item\-Id\-Null\-Address} =  0x0000, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25aa082d77e86c75c44df304252971b4007}{k\-Cip\-Item\-Id\-List\-Identity\-Response} =  0x000\-C, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a0adf8007a319941f3aaa7d9624025c0f}{k\-Cip\-Item\-Id\-Connection\-Address} =  0x00\-A1, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a8761662aa0838fb723f8696e9ea4e217}{k\-Cip\-Item\-Id\-Connected\-Data\-Item} =  0x00\-B1, 
+\*
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a9b966ac289a5c11fc80a2ab274c99a19}{k\-Cip\-Item\-Id\-Unconnected\-Data\-Item} =  0x00\-B2, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a43d8fa4dfdd73a9a23c8a75330d7b162}{k\-Cip\-Item\-Id\-List\-Service\-Response} =  0x0100, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a93851549b6af1ed796409633e8071623}{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target} =  0x8000, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25aef2e6ffe3e7443b14842d173c7f1e75d}{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator} =  0x8001, 
+\*
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a21abefabf9f64dba055671507015f2b1}{k\-Cip\-Item\-Id\-Sequenced\-Address\-Item} =  0x8002
+ \}
+\begin{DoxyCompactList}\small\item\em \-C\-P\-F is \-Common \-Packet \-Format \-C\-P\-F packet \-:= $<$number of=\char`\"{}\char`\"{} items$>$=\char`\"{}\char`\"{}$>$ \{$<$items$>$\} item \-:= $<$\-Type\-I\-D$>$ $<$\-Length$>$ $<$data$>$ $<$number of=\char`\"{}\char`\"{} items$>$=\char`\"{}\char`\"{}$>$ \-:= two bytes $<$\-Type\-I\-D$>$ \-:= two bytes $<$\-Length$>$ \-:= two bytes $<$data$>$ \-:= $<$the number=\char`\"{}\char`\"{} of=\char`\"{}\char`\"{} bytes=\char`\"{}\char`\"{} specified=\char`\"{}\char`\"{} by=\char`\"{}\char`\"{} length$>$=\char`\"{}\char`\"{}$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__ENCAP_gaafc3c9e3ff582c9b7e438ae2b1fdf822}{\-Add\-Dint\-To\-Message} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em \-Write an 32\-Bit integer to the network buffer. \end{DoxyCompactList}\item 
+int \hyperlink{group__ENCAP_gae689aac2a85bf49fb356ec94c8800799}{\-Add\-Int\-To\-Message} (const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em \-Write an 16\-Bit integer to the network buffer. \end{DoxyCompactList}\item 
+int \hyperlink{group__ENCAP_gae267a8684cc6ee1b3bd83df03260b7aa}{\-Add\-Sint\-To\-Message} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em converts \-U\-I\-N\-T8 data from host to little endian an writes it to buffer. \end{DoxyCompactList}\item 
+int \hyperlink{group__ENCAP_gad61fa4f84989cf27086d57557ad552c4}{\-Assemble\-I\-O\-Message} (\hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$message)
+\item 
+int \hyperlink{group__ENCAP_gaa81c027561d86d2589b8002b36b88392}{\-Assemble\-Linear\-Message} (\hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response, \hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$message)
+\begin{DoxyCompactList}\small\item\em \-Copy data from message\-\_\-router\-\_\-response struct and common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item into linear memory in pa\-\_\-msg for transmission over in encapsulation. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__ENCAP_ga5fd76bfeb985480d68d6fd4d97129606}{\-Create\-Common\-Packet\-Format\-Structure} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$data, int data\-\_\-length, \hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data)
+\begin{DoxyCompactList}\small\item\em \-Creates \-Common \-Packet \-Format structure out of data. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENCAP_ga7a0dc2be6c485d9e6940d5b20a981022}{\-Encapsulation\-Init} (void)
+\begin{DoxyCompactList}\small\item\em \-Initialize the encapsulation layer. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENCAP_ga1261bd2441f744c38d7a3f8d8c16c391}{\-Encapsulation\-Shut\-Down} (void)
+\begin{DoxyCompactList}\small\item\em \-Shutdown the encapsulation layer. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} \hyperlink{group__ENCAP_ga668f92389ee06510864585b97955f6f8}{\-Get\-Dint\-From\-Message} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em \-Get an 32\-Bit integer from the network buffer. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} \hyperlink{group__ENCAP_ga70322f970709ca9c9a1a1d474cfe2302}{\-Get\-Int\-From\-Message} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em \-Get an 16\-Bit integer from the network buffer, and moves pointer beyond the 16 bit value. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} \hyperlink{group__ENCAP_ga0a45608ad12bae48152cb1cfafef1a4c}{\-Get\-Sint\-From\-Message} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const buffer)
+\begin{DoxyCompactList}\small\item\em \-Reads \-E\-I\-P\-\_\-\-U\-I\-N\-T8 from $\ast$buffer and converts little endian to host. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENCAP_ga3b9c0d7d9d1413e4cd8ca5634b4bc9ac}{\-Manage\-Encapsulation\-Messages} (const \hyperlink{typedefs_8h_a2972c9424f18b12265ca35d0548da82a}{\-Milli\-Seconds} elapsed\-\_\-time)
+\begin{DoxyCompactList}\small\item\em \-Handle delayed encapsulation message responses. \end{DoxyCompactList}\item 
+int \hyperlink{group__ENCAP_ga401f152f47e54b0a6dddcfe723c086f9}{\-Notify\-Common\-Packet\-Format} (\hyperlink{encap_8h_ac4bf15574436ce32c449e9f41b69c994}{\-Encapsulation\-Data} $\ast$const received\-\_\-data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$const reply\-\_\-buffer)
+\item 
+int \hyperlink{group__ENCAP_ga045feac9b8747e049e2420df1ec0844b}{\-Notify\-Connected\-Common\-Packet\-Format} (\hyperlink{encap_8h_ac4bf15574436ce32c449e9f41b69c994}{\-Encapsulation\-Data} $\ast$received\-\_\-data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$reply\-\_\-buffer)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} \hyperlink{group__ENCAP_gafaae5be8de81c633ea4df46fa8b957e0}{g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item}
+\begin{DoxyCompactList}\small\item\em \-Data storage for the any \-C\-P\-F data \-Currently we are single threaded and need only one \-C\-P\-F at the time. \-For future extensions towards multithreading maybe more \-C\-P\-F data items may be necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The \-Ethernet encapsulation layer handles provides the abstraction between the \-Ethernet and the \-C\-I\-P layer. 
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{group__ENCAP_gafdcff621008b5e305165424c6ac4ea25}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Cip\-Item\-Id@{\-Cip\-Item\-Id}}
+\index{\-Cip\-Item\-Id@{\-Cip\-Item\-Id}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Cip\-Item\-Id}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Cip\-Item\-Id}}}\label{d4/d91/group__ENCAP_gafdcff621008b5e305165424c6ac4ea25}
+
+
+\-C\-P\-F is \-Common \-Packet \-Format \-C\-P\-F packet \-:= $<$number of=\char`\"{}\char`\"{} items$>$=\char`\"{}\char`\"{}$>$ \{$<$items$>$\} item \-:= $<$\-Type\-I\-D$>$ $<$\-Length$>$ $<$data$>$ $<$number of=\char`\"{}\char`\"{} items$>$=\char`\"{}\char`\"{}$>$ \-:= two bytes $<$\-Type\-I\-D$>$ \-:= two bytes $<$\-Length$>$ \-:= two bytes $<$data$>$ \-:= $<$the number=\char`\"{}\char`\"{} of=\char`\"{}\char`\"{} bytes=\char`\"{}\char`\"{} specified=\char`\"{}\char`\"{} by=\char`\"{}\char`\"{} length$>$=\char`\"{}\char`\"{}$>$ 
+
+\-Definition of \-Item \-I\-D numbers used for address and data items in \-C\-P\-F structures \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Cip\-Item\-Id\-Null\-Address@{k\-Cip\-Item\-Id\-Null\-Address}!\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!k\-Cip\-Item\-Id\-Null\-Address@{k\-Cip\-Item\-Id\-Null\-Address}}\item[{\em 
+\hypertarget{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a7d3d1f2d6b2f4ed65dc34b792bfdaa4f}{k\-Cip\-Item\-Id\-Null\-Address}\label{d4/d91/group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a7d3d1f2d6b2f4ed65dc34b792bfdaa4f}
+}]\-Type\-: \-Address; \-Indicates that encapsulation routing is not needed. \index{k\-Cip\-Item\-Id\-List\-Identity\-Response@{k\-Cip\-Item\-Id\-List\-Identity\-Response}!\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!k\-Cip\-Item\-Id\-List\-Identity\-Response@{k\-Cip\-Item\-Id\-List\-Identity\-Response}}\item[{\em 
+\hypertarget{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25aa082d77e86c75c44df304252971b4007}{k\-Cip\-Item\-Id\-List\-Identity\-Response}\label{d4/d91/group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25aa082d77e86c75c44df304252971b4007}
+}]\index{k\-Cip\-Item\-Id\-Connection\-Address@{k\-Cip\-Item\-Id\-Connection\-Address}!\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!k\-Cip\-Item\-Id\-Connection\-Address@{k\-Cip\-Item\-Id\-Connection\-Address}}\item[{\em 
+\hypertarget{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a0adf8007a319941f3aaa7d9624025c0f}{k\-Cip\-Item\-Id\-Connection\-Address}\label{d4/d91/group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a0adf8007a319941f3aaa7d9624025c0f}
+}]\-Type\-: \-Address; \-Connection-\/based, used for connected messages, see \-Vol.\-2, p.\-42 \index{k\-Cip\-Item\-Id\-Connected\-Data\-Item@{k\-Cip\-Item\-Id\-Connected\-Data\-Item}!\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!k\-Cip\-Item\-Id\-Connected\-Data\-Item@{k\-Cip\-Item\-Id\-Connected\-Data\-Item}}\item[{\em 
+\hypertarget{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a8761662aa0838fb723f8696e9ea4e217}{k\-Cip\-Item\-Id\-Connected\-Data\-Item}\label{d4/d91/group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a8761662aa0838fb723f8696e9ea4e217}
+}]\-Type\-: \-Data; \-Connected data item, see \-Vol.\-2, p.\-43 \index{k\-Cip\-Item\-Id\-Unconnected\-Data\-Item@{k\-Cip\-Item\-Id\-Unconnected\-Data\-Item}!\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!k\-Cip\-Item\-Id\-Unconnected\-Data\-Item@{k\-Cip\-Item\-Id\-Unconnected\-Data\-Item}}\item[{\em 
+\hypertarget{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a9b966ac289a5c11fc80a2ab274c99a19}{k\-Cip\-Item\-Id\-Unconnected\-Data\-Item}\label{d4/d91/group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a9b966ac289a5c11fc80a2ab274c99a19}
+}]\-Type\-: \-Data; \-Unconnected message \index{k\-Cip\-Item\-Id\-List\-Service\-Response@{k\-Cip\-Item\-Id\-List\-Service\-Response}!\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!k\-Cip\-Item\-Id\-List\-Service\-Response@{k\-Cip\-Item\-Id\-List\-Service\-Response}}\item[{\em 
+\hypertarget{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a43d8fa4dfdd73a9a23c8a75330d7b162}{k\-Cip\-Item\-Id\-List\-Service\-Response}\label{d4/d91/group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a43d8fa4dfdd73a9a23c8a75330d7b162}
+}]\index{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target@{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target}!\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target@{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target}}\item[{\em 
+\hypertarget{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a93851549b6af1ed796409633e8071623}{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target}\label{d4/d91/group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a93851549b6af1ed796409633e8071623}
+}]\-Type\-: \-Data; \-Sockaddr info item originator to target \index{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator@{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator}!\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator@{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator}}\item[{\em 
+\hypertarget{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25aef2e6ffe3e7443b14842d173c7f1e75d}{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator}\label{d4/d91/group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25aef2e6ffe3e7443b14842d173c7f1e75d}
+}]\-Type\-: \-Data; \-Sockaddr info item target to originator \index{k\-Cip\-Item\-Id\-Sequenced\-Address\-Item@{k\-Cip\-Item\-Id\-Sequenced\-Address\-Item}!\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!k\-Cip\-Item\-Id\-Sequenced\-Address\-Item@{k\-Cip\-Item\-Id\-Sequenced\-Address\-Item}}\item[{\em 
+\hypertarget{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a21abefabf9f64dba055671507015f2b1}{k\-Cip\-Item\-Id\-Sequenced\-Address\-Item}\label{d4/d91/group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a21abefabf9f64dba055671507015f2b1}
+}]\-Sequenced \-Address item \end{description}
+\end{Desc}
+
+
+
+\-Definition at line 24 of file cpf.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{group__ENCAP_gaafc3c9e3ff582c9b7e438ae2b1fdf822}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Add\-Dint\-To\-Message@{\-Add\-Dint\-To\-Message}}
+\index{\-Add\-Dint\-To\-Message@{\-Add\-Dint\-To\-Message}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Add\-Dint\-To\-Message}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Add\-Dint\-To\-Message} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{data, }
+\item[{{\bf \-Eip\-Uint8} $\ast$$\ast$const}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_gaafc3c9e3ff582c9b7e438ae2b1fdf822}
+
+
+\-Write an 32\-Bit integer to the network buffer. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em data} & value to write \\
+\hline
+{\em buffer} & pointer to the network buffer array. \-This pointer will be incremented by 4!\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Length in bytes of the encoded message
+\end{DoxyReturn}
+\-Write an 32\-Bit integer to the network buffer.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em data} & value to be written \\
+\hline
+{\em buffer} & pointer where data should be written. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 94 of file endianconv.\-c.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), \-Assemble\-Forward\-Open\-Response(), \-Assemble\-Linear\-Message(), \-Encapsulate\-Data(), \-Encapsulate\-Ip\-Address(), \-Encapsulate\-List\-Identy\-Response\-Message(), \-Encode\-Connected\-Address\-Item(), \-Encode\-Data(), \-Encode\-Sequenced\-Address\-Item(), \-Handle\-Received\-Register\-Session\-Command(), and \-Send\-Connected\-Data().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_gaafc3c9e3ff582c9b7e438ae2b1fdf822_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_gae689aac2a85bf49fb356ec94c8800799}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Add\-Int\-To\-Message@{\-Add\-Int\-To\-Message}}
+\index{\-Add\-Int\-To\-Message@{\-Add\-Int\-To\-Message}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Add\-Int\-To\-Message}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Add\-Int\-To\-Message} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint16}}]{data, }
+\item[{{\bf \-Eip\-Uint8} $\ast$$\ast$const}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_gae689aac2a85bf49fb356ec94c8800799}
+
+
+\-Write an 16\-Bit integer to the network buffer. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em data} & value to write \\
+\hline
+{\em buffer} & pointer to the network buffer array. \-This pointer will be incremented by 2!\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Length in bytes of the encoded message
+\end{DoxyReturn}
+\-Write an 16\-Bit integer to the network buffer.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em data} & value to be written \\
+\hline
+{\em buffer} & pointer where data should be written. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 80 of file endianconv.\-c.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), \-Assemble\-Forward\-Open\-Response(), \-Assemble\-Linear\-Message(), \-Encapsulate\-Data(), \-Encapsulate\-Ip\-Address(), \-Encapsulate\-List\-Identy\-Response\-Message(), \-Encode\-Connected\-Address\-Item(), \-Encode\-Connected\-Data\-Item\-Length(), \-Encode\-Data(), \-Encode\-Data\-Item\-Length(), \-Encode\-Data\-Item\-Type(), \-Encode\-E\-Path(), \-Encode\-Extended\-Status\-Data\-Items(), \-Encode\-Item\-Count(), \-Encode\-Null\-Address\-Item(), \-Encode\-Sequenced\-Address\-Item(), \-Encode\-Sequence\-Number(), \-Encode\-Sockaddr\-Info\-Item\-Type\-Id(), \-Encode\-Sockaddr\-Info\-Length(), \-Encode\-Unconnected\-Data\-Item\-Length(), \-Handle\-Received\-List\-Identity\-Command\-Udp(), \-Handle\-Received\-List\-Interfaces\-Command(), \-Handle\-Received\-List\-Services\-Command(), and \-Send\-Connected\-Data().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_gae689aac2a85bf49fb356ec94c8800799_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_gae267a8684cc6ee1b3bd83df03260b7aa}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Add\-Sint\-To\-Message@{\-Add\-Sint\-To\-Message}}
+\index{\-Add\-Sint\-To\-Message@{\-Add\-Sint\-To\-Message}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Add\-Sint\-To\-Message}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Add\-Sint\-To\-Message} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint8}}]{data, }
+\item[{{\bf \-Eip\-Uint8} $\ast$$\ast$const}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_gae267a8684cc6ee1b3bd83df03260b7aa}
+
+
+converts \-U\-I\-N\-T8 data from host to little endian an writes it to buffer. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em data} & value to be written \\
+\hline
+{\em buffer} & pointer where data should be written. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 67 of file endianconv.\-c.
+
+
+
+\-Referenced by \-Encode\-Data(), \-Encode\-Data\-Item\-Data(), \-Encode\-Extended\-Status\-Length(), \-Encode\-General\-Status(), \-Encode\-Message\-Router\-Response\-Data(), \-Encode\-Reply\-Service(), and \-Encode\-Reserved\-Field\-Of\-Length\-Byte().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_gae267a8684cc6ee1b3bd83df03260b7aa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_gad61fa4f84989cf27086d57557ad552c4}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Assemble\-I\-O\-Message@{\-Assemble\-I\-O\-Message}}
+\index{\-Assemble\-I\-O\-Message@{\-Assemble\-I\-O\-Message}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Assemble\-I\-O\-Message}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Assemble\-I\-O\-Message} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Common\-Packet\-Format\-Data} $\ast$}]{common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, }
+\item[{{\bf \-Eip\-Uint8} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_gad61fa4f84989cf27086d57557ad552c4}
+\-Copy data from \-C\-P\-F\-Data\-Item into linear memory in message for transmission over in encapsulation. 
+\begin{DoxyParams}{\-Parameters}
+{\em message\-\_\-router\-\_\-response} & pointer to message router response which has to be aligned into linear memory. \\
+\hline
+{\em common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item} & pointer to \-C\-P\-F structure which has to be aligned into linear memory. \\
+\hline
+{\em message} & pointer to linear memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+length of reply in pa\-\_\-msg in bytes \-E\-I\-P\-\_\-\-E\-R\-R\-O\-R .. error 
+\end{DoxyReturn}
+
+
+\-Definition at line 680 of file cpf.\-c.
+
+
+
+\-References \-Assemble\-Linear\-Message(), and g\-\_\-message\-\_\-data\-\_\-reply\-\_\-buffer.
+
+
+
+\-Referenced by \-Send\-Connected\-Data().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_gad61fa4f84989cf27086d57557ad552c4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_gad61fa4f84989cf27086d57557ad552c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_gaa81c027561d86d2589b8002b36b88392}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Assemble\-Linear\-Message@{\-Assemble\-Linear\-Message}}
+\index{\-Assemble\-Linear\-Message@{\-Assemble\-Linear\-Message}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Assemble\-Linear\-Message}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Assemble\-Linear\-Message} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response, }
+\item[{{\bf \-Cip\-Common\-Packet\-Format\-Data} $\ast$}]{common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, }
+\item[{{\bf \-Eip\-Uint8} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_gaa81c027561d86d2589b8002b36b88392}
+
+
+\-Copy data from message\-\_\-router\-\_\-response struct and common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item into linear memory in pa\-\_\-msg for transmission over in encapsulation. 
+
+\-Copy data from \-M\-R\-Response struct and \-C\-P\-F\-Data\-Item into linear memory in message for transmission over in encapsulation. 
+\begin{DoxyParams}{\-Parameters}
+{\em message\-\_\-router\-\_\-response} & pointer to message router response which has to be aligned into linear memory. \\
+\hline
+{\em common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item} & pointer to \-C\-P\-F structure which has to be aligned into linear memory. \\
+\hline
+{\em message} & pointer to linear memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+length of reply in pa\-\_\-msg in bytes \-E\-I\-P\-\_\-\-E\-R\-R\-O\-R .. error
+\end{DoxyReturn}
+
+\begin{DoxyParams}{\-Parameters}
+{\em message\-\_\-router\-\_\-response} & pointer to message router response which has to be aligned into linear memory. \\
+\hline
+{\em common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item} & pointer to \-C\-P\-F structure which has to be aligned into linear memory. \\
+\hline
+{\em message} & pointer to linear memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+length of reply in message in bytes -\/1 .. error 
+\end{DoxyReturn}
+
+
+\-Definition at line 564 of file cpf.\-c.
+
+
+
+\-References \-Add\-Dint\-To\-Message(), \-Add\-Int\-To\-Message(), \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-info\-\_\-item, \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-item, \-Cip\-Common\-Packet\-Format\-Data\-::data\-\_\-item, \-Encapsulate\-Ip\-Address(), \-Encode\-Connected\-Address\-Item(), \-Encode\-Connected\-Data\-Item\-Length(), \-Encode\-Data\-Item\-Data(), \-Encode\-Data\-Item\-Length(), \-Encode\-Data\-Item\-Type(), \-Encode\-Extended\-Status(), \-Encode\-General\-Status(), \-Encode\-Item\-Count(), \-Encode\-Message\-Router\-Response\-Data(), \-Encode\-Null\-Address\-Item(), \-Encode\-Reply\-Service(), \-Encode\-Reserved\-Field\-Of\-Length\-Byte(), \-Encode\-Sequenced\-Address\-Item(), \-Encode\-Sequence\-Number(), \-Encode\-Sockaddr\-Info\-Item\-Type\-Id(), \-Encode\-Sockaddr\-Info\-Length(), \-Encode\-Unconnected\-Data\-Item\-Length(), \-Fill\-Next\-N\-Message\-Octets\-With\-Value\-And\-Move\-To\-Next\-Position(), k\-Cip\-Item\-Id\-Connected\-Data\-Item, k\-Cip\-Item\-Id\-Connection\-Address, k\-Cip\-Item\-Id\-Null\-Address, k\-Cip\-Item\-Id\-Sequenced\-Address\-Item, k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target, k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator, k\-Cip\-Item\-Id\-Unconnected\-Data\-Item, \-Socket\-Address\-Info\-Item\-::sin\-\_\-addr, \-Socket\-Address\-Info\-Item\-::sin\-\_\-port, \-Address\-Item\-::type\-\_\-id, \-Data\-Item\-::type\-\_\-id, and \-Socket\-Address\-Info\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Assemble\-I\-O\-Message(), \-Notify\-Common\-Packet\-Format(), and \-Notify\-Connected\-Common\-Packet\-Format().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_gaa81c027561d86d2589b8002b36b88392_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_gaa81c027561d86d2589b8002b36b88392_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_ga5fd76bfeb985480d68d6fd4d97129606}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Create\-Common\-Packet\-Format\-Structure@{\-Create\-Common\-Packet\-Format\-Structure}}
+\index{\-Create\-Common\-Packet\-Format\-Structure@{\-Create\-Common\-Packet\-Format\-Structure}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Create\-Common\-Packet\-Format\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Create\-Common\-Packet\-Format\-Structure} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint8} $\ast$}]{data, }
+\item[{int}]{data\-\_\-length, }
+\item[{{\bf \-Cip\-Common\-Packet\-Format\-Data} $\ast$}]{common\-\_\-packet\-\_\-format\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_ga5fd76bfeb985480d68d6fd4d97129606}
+
+
+\-Creates \-Common \-Packet \-Format structure out of data. 
+
+\-Create \-C\-P\-F structure out of the received data. 
+\begin{DoxyParams}{\-Parameters}
+{\em data} & pointer to data which need to be structured. \\
+\hline
+{\em data\-\_\-length} & length of data in pa\-\_\-\-Data. \\
+\hline
+{\em common\-\_\-packet\-\_\-format\-\_\-data} & pointer to structure of \-C\-P\-F data item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+status \-E\-I\-P\-\_\-\-O\-K .. success \-E\-I\-P\-\_\-\-E\-R\-R\-O\-R .. error
+\end{DoxyReturn}
+
+\begin{DoxyParams}{\-Parameters}
+{\em data} & \-Pointer to data which need to be structured. \\
+\hline
+{\em data\-\_\-length} & \-Length of data in pa\-\_\-\-Data. \\
+\hline
+{\em common\-\_\-packet\-\_\-format\-\_\-data} & \-Pointer to structure of \-C\-P\-F data item.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+k\-Eip\-Status\-Ok .. success k\-Eip\-Status\-Error .. error 
+\end{DoxyReturn}
+
+
+\-Definition at line 130 of file cpf.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-info\-\_\-item, \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-item, \-Address\-Data\-::connection\-\_\-identifier, \-Address\-Item\-::data, \-Data\-Item\-::data, \-Cip\-Common\-Packet\-Format\-Data\-::data\-\_\-item, \-Get\-Dint\-From\-Message(), \-Get\-Int\-From\-Message(), \-Cip\-Common\-Packet\-Format\-Data\-::item\-\_\-count, k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target, k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, \-Address\-Item\-::length, \-Data\-Item\-::length, \-Socket\-Address\-Info\-Item\-::length, \-Socket\-Address\-Info\-Item\-::nasin\-\_\-zero, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-W\-A\-R\-N, \-Address\-Data\-::sequence\-\_\-number, \-Socket\-Address\-Info\-Item\-::sin\-\_\-addr, \-Socket\-Address\-Info\-Item\-::sin\-\_\-family, \-Socket\-Address\-Info\-Item\-::sin\-\_\-port, \-Address\-Item\-::type\-\_\-id, \-Data\-Item\-::type\-\_\-id, and \-Socket\-Address\-Info\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Handle\-Received\-Connected\-Data(), \-Notify\-Common\-Packet\-Format(), and \-Notify\-Connected\-Common\-Packet\-Format().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga5fd76bfeb985480d68d6fd4d97129606_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga5fd76bfeb985480d68d6fd4d97129606_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_ga7a0dc2be6c485d9e6940d5b20a981022}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Encapsulation\-Init@{\-Encapsulation\-Init}}
+\index{\-Encapsulation\-Init@{\-Encapsulation\-Init}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Encapsulation\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encapsulation\-Init} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_ga7a0dc2be6c485d9e6940d5b20a981022}
+
+
+\-Initialize the encapsulation layer. 
+
+
+
+\-Definition at line 125 of file encap.\-c.
+
+
+
+\-References encapsulation\-\_\-interface\-\_\-information\-::capability\-\_\-flags, \-Determine\-Endianess(), \-E\-N\-C\-A\-P\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-\_\-\-E\-N\-C\-A\-P\-\_\-\-M\-E\-S\-S\-A\-G\-E\-S, encapsulation\-\_\-interface\-\_\-information\-::encapsulation\-\_\-protocol\-\_\-version, g\-\_\-interface\-\_\-information, g\-\_\-registered\-\_\-sessions, \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::ip\-\_\-address, k\-Capability\-Flags\-Cip\-Tcp, k\-Capability\-Flags\-Cip\-Udp\-Class0or1, k\-Cip\-Item\-Id\-List\-Service\-Response, encapsulation\-\_\-interface\-\_\-information\-::length, encapsulation\-\_\-interface\-\_\-information\-::name\-\_\-of\-\_\-service, \-O\-P\-E\-N\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-S\-E\-S\-S\-I\-O\-N\-S, \-Delayed\-Encapsulation\-Message\-::socket, and encapsulation\-\_\-interface\-\_\-information\-::type\-\_\-code.
+
+
+
+\-Referenced by \-Cip\-Stack\-Init().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{d4/d91/group__ENCAP_ga7a0dc2be6c485d9e6940d5b20a981022_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga7a0dc2be6c485d9e6940d5b20a981022_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_ga1261bd2441f744c38d7a3f8d8c16c391}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Encapsulation\-Shut\-Down@{\-Encapsulation\-Shut\-Down}}
+\index{\-Encapsulation\-Shut\-Down@{\-Encapsulation\-Shut\-Down}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Encapsulation\-Shut\-Down}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encapsulation\-Shut\-Down} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_ga1261bd2441f744c38d7a3f8d8c16c391}
+
+
+\-Shutdown the encapsulation layer. 
+
+\-This means that all open sessions including their sockets are closed. 
+
+\-Definition at line 632 of file encap.\-c.
+
+
+
+\-References g\-\_\-registered\-\_\-sessions, \-I\-App\-\_\-\-Close\-Socket\-\_\-tcp(), and \-O\-P\-E\-N\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-S\-E\-S\-S\-I\-O\-N\-S.
+
+
+
+\-Referenced by \-Shutdown\-Cip\-Stack().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga1261bd2441f744c38d7a3f8d8c16c391_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga1261bd2441f744c38d7a3f8d8c16c391_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_ga668f92389ee06510864585b97955f6f8}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Get\-Dint\-From\-Message@{\-Get\-Dint\-From\-Message}}
+\index{\-Get\-Dint\-From\-Message@{\-Get\-Dint\-From\-Message}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Get\-Dint\-From\-Message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint32} {\bf \-Get\-Dint\-From\-Message} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint8} $\ast$$\ast$const}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_ga668f92389ee06510864585b97955f6f8}
+
+
+\-Get an 32\-Bit integer from the network buffer. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buffer} & pointer to the network buffer array. \-This pointer will be incremented by 4! \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Extracted 32 bit integer value
+\end{DoxyReturn}
+\-Get an 32\-Bit integer from the network buffer.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buffer} & pointer where data should be reed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-E\-I\-P\-\_\-\-U\-NÍ\-T32 value 
+\end{DoxyReturn}
+
+
+\-Definition at line 55 of file endianconv.\-c.
+
+
+
+\-Referenced by \-Create\-Common\-Packet\-Format\-Structure(), \-Create\-Encapsulation\-Structure(), \-Decode\-Data(), \-Forward\-Close(), \-Forward\-Open(), \-Handle\-Received\-Io\-Connection\-Data(), \-Handle\-Received\-Send\-Request\-Response\-Data\-Command(), and \-Handle\-Received\-Send\-Unit\-Data\-Command().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga668f92389ee06510864585b97955f6f8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_ga70322f970709ca9c9a1a1d474cfe2302}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Get\-Int\-From\-Message@{\-Get\-Int\-From\-Message}}
+\index{\-Get\-Int\-From\-Message@{\-Get\-Int\-From\-Message}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Get\-Int\-From\-Message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint16} {\bf \-Get\-Int\-From\-Message} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint8} $\ast$$\ast$const}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_ga70322f970709ca9c9a1a1d474cfe2302}
+
+
+\-Get an 16\-Bit integer from the network buffer, and moves pointer beyond the 16 bit value. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buffer} & \-Pointer to the network buffer array. \-This pointer will be incremented by 2! \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Extracted 16 bit integer value
+\end{DoxyReturn}
+\-Get an 16\-Bit integer from the network buffer, and moves pointer beyond the 16 bit value.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buffer} & pointer where data should be reed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-E\-I\-P\-\_\-\-U\-I\-N\-T16 data value 
+\end{DoxyReturn}
+
+
+\-Definition at line 43 of file endianconv.\-c.
+
+
+
+\-Referenced by \-Create\-Common\-Packet\-Format\-Structure(), \-Create\-Encapsulation\-Structure(), \-Decode\-Data(), \-Decode\-Padded\-E\-Path(), \-Determine\-Delay\-Time(), \-Forward\-Close(), \-Forward\-Open(), \-Handle\-Data\-On\-Tcp\-Socket(), \-Handle\-Received\-Io\-Connection\-Data(), \-Handle\-Received\-Register\-Session\-Command(), \-Handle\-Received\-Send\-Request\-Response\-Data\-Command(), \-Handle\-Received\-Send\-Unit\-Data\-Command(), \-Notify\-Connected\-Common\-Packet\-Format(), and \-Parse\-Connection\-Path().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga70322f970709ca9c9a1a1d474cfe2302_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_ga0a45608ad12bae48152cb1cfafef1a4c}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Get\-Sint\-From\-Message@{\-Get\-Sint\-From\-Message}}
+\index{\-Get\-Sint\-From\-Message@{\-Get\-Sint\-From\-Message}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Get\-Sint\-From\-Message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint8} {\bf \-Get\-Sint\-From\-Message} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint8} $\ast$$\ast$const}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_ga0a45608ad12bae48152cb1cfafef1a4c}
+
+
+\-Reads \-E\-I\-P\-\_\-\-U\-I\-N\-T8 from $\ast$buffer and converts little endian to host. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buffer} & pointer where data should be reed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-E\-I\-P\-\_\-\-U\-I\-N\-T8 data value 
+\end{DoxyReturn}
+
+
+\-Definition at line 29 of file endianconv.\-c.
+
+\hypertarget{group__ENCAP_ga3b9c0d7d9d1413e4cd8ca5634b4bc9ac}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Manage\-Encapsulation\-Messages@{\-Manage\-Encapsulation\-Messages}}
+\index{\-Manage\-Encapsulation\-Messages@{\-Manage\-Encapsulation\-Messages}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Manage\-Encapsulation\-Messages}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Manage\-Encapsulation\-Messages} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Milli\-Seconds}}]{elapsed\-\_\-time}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_ga3b9c0d7d9d1413e4cd8ca5634b4bc9ac}
+
+
+\-Handle delayed encapsulation message responses. 
+
+\-Certain encapsulation message requests require a delayed sending of the response message. \-This functions checks if messages need to be sent and performs the sending. 
+
+\-Definition at line 641 of file encap.\-c.
+
+
+
+\-References \-E\-N\-C\-A\-P\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-\_\-\-E\-N\-C\-A\-P\-\_\-\-M\-E\-S\-S\-A\-G\-E\-S, \-Send\-Udp\-Data(), \-Delayed\-Encapsulation\-Message\-::socket, and \-Delayed\-Encapsulation\-Message\-::time\-\_\-out.
+
+
+
+\-Referenced by \-Manage\-Connections().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga3b9c0d7d9d1413e4cd8ca5634b4bc9ac_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga3b9c0d7d9d1413e4cd8ca5634b4bc9ac_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_ga401f152f47e54b0a6dddcfe723c086f9}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Notify\-Common\-Packet\-Format@{\-Notify\-Common\-Packet\-Format}}
+\index{\-Notify\-Common\-Packet\-Format@{\-Notify\-Common\-Packet\-Format}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Notify\-Common\-Packet\-Format}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Notify\-Common\-Packet\-Format} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Encapsulation\-Data} $\ast$const}]{received\-\_\-data, }
+\item[{{\bf \-Eip\-Uint8} $\ast$const}]{reply\-\_\-buffer}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_ga401f152f47e54b0a6dddcfe723c086f9}
+\-Parse the \-C\-P\-F data from a received unconnected explicit message and hand the data on to the message router
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em received\-\_\-data} & pointer to the encapsulation structure with the received message \\
+\hline
+{\em reply\-\_\-buffer} & reply buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+number of bytes to be sent back. $<$ 0 if nothing should be sent 
+\end{DoxyReturn}
+
+
+\-Definition at line 25 of file cpf.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-item, \-Assemble\-Linear\-Message(), \-Create\-Common\-Packet\-Format\-Structure(), encapsulation\-\_\-data\-::current\-\_\-communication\-\_\-buffer\-\_\-position, \-Data\-Item\-::data, \-Cip\-Common\-Packet\-Format\-Data\-::data\-\_\-item, encapsulation\-\_\-data\-::data\-\_\-length, g\-\_\-message\-\_\-router\-\_\-response, k\-Cip\-Item\-Id\-Null\-Address, k\-Cip\-Item\-Id\-Unconnected\-Data\-Item, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Encapsulation\-Protocol\-Incorrect\-Data, \-Data\-Item\-::length, \-Notify\-Message\-Router(), \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, encapsulation\-\_\-data\-::status, \-Address\-Item\-::type\-\_\-id, and \-Data\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Handle\-Received\-Send\-Request\-Response\-Data\-Command().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga401f152f47e54b0a6dddcfe723c086f9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga401f152f47e54b0a6dddcfe723c086f9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__ENCAP_ga045feac9b8747e049e2420df1ec0844b}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!\-Notify\-Connected\-Common\-Packet\-Format@{\-Notify\-Connected\-Common\-Packet\-Format}}
+\index{\-Notify\-Connected\-Common\-Packet\-Format@{\-Notify\-Connected\-Common\-Packet\-Format}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{\-Notify\-Connected\-Common\-Packet\-Format}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Notify\-Connected\-Common\-Packet\-Format} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Encapsulation\-Data} $\ast$}]{received\-\_\-data, }
+\item[{{\bf \-Eip\-Uint8} $\ast$}]{reply\-\_\-buffer}
+\end{DoxyParamCaption}
+)}}\label{d4/d91/group__ENCAP_ga045feac9b8747e049e2420df1ec0844b}
+\-Parse the \-C\-P\-F data from a received connected explicit message, check the connection status, update any timers, and hand the data on to the message router
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em received\-\_\-data} & pointer to the encapsulation structure with the received message \\
+\hline
+{\em reply\-\_\-buffer} & reply buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+number of bytes to be sent back. $<$ 0 if nothing should be sent 
+\end{DoxyReturn}
+
+
+\-Definition at line 64 of file cpf.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-item, \-Assemble\-Linear\-Message(), \-Address\-Data\-::connection\-\_\-identifier, connection\-\_\-object\-::connection\-\_\-timeout\-\_\-multiplier, \-Create\-Common\-Packet\-Format\-Structure(), encapsulation\-\_\-data\-::current\-\_\-communication\-\_\-buffer\-\_\-position, \-Address\-Item\-::data, \-Data\-Item\-::data, \-Cip\-Common\-Packet\-Format\-Data\-::data\-\_\-item, encapsulation\-\_\-data\-::data\-\_\-length, g\-\_\-message\-\_\-router\-\_\-response, \-Get\-Connected\-Object(), \-Get\-Int\-From\-Message(), connection\-\_\-object\-::inactivity\-\_\-watchdog\-\_\-timer, k\-Cip\-Item\-Id\-Connected\-Data\-Item, k\-Cip\-Item\-Id\-Connection\-Address, k\-Eip\-Status\-Error, \-Data\-Item\-::length, \-Notify\-Message\-Router(), connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-requested\-\_\-packet\-\_\-interval, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, connection\-\_\-object\-::produced\-\_\-connection\-\_\-id, \-Address\-Data\-::sequence\-\_\-number, \-Address\-Item\-::type\-\_\-id, and \-Data\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Handle\-Received\-Send\-Unit\-Data\-Command().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga045feac9b8747e049e2420df1ec0844b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d91/group__ENCAP_ga045feac9b8747e049e2420df1ec0844b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{group__ENCAP_gafaae5be8de81c633ea4df46fa8b957e0}{\index{\-Op\-E\-Ner Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}!g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item@{g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item}}
+\index{g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item@{g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item}!OpENer Ethernet encapsulation layer@{\-Op\-E\-Ner Ethernet encapsulation layer}}
+\subsubsection[{g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Common\-Packet\-Format\-Data} {\bf g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item}}}\label{d4/d91/group__ENCAP_gafaae5be8de81c633ea4df46fa8b957e0}
+
+
+\-Data storage for the any \-C\-P\-F data \-Currently we are single threaded and need only one \-C\-P\-F at the time. \-For future extensions towards multithreading maybe more \-C\-P\-F data items may be necessary. 
+
+\-C\-P\-F global data items 
+
+\-Definition at line 23 of file cpf.\-c.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), \-Assemble\-Forward\-Open\-Response(), \-Forward\-Close(), \-Handle\-Received\-Connected\-Data(), \-Open\-Communication\-Channels(), \-Open\-Multicast\-Connection(), \-Open\-Producing\-Multicast\-Connection(), and \-Send\-Connected\-Data().
+

@@ -1,0 +1,549 @@
+\hypertarget{appcontype_8c}{\section{src/cip/appcontype.c \-File \-Reference}
+\label{d1/dbc/appcontype_8c}\index{src/cip/appcontype.\-c@{src/cip/appcontype.\-c}}
+}
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include \char`\"{}appcontype.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipconnectionmanager.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}opener\-\_\-api.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}assert.\-h\char`\"{}}\*
+\-Include dependency graph for appcontype.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d67/appcontype_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structExclusiveOwnerConnection}{\-Exclusive\-Owner\-Connection}
+\begin{DoxyCompactList}\small\item\em \-Exclusive \-Owner connection data. \end{DoxyCompactList}\item 
+struct \hyperlink{structInputOnlyConnection}{\-Input\-Only\-Connection}
+\begin{DoxyCompactList}\small\item\em \-Input \-Only connection data. \end{DoxyCompactList}\item 
+struct \hyperlink{structListenOnlyConnection}{\-Listen\-Only\-Connection}
+\begin{DoxyCompactList}\small\item\em \-Listen \-Only connection data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{appcontype_8c_a18d2a32030faf1d5e3d48e610b1c4fe7}{\-Close\-All\-Connections} (void)
+\item 
+void \hyperlink{appcontype_8c_a67233ebfb6ba7952669a197a4cf21126}{\-Close\-All\-Connections\-For\-Input\-With\-Same\-Type} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} input\-\_\-point, const \hyperlink{cipconnectionmanager_8h_aa1f0e2efd52935fd01bfece0fbead81f}{\-Connection\-Type} instance\-\_\-type)
+\begin{DoxyCompactList}\small\item\em \-Close all connection producing the same input and have the same type (i.\-e., listen only or input only). \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gad1826555a5a2c522bfd98496f31c7ab2}{\-Configure\-Exclusive\-Owner\-Connection\-Point} (const unsigned int connection\-\_\-number, const unsigned int output\-\_\-assembly, const unsigned int input\-\_\-assembly, const unsigned int config\-\_\-assembly)
+\begin{DoxyCompactList}\small\item\em \-Configures the connection point for an exclusive owner connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga1f81ca8040f02503c8374288a1453f52}{\-Configure\-Input\-Only\-Connection\-Point} (const unsigned int connection\-\_\-number, const unsigned int output\-\_\-assembly, const unsigned int input\-\_\-assembly, const unsigned int config\-\_\-assembly)
+\begin{DoxyCompactList}\small\item\em \-Configures the connection point for an input only connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga0ffe2fb2fa68e86bd2c0b3a94d7ad9bb}{\-Configure\-Listen\-Only\-Connection\-Point} (const unsigned int connection\-\_\-number, const unsigned int output\-\_\-assembly, const unsigned int input\-\_\-assembly, const unsigned int config\-\_\-assembly)
+\begin{DoxyCompactList}\small\item\em \-Configures the connection point for a listen only connection. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_ab1d6967e091c10c240b250db768e78bc}{\-Eip\-Bool8} \hyperlink{appcontype_8c_aea7e180dc280ec82f06282864f84097a}{\-Connection\-With\-Same\-Config\-Point\-Exists} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} config\-\_\-point)
+\begin{DoxyCompactList}\small\item\em \-Check if there is an established connection that uses the same config point. \end{DoxyCompactList}\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{appcontype_8c_a09043b60a3c5bd705e4779c41557aa0a}{\-Get\-Exclusive\-Owner\-Connection} (const \hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T \hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} $\ast$const extended\-\_\-error)
+\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{appcontype_8c_a7b838b128170044eb0d81371c9f0bb49}{\-Get\-Existing\-Producer\-Multicast\-Connection} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} input\-\_\-point)
+\begin{DoxyCompactList}\small\item\em \-Check if there exists already an exclusive owner or listen only connection which produces the input assembly. \end{DoxyCompactList}\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{appcontype_8c_a4cce729a764df6a4dcf3c34d53fceeed}{\-Get\-Input\-Only\-Connection} (const \hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T \hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} $\ast$const extended\-\_\-error)
+\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{appcontype_8c_a078777f6becb5dd5b858811b546dc523}{\-Get\-Io\-Connection\-For\-Connection\-Data} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T \hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} $\ast$const extended\-\_\-error)
+\begin{DoxyCompactList}\small\item\em check if for the given connection data received in a forward\-\_\-open request a suitable connection is available. \end{DoxyCompactList}\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{appcontype_8c_afcd4cb55ba33a5416c0498848cdb2f87}{\-Get\-Listen\-Only\-Connection} (const \hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T \hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} $\ast$const extended\-\_\-error)
+\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{appcontype_8c_a1cbf4348c1bb5f1949d7ed38c58b2f27}{\-Get\-Next\-Non\-Control\-Master\-Connection} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} input\-\_\-point)
+\begin{DoxyCompactList}\small\item\em check if there exists an producing multicast exclusive owner or listen only connection that should produce the same input but is not in charge of the connection. \end{DoxyCompactList}\item 
+void \hyperlink{appcontype_8c_a89ebedc457f26c4e845f60f3e6fb8155}{\-Initialize\-Io\-Connection\-Data} (void)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{appcontype_8c_a1fb6f4a00ea5c96694050b5be4e2501c}{g\-\_\-active\-\_\-connection\-\_\-list}
+\begin{DoxyCompactList}\small\item\em \-External globals needed from connectionmanager.\-c. \end{DoxyCompactList}\item 
+\hyperlink{structExclusiveOwnerConnection}{\-Exclusive\-Owner\-Connection} \hyperlink{appcontype_8c_a0e71f6047f6aa7bcf9bd8db00d64b0e3}{g\-\_\-exlusive\-\_\-owner\-\_\-connections} \mbox{[}\hyperlink{WIN32_2sample__application_2opener__user__conf_8h_adc6d3a58031ec407b84b09ec5643294a}{\-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-E\-X\-L\-U\-S\-I\-V\-E\-\_\-\-O\-W\-N\-E\-R\-\_\-\-C\-O\-N\-N\-S}\mbox{]}
+\item 
+\hyperlink{structInputOnlyConnection}{\-Input\-Only\-Connection} \hyperlink{appcontype_8c_a0f799622e0928bbaf7f95d2a9dc57d42}{g\-\_\-input\-\_\-only\-\_\-connections} \mbox{[}\hyperlink{WIN32_2sample__application_2opener__user__conf_8h_ae7106755b220189093132abc4da3857b}{\-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-I\-N\-P\-U\-T\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S}\mbox{]}
+\item 
+\hyperlink{structListenOnlyConnection}{\-Listen\-Only\-Connection} \hyperlink{appcontype_8c_aad35fef999972a5a776bb095bc1daaa2}{g\-\_\-listen\-\_\-only\-\_\-connections} \mbox{[}\hyperlink{WIN32_2sample__application_2opener__user__conf_8h_a7ae463e5cb0f1deb77060bb14eb8816a}{\-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-L\-I\-S\-T\-E\-N\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{appcontype_8c_a18d2a32030faf1d5e3d48e610b1c4fe7}{\index{appcontype.\-c@{appcontype.\-c}!\-Close\-All\-Connections@{\-Close\-All\-Connections}}
+\index{\-Close\-All\-Connections@{\-Close\-All\-Connections}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Close\-All\-Connections}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Close\-All\-Connections} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_a18d2a32030faf1d5e3d48e610b1c4fe7}
+@ brief close all open connections.
+
+\-For \-I/\-O connections the sockets will be freed. \-The sockets for explicit connections are handled by the encapsulation layer, and freed there. 
+
+\-Definition at line 330 of file appcontype.\-c.
+
+
+
+\-References \-Close\-Connection(), connection\-\_\-object\-::connection\-\_\-close\-\_\-function, and g\-\_\-active\-\_\-connection\-\_\-list.
+
+
+
+\-Referenced by \-Shutdown\-Cip\-Stack().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a18d2a32030faf1d5e3d48e610b1c4fe7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a18d2a32030faf1d5e3d48e610b1c4fe7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{appcontype_8c_a67233ebfb6ba7952669a197a4cf21126}{\index{appcontype.\-c@{appcontype.\-c}!\-Close\-All\-Connections\-For\-Input\-With\-Same\-Type@{\-Close\-All\-Connections\-For\-Input\-With\-Same\-Type}}
+\index{\-Close\-All\-Connections\-For\-Input\-With\-Same\-Type@{\-Close\-All\-Connections\-For\-Input\-With\-Same\-Type}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Close\-All\-Connections\-For\-Input\-With\-Same\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Close\-All\-Connections\-For\-Input\-With\-Same\-Type} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{input\-\_\-point, }
+\item[{const {\bf \-Connection\-Type}}]{instance\-\_\-type}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_a67233ebfb6ba7952669a197a4cf21126}
+
+
+\-Close all connection producing the same input and have the same type (i.\-e., listen only or input only). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em input\-\_\-point} & the input point \\
+\hline
+{\em instance\-\_\-type} & the connection application type \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 308 of file appcontype.\-c.
+
+
+
+\-References \-Check\-Io\-Connection\-Event(), connection\-\_\-object\-::connection\-\_\-close\-\_\-function, connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, g\-\_\-active\-\_\-connection\-\_\-list, connection\-\_\-object\-::instance\-\_\-type, k\-Io\-Connection\-Event\-Closed, and connection\-\_\-object\-::next\-\_\-connection\-\_\-object.
+
+
+
+\-Referenced by \-Close\-Io\-Connection(), and \-Handle\-Io\-Connection\-Time\-Out().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a67233ebfb6ba7952669a197a4cf21126_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a67233ebfb6ba7952669a197a4cf21126_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{appcontype_8c_aea7e180dc280ec82f06282864f84097a}{\index{appcontype.\-c@{appcontype.\-c}!\-Connection\-With\-Same\-Config\-Point\-Exists@{\-Connection\-With\-Same\-Config\-Point\-Exists}}
+\index{\-Connection\-With\-Same\-Config\-Point\-Exists@{\-Connection\-With\-Same\-Config\-Point\-Exists}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Connection\-With\-Same\-Config\-Point\-Exists}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Bool8} {\bf \-Connection\-With\-Same\-Config\-Point\-Exists} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{config\-\_\-point}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_aea7e180dc280ec82f06282864f84097a}
+
+
+\-Check if there is an established connection that uses the same config point. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em config\-\_\-point} & \-The configuration point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+true if connection was found, otherwise false 
+\end{DoxyReturn}
+
+
+\-Definition at line 343 of file appcontype.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, g\-\_\-active\-\_\-connection\-\_\-list, and connection\-\_\-object\-::next\-\_\-connection\-\_\-object.
+
+
+
+\-Referenced by \-Handle\-Config\-Data().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_aea7e180dc280ec82f06282864f84097a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{appcontype_8c_a09043b60a3c5bd705e4779c41557aa0a}{\index{appcontype.\-c@{appcontype.\-c}!\-Get\-Exclusive\-Owner\-Connection@{\-Get\-Exclusive\-Owner\-Connection}}
+\index{\-Get\-Exclusive\-Owner\-Connection@{\-Get\-Exclusive\-Owner\-Connection}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Get\-Exclusive\-Owner\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object} $\ast$ {\bf \-Get\-Exclusive\-Owner\-Connection} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T}]{connection\-\_\-object, }
+\item[{{\bf \-Eip\-Uint16} $\ast$const}]{extended\-\_\-error}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_a09043b60a3c5bd705e4779c41557aa0a}
+
+
+\-Definition at line 138 of file appcontype.\-c.
+
+
+
+\-References \-Exclusive\-Owner\-Connection\-::config\-\_\-assembly, \-Exclusive\-Owner\-Connection\-::connection\-\_\-data, \-Get\-Connected\-Output\-Assembly(), \-Exclusive\-Owner\-Connection\-::input\-\_\-assembly, k\-Connection\-Manager\-Status\-Code\-Error\-Ownership\-Conflict, and \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-E\-X\-L\-U\-S\-I\-V\-E\-\_\-\-O\-W\-N\-E\-R\-\_\-\-C\-O\-N\-N\-S.
+
+
+
+\-Referenced by \-Get\-Io\-Connection\-For\-Connection\-Data().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a09043b60a3c5bd705e4779c41557aa0a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a09043b60a3c5bd705e4779c41557aa0a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{appcontype_8c_a7b838b128170044eb0d81371c9f0bb49}{\index{appcontype.\-c@{appcontype.\-c}!\-Get\-Existing\-Producer\-Multicast\-Connection@{\-Get\-Existing\-Producer\-Multicast\-Connection}}
+\index{\-Get\-Existing\-Producer\-Multicast\-Connection@{\-Get\-Existing\-Producer\-Multicast\-Connection}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Get\-Existing\-Producer\-Multicast\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object}$\ast$ {\bf \-Get\-Existing\-Producer\-Multicast\-Connection} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{input\-\_\-point}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_a7b838b128170044eb0d81371c9f0bb49}
+
+
+\-Check if there exists already an exclusive owner or listen only connection which produces the input assembly. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em input\-\_\-point} & the \-Input point to be produced \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+if a connection could be found a pointer to this connection if not \-N\-U\-L\-L 
+\end{DoxyReturn}
+
+
+\-Definition at line 250 of file appcontype.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, g\-\_\-active\-\_\-connection\-\_\-list, connection\-\_\-object\-::instance\-\_\-type, k\-Connection\-Type\-Io\-Exclusive\-Owner, k\-Connection\-Type\-Io\-Input\-Only, k\-Routing\-Type\-Multicast\-Connection, k\-Udp\-Communcation\-Direction\-Producing, connection\-\_\-object\-::next\-\_\-connection\-\_\-object, connection\-\_\-object\-::socket, and connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-network\-\_\-connection\-\_\-parameter.
+
+
+
+\-Referenced by \-Get\-Listen\-Only\-Connection(), and \-Open\-Producing\-Multicast\-Connection().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a7b838b128170044eb0d81371c9f0bb49_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{appcontype_8c_a4cce729a764df6a4dcf3c34d53fceeed}{\index{appcontype.\-c@{appcontype.\-c}!\-Get\-Input\-Only\-Connection@{\-Get\-Input\-Only\-Connection}}
+\index{\-Get\-Input\-Only\-Connection@{\-Get\-Input\-Only\-Connection}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Get\-Input\-Only\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object} $\ast$ {\bf \-Get\-Input\-Only\-Connection} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Connection\-Object} $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T}]{connection\-\_\-object, }
+\item[{{\bf \-Eip\-Uint16} $\ast$const}]{extended\-\_\-error}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_a4cce729a764df6a4dcf3c34d53fceeed}
+
+
+\-Definition at line 165 of file appcontype.\-c.
+
+
+
+\-References \-Input\-Only\-Connection\-::connection\-\_\-data, k\-Connection\-Manager\-Status\-Code\-Inconsistent\-Application\-Path\-Combo, k\-Connection\-Manager\-Status\-Code\-Invalid\-Producing\-Application\-Path, k\-Connection\-Manager\-Status\-Code\-Target\-Object\-Out\-Of\-Connections, k\-Connection\-State\-Non\-Existent, \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-I\-N\-P\-U\-T\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S, and \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-I\-N\-P\-U\-T\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S\-\_\-\-P\-E\-R\-\_\-\-C\-O\-N\-\_\-\-P\-A\-T\-H.
+
+
+
+\-Referenced by \-Get\-Io\-Connection\-For\-Connection\-Data().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a4cce729a764df6a4dcf3c34d53fceeed_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{appcontype_8c_a078777f6becb5dd5b858811b546dc523}{\index{appcontype.\-c@{appcontype.\-c}!\-Get\-Io\-Connection\-For\-Connection\-Data@{\-Get\-Io\-Connection\-For\-Connection\-Data}}
+\index{\-Get\-Io\-Connection\-For\-Connection\-Data@{\-Get\-Io\-Connection\-For\-Connection\-Data}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Get\-Io\-Connection\-For\-Connection\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object}$\ast$ {\bf \-Get\-Io\-Connection\-For\-Connection\-Data} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T}]{connection\-\_\-object, }
+\item[{{\bf \-Eip\-Uint16} $\ast$const}]{extended\-\_\-error}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_a078777f6becb5dd5b858811b546dc523}
+
+
+check if for the given connection data received in a forward\-\_\-open request a suitable connection is available. 
+
+\-If a suitable connection is found the connection data is transfered the application connection type is set (i.\-e., \-E\-Conn\-Type). 
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & connection data to be used \\
+\hline
+{\em extended\-\_\-error} & pointer to the extended\-\_\-error variable, if an error occurred this value has the according error code for the response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\begin{DoxyItemize}
+\item on success\-: \-A pointer to the connection object already containing the connection data given in \hyperlink{structconnection__object}{connection\-\_\-object}.
+\item on error\-: \-N\-U\-L\-L 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+\-Definition at line 98 of file appcontype.\-c.
+
+
+
+\-References \-Copy\-Connection\-Data(), \-Get\-Exclusive\-Owner\-Connection(), \-Get\-Input\-Only\-Connection(), \-Get\-Listen\-Only\-Connection(), k\-Connection\-Manager\-Status\-Code\-Inconsistent\-Application\-Path\-Combo, k\-Connection\-Type\-Io\-Exclusive\-Owner, k\-Connection\-Type\-Io\-Input\-Only, and k\-Connection\-Type\-Io\-Listen\-Only.
+
+
+
+\-Referenced by \-Establish\-Io\-Connction().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a078777f6becb5dd5b858811b546dc523_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a078777f6becb5dd5b858811b546dc523_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{appcontype_8c_afcd4cb55ba33a5416c0498848cdb2f87}{\index{appcontype.\-c@{appcontype.\-c}!\-Get\-Listen\-Only\-Connection@{\-Get\-Listen\-Only\-Connection}}
+\index{\-Get\-Listen\-Only\-Connection@{\-Get\-Listen\-Only\-Connection}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Get\-Listen\-Only\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object} $\ast$ {\bf \-Get\-Listen\-Only\-Connection} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Connection\-Object} $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T}]{connection\-\_\-object, }
+\item[{{\bf \-Eip\-Uint16} $\ast$const}]{extended\-\_\-error}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_afcd4cb55ba33a5416c0498848cdb2f87}
+
+
+\-Definition at line 199 of file appcontype.\-c.
+
+
+
+\-References \-Listen\-Only\-Connection\-::connection\-\_\-data, \-Get\-Existing\-Producer\-Multicast\-Connection(), k\-Connection\-Manager\-Status\-Code\-Inconsistent\-Application\-Path\-Combo, k\-Connection\-Manager\-Status\-Code\-Invalid\-Producing\-Application\-Path, k\-Connection\-Manager\-Status\-Code\-Non\-Listen\-Only\-Connection\-Not\-Opened, k\-Connection\-Manager\-Status\-Code\-Target\-Object\-Out\-Of\-Connections, k\-Connection\-State\-Non\-Existent, k\-Routing\-Type\-Multicast\-Connection, \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-L\-I\-S\-T\-E\-N\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S, and \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-L\-I\-S\-T\-E\-N\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S\-\_\-\-P\-E\-R\-\_\-\-C\-O\-N\-\_\-\-P\-A\-T\-H.
+
+
+
+\-Referenced by \-Get\-Io\-Connection\-For\-Connection\-Data().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_afcd4cb55ba33a5416c0498848cdb2f87_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_afcd4cb55ba33a5416c0498848cdb2f87_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{appcontype_8c_a1cbf4348c1bb5f1949d7ed38c58b2f27}{\index{appcontype.\-c@{appcontype.\-c}!\-Get\-Next\-Non\-Control\-Master\-Connection@{\-Get\-Next\-Non\-Control\-Master\-Connection}}
+\index{\-Get\-Next\-Non\-Control\-Master\-Connection@{\-Get\-Next\-Non\-Control\-Master\-Connection}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Get\-Next\-Non\-Control\-Master\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object}$\ast$ {\bf \-Get\-Next\-Non\-Control\-Master\-Connection} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{input\-\_\-point}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_a1cbf4348c1bb5f1949d7ed38c58b2f27}
+
+
+check if there exists an producing multicast exclusive owner or listen only connection that should produce the same input but is not in charge of the connection. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em input\-\_\-point} & the produced input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+if a connection could be found the pointer to this connection otherwise \-N\-U\-L\-L. 
+\end{DoxyReturn}
+
+
+\-Definition at line 278 of file appcontype.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, g\-\_\-active\-\_\-connection\-\_\-list, connection\-\_\-object\-::instance\-\_\-type, k\-Connection\-Type\-Io\-Exclusive\-Owner, k\-Connection\-Type\-Io\-Input\-Only, k\-Routing\-Type\-Multicast\-Connection, k\-Udp\-Communcation\-Direction\-Producing, connection\-\_\-object\-::next\-\_\-connection\-\_\-object, connection\-\_\-object\-::socket, and connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-network\-\_\-connection\-\_\-parameter.
+
+
+
+\-Referenced by \-Close\-Io\-Connection(), and \-Handle\-Io\-Connection\-Time\-Out().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a1cbf4348c1bb5f1949d7ed38c58b2f27_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{appcontype_8c_a89ebedc457f26c4e845f60f3e6fb8155}{\index{appcontype.\-c@{appcontype.\-c}!\-Initialize\-Io\-Connection\-Data@{\-Initialize\-Io\-Connection\-Data}}
+\index{\-Initialize\-Io\-Connection\-Data@{\-Initialize\-Io\-Connection\-Data}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{\-Initialize\-Io\-Connection\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Initialize\-Io\-Connection\-Data} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d1/dbc/appcontype_8c_a89ebedc457f26c4e845f60f3e6fb8155}
+
+
+\-Definition at line 355 of file appcontype.\-c.
+
+
+
+\-References \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-E\-X\-L\-U\-S\-I\-V\-E\-\_\-\-O\-W\-N\-E\-R\-\_\-\-C\-O\-N\-N\-S, \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-I\-N\-P\-U\-T\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S, and \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-L\-I\-S\-T\-E\-N\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S.
+
+
+
+\-Referenced by \-Initialize\-Connection\-Manager\-Data().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dbc/appcontype_8c_a89ebedc457f26c4e845f60f3e6fb8155_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{appcontype_8c_a1fb6f4a00ea5c96694050b5be4e2501c}{\index{appcontype.\-c@{appcontype.\-c}!g\-\_\-active\-\_\-connection\-\_\-list@{g\-\_\-active\-\_\-connection\-\_\-list}}
+\index{g\-\_\-active\-\_\-connection\-\_\-list@{g\-\_\-active\-\_\-connection\-\_\-list}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{g\-\_\-active\-\_\-connection\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object}$\ast$ {\bf g\-\_\-active\-\_\-connection\-\_\-list}}}\label{d1/dbc/appcontype_8c_a1fb6f4a00ea5c96694050b5be4e2501c}
+
+
+\-External globals needed from connectionmanager.\-c. 
+
+\-List holding all currently active connections 
+
+\-Definition at line 56 of file cipconnectionmanager.\-c.
+
+
+
+\-Referenced by \-Add\-New\-Active\-Connection(), \-Check\-And\-Handle\-Consuming\-Udp\-Sockets(), \-Check\-For\-Existing\-Connection(), \-Close\-All\-Connections(), \-Close\-All\-Connections\-For\-Input\-With\-Same\-Type(), \-Connection\-With\-Same\-Config\-Point\-Exists(), \-Forward\-Close(), \-Get\-Connected\-Object(), \-Get\-Connected\-Output\-Assembly(), \-Get\-Existing\-Producer\-Multicast\-Connection(), \-Get\-Next\-Non\-Control\-Master\-Connection(), \-Is\-Connected\-Output\-Assembly(), \-Manage\-Connections(), and \-Trigger\-Connections().
+
+\hypertarget{appcontype_8c_a0e71f6047f6aa7bcf9bd8db00d64b0e3}{\index{appcontype.\-c@{appcontype.\-c}!g\-\_\-exlusive\-\_\-owner\-\_\-connections@{g\-\_\-exlusive\-\_\-owner\-\_\-connections}}
+\index{g\-\_\-exlusive\-\_\-owner\-\_\-connections@{g\-\_\-exlusive\-\_\-owner\-\_\-connections}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{g\-\_\-exlusive\-\_\-owner\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Exclusive\-Owner\-Connection} {\bf g\-\_\-exlusive\-\_\-owner\-\_\-connections}\mbox{[}{\bf \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-E\-X\-L\-U\-S\-I\-V\-E\-\_\-\-O\-W\-N\-E\-R\-\_\-\-C\-O\-N\-N\-S}\mbox{]}}}\label{d1/dbc/appcontype_8c_a0e71f6047f6aa7bcf9bd8db00d64b0e3}
+\-Exclusive \-Owner connections 
+
+\-Definition at line 42 of file appcontype.\-c.
+
+\hypertarget{appcontype_8c_a0f799622e0928bbaf7f95d2a9dc57d42}{\index{appcontype.\-c@{appcontype.\-c}!g\-\_\-input\-\_\-only\-\_\-connections@{g\-\_\-input\-\_\-only\-\_\-connections}}
+\index{g\-\_\-input\-\_\-only\-\_\-connections@{g\-\_\-input\-\_\-only\-\_\-connections}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{g\-\_\-input\-\_\-only\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Input\-Only\-Connection} {\bf g\-\_\-input\-\_\-only\-\_\-connections}\mbox{[}{\bf \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-I\-N\-P\-U\-T\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S}\mbox{]}}}\label{d1/dbc/appcontype_8c_a0f799622e0928bbaf7f95d2a9dc57d42}
+\-Input \-Only connections 
+
+\-Definition at line 44 of file appcontype.\-c.
+
+\hypertarget{appcontype_8c_aad35fef999972a5a776bb095bc1daaa2}{\index{appcontype.\-c@{appcontype.\-c}!g\-\_\-listen\-\_\-only\-\_\-connections@{g\-\_\-listen\-\_\-only\-\_\-connections}}
+\index{g\-\_\-listen\-\_\-only\-\_\-connections@{g\-\_\-listen\-\_\-only\-\_\-connections}!appcontype.c@{appcontype.\-c}}
+\subsubsection[{g\-\_\-listen\-\_\-only\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Listen\-Only\-Connection} {\bf g\-\_\-listen\-\_\-only\-\_\-connections}\mbox{[}{\bf \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-L\-I\-S\-T\-E\-N\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S}\mbox{]}}}\label{d1/dbc/appcontype_8c_aad35fef999972a5a776bb095bc1daaa2}
+\-Listen \-Only connections 
+
+\-Definition at line 46 of file appcontype.\-c.
+

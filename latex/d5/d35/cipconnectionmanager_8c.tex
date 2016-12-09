@@ -1,0 +1,1223 @@
+\hypertarget{cipconnectionmanager_8c}{\section{src/cip/cipconnectionmanager.c \-File \-Reference}
+\label{d5/d35/cipconnectionmanager_8c}\index{src/cip/cipconnectionmanager.\-c@{src/cip/cipconnectionmanager.\-c}}
+}
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include \char`\"{}cipconnectionmanager.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}opener\-\_\-user\-\_\-conf.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipcommon.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipmessagerouter.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ciperror.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}endianconv.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}opener\-\_\-api.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}encap.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipidentity.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}trace.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipclass3connection.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipioconnection.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipassembly.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cpf.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}appcontype.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}generic\-\_\-networkhandler.\-h\char`\"{}}\*
+\-Include dependency graph for cipconnectionmanager.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/deb/cipconnectionmanager_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structConnectionManagementHandling}{\-Connection\-Management\-Handling}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cipconnectionmanager_8c_a6f6fa4fc59f365546ba51d433fc54dec}{\-C\-I\-P\-\_\-\-C\-O\-N\-N\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-A\-S\-K}~0x6000
+\item 
+\#define \hyperlink{cipconnectionmanager_8c_a8a4a53df9f8946453952d4e3f01d800e}{\-E\-Q\-L\-O\-G\-I\-C\-A\-L\-P\-A\-T\-H}(x, y)~(((x)\&0xfc)==(y))
+\begin{DoxyCompactList}\small\item\em \-Compares the logical path on equality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_gac7db4d2927e83b6b3110f5dc66589b1e}{\-Add\-Connectable\-Object} (\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-id, \hyperlink{group__CIP__API_gaba609aaaca108b8d1b24da1ccbd7b375}{\-Open\-Connection\-Function} open\-\_\-connection\-\_\-function)
+\begin{DoxyCompactList}\small\item\em register open functions for an specific object. \end{DoxyCompactList}\item 
+void \hyperlink{cipconnectionmanager_8c_a9414ca20f400db7e4d219dddd953a004}{\-Add\-New\-Active\-Connection} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Insert the given connection object to the list of currently active and managed connections. \end{DoxyCompactList}\item 
+void \hyperlink{cipconnectionmanager_8c_ac09a235d1ae01c674d4537450fb8fda3}{\-Add\-Null\-Address\-Item} (\hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-data\-\_\-packet\-\_\-format\-\_\-data)
+\begin{DoxyCompactList}\small\item\em \-Adds a \-Null \-Address \-Item to the common data packet format data. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipconnectionmanager_8c_a139a056407b798ae0e5928aaca6d2c7f}{\-Assemble\-Forward\-Close\-Response} (\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} connection\-\_\-serial\-\_\-number, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} originatior\-\_\-vendor\-\_\-id, \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} originator\-\_\-serial\-\_\-number, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} extended\-\_\-error\-\_\-code)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipconnectionmanager_8c_a22b98139acc6d0f16b6e8954422cc80c}{\-Assemble\-Forward\-Open\-Response} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} general\-\_\-status, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} extended\-\_\-status)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipconnectionmanager_8c_a0641b0c274a018b0cdd449f977c4be06}{\-Check\-Electronic\-Key\-Data} (\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} key\-\_\-format, \hyperlink{structCipKeyData}{\-Cip\-Key\-Data} $\ast$key\-\_\-data, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} $\ast$extended\-\_\-status)
+\begin{DoxyCompactList}\small\item\em \-Compare the electronic key received with a forward open request with the device's data. \end{DoxyCompactList}\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{cipconnectionmanager_8c_aa7559059e2749141bdf15832659d938b}{\-Check\-For\-Existing\-Connection} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em check if the data given in the connection object match with an already established connection \end{DoxyCompactList}\item 
+void \hyperlink{cipconnectionmanager_8c_a0e955e3b8a41b27cf79520a6bd04d21c}{\-Close\-Connection} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T \hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Close the given connection. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipconnectionmanager_8c_a5ab0de6894d23e8fe84a6b46797c2212}{\-Connection\-Manager\-Init} (\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} unique\-\_\-connection\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Initialize the data of the connection manager object. \end{DoxyCompactList}\item 
+void \hyperlink{cipconnectionmanager_8c_a5b446bd74c93f6faf3d836ffe3dac510}{\-Copy\-Connection\-Data} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T destination, const \hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const source)
+\begin{DoxyCompactList}\small\item\em \-Copy the given connection data from source to destination. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipconnectionmanager_8c_acb61ac8fef126ddbe43e9dfb7d810838}{\-Forward\-Close} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipconnectionmanager_8c_acc964f39070f0cfc9682ee399a117e09}{\-Forward\-Open} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response)
+\begin{DoxyCompactList}\small\item\em \-Check if resources for new connection available, generate \-Forward\-Open \-Reply message. \end{DoxyCompactList}\item 
+void \hyperlink{cipconnectionmanager_8c_a58ea5ad416416102edd225bc918bd6bd}{\-General\-Connection\-Configuration} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Generate the \-Connection\-I\-Ds and set the general configuration parameter in the given connection object. \end{DoxyCompactList}\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{cipconnectionmanager_8c_a2c52d1bd0f41c535d953eb17b223fa03}{\-Get\-Connected\-Object} (\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} connection\-\_\-id)
+\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{cipconnectionmanager_8c_a431e253a508cf136edbba337b91e0060}{\-Get\-Connected\-Output\-Assembly} (\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} output\-\_\-assembly\-\_\-id)
+\item 
+\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} \hyperlink{cipconnectionmanager_8c_acd79f5979ea6356666f19e6bb53e989a}{\-Get\-Connection\-Id} (void)
+\begin{DoxyCompactList}\small\item\em \-Generate a new connection \-Id utilizing the \-Incarnation \-Id as described in the \-E\-I\-P specs. \end{DoxyCompactList}\item 
+\hyperlink{structConnectionManagementHandling}{\-Connection\-Management\-Handling} $\ast$ \hyperlink{cipconnectionmanager_8c_abd5ec846f4be69da9c0f566dbc38dea3}{\-Get\-Connection\-Management\-Entry} (\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-id)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipconnectionmanager_8c_ab9966f5c4f4522054b6c31ac5293df20}{\-Get\-Connection\-Owner} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response)
+\item 
+unsigned int \hyperlink{cipconnectionmanager_8c_ab83f6b364a19bd484d9cc4c6e6342057}{\-Get\-Padded\-Logical\-Path} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$logical\-\_\-path\-\_\-segment)
+\begin{DoxyCompactList}\small\item\em gets the padded logical path \-T\-O\-D\-O\-: enhance documentation \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga34f1582ed424a2c875b8a317d828e181}{\-Handle\-Received\-Connected\-Data} (\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$data, int data\-\_\-length, struct sockaddr\-\_\-in $\ast$from\-\_\-address)
+\begin{DoxyCompactList}\small\item\em \-Notify the connection manager that data for a connection has been received. \end{DoxyCompactList}\item 
+void \hyperlink{cipconnectionmanager_8c_afd7a513de61e9d83b59c3505733448b5}{\-Initialize\-Connection\-Manager\-Data} (void)
+\item 
+\hyperlink{typedefs_8h_ab1d6967e091c10c240b250db768e78bc}{\-Eip\-Bool8} \hyperlink{cipconnectionmanager_8c_a2ca3eb3dc7fe805b410d849612720b4c}{\-Is\-Connected\-Output\-Assembly} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-number)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga9f57b09260efb5bfb188b9d0ca0c6091}{\-Manage\-Connections} (\hyperlink{typedefs_8h_a2972c9424f18b12265ca35d0548da82a}{\-Milli\-Seconds} elapsed\-\_\-time)
+\begin{DoxyCompactList}\small\item\em \-Check if any of the connection timers (\-Transmission\-Trigger or \-Watchdog\-Timeout) have timed out. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} \hyperlink{cipconnectionmanager_8c_a96ebb3d0e93c8d4ee4a7d6529061ee68}{\-Parse\-Connection\-Path} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$message\-\_\-router\-\_\-request, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} $\ast$extended\-\_\-error)
+\begin{DoxyCompactList}\small\item\em \-Parse the connection path of a forward open request. \end{DoxyCompactList}\item 
+void \hyperlink{cipconnectionmanager_8c_aef50a0eee3ff5df3320b49f872a7f3c4}{\-Remove\-From\-Active\-Connections} (\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Removes connection from the list of active connections. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga286de29d4e88bd1fec0611e75c288faf}{\-Trigger\-Connections} (unsigned int output\-\_\-assembly, unsigned int input\-\_\-assembly)
+\begin{DoxyCompactList}\small\item\em \-Trigger the production of an application triggered connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} \hyperlink{cipconnectionmanager_8c_a4a26b0364996689eb8704fcde6090cbe}{device\-\_\-type\-\_\-}
+\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$ \hyperlink{cipconnectionmanager_8c_a1fb6f4a00ea5c96694050b5be4e2501c}{g\-\_\-active\-\_\-connection\-\_\-list} = \-N\-U\-L\-L
+\begin{DoxyCompactList}\small\item\em \-External globals needed from connectionmanager.\-c. \end{DoxyCompactList}\item 
+\hyperlink{structConnectionManagementHandling}{\-Connection\-Management\-Handling} \hyperlink{cipconnectionmanager_8c_a3bb02f514692122bef60811d57c0b5d3}{g\-\_\-connection\-\_\-management\-\_\-list} \mbox{[}2+\hyperlink{WIN32_2sample__application_2opener__user__conf_8h_a79a5739ac401f5bbe9d34286c216f50f}{\-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-A\-P\-P\-L\-I\-C\-A\-T\-I\-O\-N\-\_\-\-S\-P\-E\-C\-I\-F\-I\-C\-\_\-\-C\-O\-N\-N\-E\-C\-T\-A\-B\-L\-E\-\_\-\-O\-B\-J\-E\-C\-T\-S}\mbox{]}
+\item 
+\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} \hyperlink{cipconnectionmanager_8c_aefc06511ddd041d393627c29b419b0cc}{g\-\_\-dummy\-\_\-connection\-\_\-object}
+\item 
+\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} \hyperlink{cipconnectionmanager_8c_a4fa91981e220d2f8a83ad152cc8b750a}{g\-\_\-incarnation\-\_\-id}
+\begin{DoxyCompactList}\small\item\em \-Holds the connection \-I\-D's \char`\"{}incarnation I\-D\char`\"{} in the upper 16 bits. \end{DoxyCompactList}\item 
+const int \hyperlink{cipconnectionmanager_8c_af8eb9fc6b76aad632d89bcfaeb99444b}{g\-\_\-k\-Forward\-Open\-Header\-Length} = 36
+\item 
+\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} \hyperlink{cipconnectionmanager_8c_a952aaef238eb5c4b73eae1692f7e8112}{product\-\_\-code\-\_\-}
+\item 
+\hyperlink{structCipRevision}{\-Cip\-Revision} \hyperlink{cipconnectionmanager_8c_aef2b62657ef56842d595877f2af6c64b}{revision\-\_\-}
+\item 
+\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} \hyperlink{cipconnectionmanager_8c_a4bc7452f53881ccfd18ac9724f811903}{vendor\-\_\-id\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{cipconnectionmanager_8c_a6f6fa4fc59f365546ba51d433fc54dec}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-C\-I\-P\-\_\-\-C\-O\-N\-N\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-A\-S\-K@{\-C\-I\-P\-\_\-\-C\-O\-N\-N\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-A\-S\-K}}
+\index{\-C\-I\-P\-\_\-\-C\-O\-N\-N\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-A\-S\-K@{\-C\-I\-P\-\_\-\-C\-O\-N\-N\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-A\-S\-K}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-C\-I\-P\-\_\-\-C\-O\-N\-N\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-I\-P\-\_\-\-C\-O\-N\-N\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-A\-S\-K}~0x6000}}\label{d5/d35/cipconnectionmanager_8c_a6f6fa4fc59f365546ba51d433fc54dec}
+\-Bit mask filter on bit 13 \& 14 
+
+\-Definition at line 33 of file cipconnectionmanager.\-c.
+
+
+
+\-Referenced by \-Forward\-Open().
+
+\hypertarget{cipconnectionmanager_8c_a8a4a53df9f8946453952d4e3f01d800e}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-E\-Q\-L\-O\-G\-I\-C\-A\-L\-P\-A\-T\-H@{\-E\-Q\-L\-O\-G\-I\-C\-A\-L\-P\-A\-T\-H}}
+\index{\-E\-Q\-L\-O\-G\-I\-C\-A\-L\-P\-A\-T\-H@{\-E\-Q\-L\-O\-G\-I\-C\-A\-L\-P\-A\-T\-H}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-E\-Q\-L\-O\-G\-I\-C\-A\-L\-P\-A\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-Q\-L\-O\-G\-I\-C\-A\-L\-P\-A\-T\-H}(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)~(((x)\&0xfc)==(y))}}\label{d5/d35/cipconnectionmanager_8c_a8a4a53df9f8946453952d4e3f01d800e}
+
+
+\-Compares the logical path on equality. 
+
+
+
+\-Definition at line 38 of file cipconnectionmanager.\-c.
+
+
+
+\-Referenced by \-Parse\-Connection\-Path().
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{cipconnectionmanager_8c_a9414ca20f400db7e4d219dddd953a004}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Add\-New\-Active\-Connection@{\-Add\-New\-Active\-Connection}}
+\index{\-Add\-New\-Active\-Connection@{\-Add\-New\-Active\-Connection}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Add\-New\-Active\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Add\-New\-Active\-Connection} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a9414ca20f400db7e4d219dddd953a004}
+
+
+\-Insert the given connection object to the list of currently active and managed connections. 
+
+\-By adding a connection to the active connection list the connection manager will perform the supervision and handle the timing (e.\-g., timeout, production inhibit, etc).
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & pointer to the connection object to be added. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 1164 of file cipconnectionmanager.\-c.
+
+
+
+\-References connection\-\_\-object\-::first\-\_\-connection\-\_\-object, g\-\_\-active\-\_\-connection\-\_\-list, k\-Connection\-State\-Established, connection\-\_\-object\-::next\-\_\-connection\-\_\-object, and connection\-\_\-object\-::state.
+
+
+
+\-Referenced by \-Establish\-Class3\-Connection(), and \-Establish\-Io\-Connction().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a9414ca20f400db7e4d219dddd953a004_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_ac09a235d1ae01c674d4537450fb8fda3}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Add\-Null\-Address\-Item@{\-Add\-Null\-Address\-Item}}
+\index{\-Add\-Null\-Address\-Item@{\-Add\-Null\-Address\-Item}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Add\-Null\-Address\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Add\-Null\-Address\-Item} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Common\-Packet\-Format\-Data} $\ast$}]{common\-\_\-data\-\_\-packet\-\_\-format\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_ac09a235d1ae01c674d4537450fb8fda3}
+
+
+\-Adds a \-Null \-Address \-Item to the common data packet format data. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em common\-\_\-data\-\_\-packet\-\_\-format\-\_\-data} & \-The \-C\-P\-F data packet where the \-Null \-Address \-Item shall be added \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 705 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-item, \-Cip\-Common\-Packet\-Format\-Data\-::data\-\_\-item, k\-Cip\-Item\-Id\-Null\-Address, k\-Cip\-Item\-Id\-Unconnected\-Data\-Item, \-Address\-Item\-::length, \-Address\-Item\-::type\-\_\-id, and \-Data\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), and \-Assemble\-Forward\-Open\-Response().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_ac09a235d1ae01c674d4537450fb8fda3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a139a056407b798ae0e5928aaca6d2c7f}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Assemble\-Forward\-Close\-Response@{\-Assemble\-Forward\-Close\-Response}}
+\index{\-Assemble\-Forward\-Close\-Response@{\-Assemble\-Forward\-Close\-Response}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Assemble\-Forward\-Close\-Response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Assemble\-Forward\-Close\-Response} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eip\-Uint16}}]{connection\-\_\-serial\-\_\-number, }
+\item[{{\bf \-Eip\-Uint16}}]{originatior\-\_\-vendor\-\_\-id, }
+\item[{{\bf \-Eip\-Uint32}}]{originator\-\_\-serial\-\_\-number, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response, }
+\item[{{\bf \-Eip\-Uint16}}]{extended\-\_\-error\-\_\-code}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a139a056407b798ae0e5928aaca6d2c7f}
+
+
+\-Definition at line 729 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Add\-Dint\-To\-Message(), \-Add\-Int\-To\-Message(), \-Cip\-Message\-Router\-Response\-::additional\-\_\-status, \-Add\-Null\-Address\-Item(), \-Cip\-Message\-Router\-Request\-::data, \-Cip\-Message\-Router\-Response\-::data, \-Cip\-Common\-Packet\-Format\-Data\-::data\-\_\-item, \-Cip\-Message\-Router\-Response\-::data\-\_\-length, g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, \-Cip\-Message\-Router\-Response\-::general\-\_\-status, \-Cip\-Common\-Packet\-Format\-Data\-::item\-\_\-count, k\-Cip\-Error\-Connection\-Failure, k\-Cip\-Error\-Success, k\-Cip\-Item\-Id\-Unconnected\-Data\-Item, k\-Connection\-Manager\-Status\-Code\-Success, k\-Eip\-Status\-Ok\-Send, \-Cip\-Message\-Router\-Response\-::reply\-\_\-service, \-Cip\-Message\-Router\-Request\-::service, \-Cip\-Message\-Router\-Response\-::size\-\_\-of\-\_\-additional\-\_\-status, and \-Data\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Forward\-Close().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a139a056407b798ae0e5928aaca6d2c7f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a139a056407b798ae0e5928aaca6d2c7f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a22b98139acc6d0f16b6e8954422cc80c}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Assemble\-Forward\-Open\-Response@{\-Assemble\-Forward\-Open\-Response}}
+\index{\-Assemble\-Forward\-Open\-Response@{\-Assemble\-Forward\-Open\-Response}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Assemble\-Forward\-Open\-Response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Assemble\-Forward\-Open\-Response} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response, }
+\item[{{\bf \-Eip\-Uint8}}]{general\-\_\-status, }
+\item[{{\bf \-Eip\-Uint16}}]{extended\-\_\-status}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a22b98139acc6d0f16b6e8954422cc80c}
+
+
+\-Definition at line 608 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Add\-Dint\-To\-Message(), \-Add\-Int\-To\-Message(), \-Cip\-Message\-Router\-Response\-::additional\-\_\-status, \-Add\-Null\-Address\-Item(), \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-info\-\_\-item, connection\-\_\-object\-::connection\-\_\-serial\-\_\-number, connection\-\_\-object\-::consumed\-\_\-connection\-\_\-id, connection\-\_\-object\-::correct\-\_\-originator\-\_\-to\-\_\-target\-\_\-size, connection\-\_\-object\-::correct\-\_\-target\-\_\-to\-\_\-originator\-\_\-size, \-Cip\-Message\-Router\-Response\-::data, \-Cip\-Common\-Packet\-Format\-Data\-::data\-\_\-item, \-Cip\-Message\-Router\-Response\-::data\-\_\-length, g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, \-Cip\-Message\-Router\-Response\-::general\-\_\-status, \-Cip\-Common\-Packet\-Format\-Data\-::item\-\_\-count, k\-Cip\-Error\-Not\-Enough\-Data, k\-Cip\-Error\-Success, k\-Cip\-Error\-Too\-Much\-Data, k\-Cip\-Item\-Id\-Unconnected\-Data\-Item, k\-Connection\-Manager\-Status\-Code\-Error\-Invalid\-O\-To\-T\-Connection\-Size, k\-Connection\-Manager\-Status\-Code\-Error\-Invalid\-T\-To\-O\-Connection\-Size, k\-Connection\-State\-Non\-Existent, k\-Eip\-Status\-Ok\-Send, k\-Forward\-Open, connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-requested\-\_\-packet\-\_\-interval, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, connection\-\_\-object\-::originator\-\_\-serial\-\_\-number, connection\-\_\-object\-::originator\-\_\-vendor\-\_\-id, connection\-\_\-object\-::produced\-\_\-connection\-\_\-id, \-Cip\-Message\-Router\-Response\-::reply\-\_\-service, \-Cip\-Message\-Router\-Response\-::size\-\_\-of\-\_\-additional\-\_\-status, connection\-\_\-object\-::state, connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-requested\-\_\-packet\-\_\-interval, \-Data\-Item\-::type\-\_\-id, and \-Socket\-Address\-Info\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Forward\-Open().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a22b98139acc6d0f16b6e8954422cc80c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a22b98139acc6d0f16b6e8954422cc80c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a0641b0c274a018b0cdd449f977c4be06}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Check\-Electronic\-Key\-Data@{\-Check\-Electronic\-Key\-Data}}
+\index{\-Check\-Electronic\-Key\-Data@{\-Check\-Electronic\-Key\-Data}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Check\-Electronic\-Key\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Check\-Electronic\-Key\-Data} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eip\-Uint8}}]{key\-\_\-format, }
+\item[{{\bf \-Cip\-Key\-Data} $\ast$}]{key\-\_\-data, }
+\item[{{\bf \-Eip\-Uint16} $\ast$}]{extended\-\_\-status}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a0641b0c274a018b0cdd449f977c4be06}
+
+
+\-Compare the electronic key received with a forward open request with the device's data. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em key\-\_\-format} & format identifier given in the forward open request \\
+\hline
+{\em key\-\_\-data} & pointer to the electronic key data received in the forward open request \\
+\hline
+{\em extended\-\_\-status} & the extended error code in case an error happened \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+general status on the establishment
+\begin{DoxyItemize}
+\item \-E\-I\-P\-\_\-\-O\-K ... on success
+\item \-On an error the general status code to be put into the response 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+\-Definition at line 827 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Cip\-Key\-Data\-::device\-\_\-type, device\-\_\-type\-\_\-, k\-Connection\-Manager\-Status\-Code\-Error\-Device\-Type\-Error, k\-Connection\-Manager\-Status\-Code\-Error\-Invalid\-Segment\-Type\-In\-Path, k\-Connection\-Manager\-Status\-Code\-Error\-Revision\-Mismatch, k\-Connection\-Manager\-Status\-Code\-Error\-Vendor\-Id\-Or\-Productcode\-Error, k\-Connection\-Manager\-Status\-Code\-Success, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, \-Cip\-Key\-Data\-::major\-\_\-revision, \-Cip\-Revision\-::major\-\_\-revision, \-Cip\-Key\-Data\-::minor\-\_\-revision, \-Cip\-Revision\-::minor\-\_\-revision, \-Cip\-Key\-Data\-::product\-\_\-code, product\-\_\-code\-\_\-, \-Cip\-Key\-Data\-::vendor\-\_\-id, and vendor\-\_\-id\-\_\-.
+
+
+
+\-Referenced by \-Parse\-Connection\-Path().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a0641b0c274a018b0cdd449f977c4be06_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_aa7559059e2749141bdf15832659d938b}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Check\-For\-Existing\-Connection@{\-Check\-For\-Existing\-Connection}}
+\index{\-Check\-For\-Existing\-Connection@{\-Check\-For\-Existing\-Connection}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Check\-For\-Existing\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object} $\ast$ {\bf \-Check\-For\-Existing\-Connection} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_aa7559059e2749141bdf15832659d938b}
+
+
+check if the data given in the connection object match with an already established connection 
+
+\-The comparison is done according to the definitions in the \-C\-I\-P specification \-Section 3-\/5.\-5.\-2\-: \-The following elements have to be equal\-: \-Vendor \-I\-D, \-Connection \-Serial \-Number, \-Originator \-Serial \-Number 
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & connection object containing the comparison elements from the forward open request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\begin{DoxyItemize}
+\item \-N\-U\-L\-L if no equal established connection exists
+\item pointer to the equal connection object 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+\-Definition at line 804 of file cipconnectionmanager.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-serial\-\_\-number, g\-\_\-active\-\_\-connection\-\_\-list, k\-Connection\-State\-Established, connection\-\_\-object\-::next\-\_\-connection\-\_\-object, connection\-\_\-object\-::originator\-\_\-serial\-\_\-number, connection\-\_\-object\-::originator\-\_\-vendor\-\_\-id, and connection\-\_\-object\-::state.
+
+
+
+\-Referenced by \-Forward\-Open().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_aa7559059e2749141bdf15832659d938b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a0e955e3b8a41b27cf79520a6bd04d21c}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Close\-Connection@{\-Close\-Connection}}
+\index{\-Close\-Connection@{\-Close\-Connection}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Close\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Close\-Connection} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a0e955e3b8a41b27cf79520a6bd04d21c}
+
+
+\-Close the given connection. 
+
+\-This function will take the data form the connection and correctly closes the connection (e.\-g., open sockets) 
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & pointer to the connection object structure to be closed \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 1143 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-I\-App\-\_\-\-Close\-Socket\-\_\-udp(), k\-Connection\-State\-Non\-Existent, k\-Udp\-Communcation\-Direction\-Consuming, k\-Udp\-Communcation\-Direction\-Producing, and \-Remove\-From\-Active\-Connections().
+
+
+
+\-Referenced by \-Close\-All\-Connections().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a0e955e3b8a41b27cf79520a6bd04d21c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a0e955e3b8a41b27cf79520a6bd04d21c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a5ab0de6894d23e8fe84a6b46797c2212}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Connection\-Manager\-Init@{\-Connection\-Manager\-Init}}
+\index{\-Connection\-Manager\-Init@{\-Connection\-Manager\-Init}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Connection\-Manager\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Connection\-Manager\-Init} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eip\-Uint16}}]{unique\-\_\-connection\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a5ab0de6894d23e8fe84a6b46797c2212}
+
+
+\-Initialize the data of the connection manager object. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-A} & unique connection id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+k\-Eip\-Status\-Ok if successful, otherwise k\-Eip\-Status\-Error 
+\end{DoxyReturn}
+
+
+\-Definition at line 168 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Add\-Connectable\-Object(), \-Create\-Cip\-Class(), \-Establish\-Class3\-Connection(), \-Establish\-Io\-Connction(), \-Forward\-Close(), \-Forward\-Open(), g\-\_\-incarnation\-\_\-id, \-Get\-Connection\-Owner(), \-Initialize\-Connection\-Manager\-Data(), \-Insert\-Service(), k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Forward\-Close, k\-Forward\-Open, and k\-Get\-Connection\-Owner.
+
+
+
+\-Referenced by \-Cip\-Stack\-Init().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a5ab0de6894d23e8fe84a6b46797c2212_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a5ab0de6894d23e8fe84a6b46797c2212_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a5b446bd74c93f6faf3d836ffe3dac510}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Copy\-Connection\-Data@{\-Copy\-Connection\-Data}}
+\index{\-Copy\-Connection\-Data@{\-Copy\-Connection\-Data}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Copy\-Connection\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Copy\-Connection\-Data} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T}]{destination, }
+\item[{const {\bf \-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{source}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a5b446bd74c93f6faf3d836ffe3dac510}
+
+
+\-Copy the given connection data from source to destination. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em destination} & \-Destination of the copy operation \\
+\hline
+{\em osurce} & \-Source of the copy operation \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 1159 of file cipconnectionmanager.\-c.
+
+
+
+\-Referenced by \-Establish\-Class3\-Connection(), and \-Get\-Io\-Connection\-For\-Connection\-Data().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a5b446bd74c93f6faf3d836ffe3dac510_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_acb61ac8fef126ddbe43e9dfb7d810838}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Forward\-Close@{\-Forward\-Close}}
+\index{\-Forward\-Close@{\-Forward\-Close}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Forward\-Close}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Forward\-Close} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$}]{instance, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_acb61ac8fef126ddbe43e9dfb7d810838}
+
+
+\-Definition at line 461 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-info\-\_\-item, \-Assemble\-Forward\-Close\-Response(), connection\-\_\-object\-::connection\-\_\-close\-\_\-function, connection\-\_\-object\-::connection\-\_\-serial\-\_\-number, \-Cip\-Message\-Router\-Request\-::data, g\-\_\-active\-\_\-connection\-\_\-list, g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, \-Get\-Dint\-From\-Message(), \-Get\-Int\-From\-Message(), k\-Connection\-Manager\-Status\-Code\-Error\-Connection\-Not\-Found\-At\-Target\-Application, k\-Connection\-Manager\-Status\-Code\-Success, k\-Connection\-State\-Established, k\-Connection\-State\-Timed\-Out, connection\-\_\-object\-::next\-\_\-connection\-\_\-object, \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, connection\-\_\-object\-::originator\-\_\-serial\-\_\-number, connection\-\_\-object\-::originator\-\_\-vendor\-\_\-id, connection\-\_\-object\-::state, and \-Socket\-Address\-Info\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Connection\-Manager\-Init().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_acb61ac8fef126ddbe43e9dfb7d810838_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_acb61ac8fef126ddbe43e9dfb7d810838_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_acc964f39070f0cfc9682ee399a117e09}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Forward\-Open@{\-Forward\-Open}}
+\index{\-Forward\-Open@{\-Forward\-Open}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Forward\-Open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Forward\-Open} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$}]{instance, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_acc964f39070f0cfc9682ee399a117e09}
+
+
+\-Check if resources for new connection available, generate \-Forward\-Open \-Reply message. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em instance} & pointer to \-C\-I\-P object instance \\
+\hline
+{\em message\-\_\-router\-\_\-request} & pointer to \-Message \-Router \-Request. \\
+\hline
+{\em message\-\_\-router\-\_\-response} & pointer to \-Message \-Router \-Response. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+$>$0 .. success, 0 .. no reply to send back -\/1 .. error 
+\end{DoxyReturn}
+
+
+\-Definition at line 262 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Assemble\-Forward\-Open\-Response(), \-Check\-For\-Existing\-Connection(), \-C\-I\-P\-\_\-\-C\-O\-N\-N\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-A\-S\-K, \-Cip\-Connection\-Path\-::class\-\_\-id, connection\-\_\-object\-::connection\-\_\-path, connection\-\_\-object\-::connection\-\_\-serial\-\_\-number, connection\-\_\-object\-::connection\-\_\-timeout\-\_\-multiplier, connection\-\_\-object\-::consumed\-\_\-connection\-\_\-id, \-Cip\-Message\-Router\-Request\-::data, \-Get\-Connection\-Management\-Entry(), \-Get\-Dint\-From\-Message(), \-Get\-Int\-From\-Message(), k\-Cip\-Error\-Connection\-Failure, k\-Cip\-Error\-Success, k\-Connection\-Manager\-Status\-Code\-Error\-Connection\-In\-Use, k\-Connection\-Manager\-Status\-Code\-Error\-Invalid\-O\-To\-T\-Connection\-Type, k\-Connection\-Manager\-Status\-Code\-Error\-Invalid\-T\-To\-O\-Connection\-Type, k\-Connection\-Manager\-Status\-Code\-Error\-Transport\-Trigger\-Not\-Supported, k\-Connection\-Manager\-Status\-Code\-Inconsistent\-Application\-Path\-Combo, k\-Connection\-Manager\-Status\-Code\-Success, k\-Connection\-State\-Non\-Existent, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-network\-\_\-connection\-\_\-parameter, connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-requested\-\_\-packet\-\_\-interval, \-Connection\-Management\-Handling\-::open\-\_\-connection\-\_\-function, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, connection\-\_\-object\-::originator\-\_\-serial\-\_\-number, connection\-\_\-object\-::originator\-\_\-vendor\-\_\-id, \-Parse\-Connection\-Path(), connection\-\_\-object\-::priority\-\_\-timetick, connection\-\_\-object\-::produced\-\_\-connection\-\_\-id, connection\-\_\-object\-::sequence\-\_\-count\-\_\-producing, connection\-\_\-object\-::state, connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-network\-\_\-connection\-\_\-parameter, connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-requested\-\_\-packet\-\_\-interval, connection\-\_\-object\-::timeout\-\_\-ticks, and connection\-\_\-object\-::transport\-\_\-type\-\_\-class\-\_\-trigger.
+
+
+
+\-Referenced by \-Connection\-Manager\-Init().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_acc964f39070f0cfc9682ee399a117e09_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_acc964f39070f0cfc9682ee399a117e09_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a58ea5ad416416102edd225bc918bd6bd}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-General\-Connection\-Configuration@{\-General\-Connection\-Configuration}}
+\index{\-General\-Connection\-Configuration@{\-General\-Connection\-Configuration}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-General\-Connection\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-General\-Connection\-Configuration} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a58ea5ad416416102edd225bc918bd6bd}
+
+
+\-Generate the \-Connection\-I\-Ds and set the general configuration parameter in the given connection object. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & pointer to the connection object that should be set up. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 402 of file cipconnectionmanager.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-timeout\-\_\-multiplier, connection\-\_\-object\-::consumed\-\_\-connection\-\_\-id, connection\-\_\-object\-::consumed\-\_\-connection\-\_\-size, connection\-\_\-object\-::eip\-\_\-level\-\_\-sequence\-\_\-count\-\_\-consuming, connection\-\_\-object\-::eip\-\_\-level\-\_\-sequence\-\_\-count\-\_\-producing, connection\-\_\-object\-::expected\-\_\-packet\-\_\-rate, \-Get\-Connection\-Id(), connection\-\_\-object\-::inactivity\-\_\-watchdog\-\_\-timer, k\-Routing\-Type\-Multicast\-Connection, k\-Routing\-Type\-Point\-To\-Point\-Connection, k\-Watchdog\-Timeout\-Action\-Auto\-Delete, connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-network\-\_\-connection\-\_\-parameter, connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-requested\-\_\-packet\-\_\-interval, connection\-\_\-object\-::produced\-\_\-connection\-\_\-id, connection\-\_\-object\-::produced\-\_\-connection\-\_\-size, connection\-\_\-object\-::production\-\_\-inhibit\-\_\-time, connection\-\_\-object\-::production\-\_\-inhibit\-\_\-timer, connection\-\_\-object\-::sequence\-\_\-count\-\_\-consuming, connection\-\_\-object\-::sequence\-\_\-count\-\_\-producing, connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-network\-\_\-connection\-\_\-parameter, connection\-\_\-object\-::transmission\-\_\-trigger\-\_\-timer, connection\-\_\-object\-::transport\-\_\-type\-\_\-class\-\_\-trigger, and connection\-\_\-object\-::watchdog\-\_\-timeout\-\_\-action.
+
+
+
+\-Referenced by \-Establish\-Class3\-Connection(), and \-Establish\-Io\-Connction().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a58ea5ad416416102edd225bc918bd6bd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a58ea5ad416416102edd225bc918bd6bd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a2c52d1bd0f41c535d953eb17b223fa03}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Get\-Connected\-Object@{\-Get\-Connected\-Object}}
+\index{\-Get\-Connected\-Object@{\-Get\-Connected\-Object}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Get\-Connected\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object}$\ast$ {\bf \-Get\-Connected\-Object} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eip\-Uint32}}]{connection\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a2c52d1bd0f41c535d953eb17b223fa03}
+
+
+\-Definition at line 771 of file cipconnectionmanager.\-c.
+
+
+
+\-References connection\-\_\-object\-::consumed\-\_\-connection\-\_\-id, g\-\_\-active\-\_\-connection\-\_\-list, k\-Connection\-State\-Established, connection\-\_\-object\-::next\-\_\-connection\-\_\-object, and connection\-\_\-object\-::state.
+
+
+
+\-Referenced by \-Handle\-Received\-Connected\-Data(), and \-Notify\-Connected\-Common\-Packet\-Format().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a2c52d1bd0f41c535d953eb17b223fa03_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a431e253a508cf136edbba337b91e0060}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Get\-Connected\-Output\-Assembly@{\-Get\-Connected\-Output\-Assembly}}
+\index{\-Get\-Connected\-Output\-Assembly@{\-Get\-Connected\-Output\-Assembly}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Get\-Connected\-Output\-Assembly}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object}$\ast$ {\bf \-Get\-Connected\-Output\-Assembly} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eip\-Uint32}}]{output\-\_\-assembly\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a431e253a508cf136edbba337b91e0060}
+\-Get a connection object for a given output assembly.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em output\-\_\-assembly\-\_\-id} & requested output assembly of requested connection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+pointer to connected \-Object 0 .. connection not present in device 
+\end{DoxyReturn}
+
+
+\-Definition at line 787 of file cipconnectionmanager.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, g\-\_\-active\-\_\-connection\-\_\-list, k\-Connection\-State\-Established, connection\-\_\-object\-::next\-\_\-connection\-\_\-object, and connection\-\_\-object\-::state.
+
+
+
+\-Referenced by \-Get\-Exclusive\-Owner\-Connection().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a431e253a508cf136edbba337b91e0060_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_acd79f5979ea6356666f19e6bb53e989a}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Get\-Connection\-Id@{\-Get\-Connection\-Id}}
+\index{\-Get\-Connection\-Id@{\-Get\-Connection\-Id}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Get\-Connection\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint32} {\bf \-Get\-Connection\-Id} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_acd79f5979ea6356666f19e6bb53e989a}
+
+
+\-Generate a new connection \-Id utilizing the \-Incarnation \-Id as described in the \-E\-I\-P specs. 
+
+\-A unique connection\-I\-D is formed from the boot-\/time-\/specified \char`\"{}incarnation I\-D\char`\"{} and the per-\/new-\/connection-\/incremented connection number/counter. \begin{DoxyReturn}{\-Returns}
+new connection id 
+\end{DoxyReturn}
+
+
+\-Definition at line 162 of file cipconnectionmanager.\-c.
+
+
+
+\-References g\-\_\-incarnation\-\_\-id.
+
+
+
+\-Referenced by \-General\-Connection\-Configuration().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_acd79f5979ea6356666f19e6bb53e989a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_abd5ec846f4be69da9c0f566dbc38dea3}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Get\-Connection\-Management\-Entry@{\-Get\-Connection\-Management\-Entry}}
+\index{\-Get\-Connection\-Management\-Entry@{\-Get\-Connection\-Management\-Entry}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Get\-Connection\-Management\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Management\-Handling} $\ast$ {\bf \-Get\-Connection\-Management\-Entry} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eip\-Uint32}}]{class\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_abd5ec846f4be69da9c0f566dbc38dea3}
+
+
+\-Definition at line 1224 of file cipconnectionmanager.\-c.
+
+
+
+\-Referenced by \-Forward\-Open().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_abd5ec846f4be69da9c0f566dbc38dea3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_ab9966f5c4f4522054b6c31ac5293df20}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Get\-Connection\-Owner@{\-Get\-Connection\-Owner}}
+\index{\-Get\-Connection\-Owner@{\-Get\-Connection\-Owner}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Get\-Connection\-Owner}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Get\-Connection\-Owner} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$}]{instance, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_ab9966f5c4f4522054b6c31ac5293df20}
+
+
+\-Definition at line 515 of file cipconnectionmanager.\-c.
+
+
+
+\-References k\-Eip\-Status\-Ok.
+
+
+
+\-Referenced by \-Connection\-Manager\-Init().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_ab9966f5c4f4522054b6c31ac5293df20_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_ab83f6b364a19bd484d9cc4c6e6342057}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Get\-Padded\-Logical\-Path@{\-Get\-Padded\-Logical\-Path}}
+\index{\-Get\-Padded\-Logical\-Path@{\-Get\-Padded\-Logical\-Path}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Get\-Padded\-Logical\-Path}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Get\-Padded\-Logical\-Path} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint8} $\ast$$\ast$}]{logical\-\_\-path\-\_\-segment}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_ab83f6b364a19bd484d9cc4c6e6342057}
+
+
+gets the padded logical path \-T\-O\-D\-O\-: enhance documentation 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em logical\-\_\-path\-\_\-segment} & \-The\-Logical \-Path \-Segment\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The padded logical path 
+\end{DoxyReturn}
+
+
+\-Definition at line 140 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R.
+
+
+
+\-Referenced by \-Parse\-Connection\-Path().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_ab83f6b364a19bd484d9cc4c6e6342057_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_afd7a513de61e9d83b59c3505733448b5}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Initialize\-Connection\-Manager\-Data@{\-Initialize\-Connection\-Manager\-Data}}
+\index{\-Initialize\-Connection\-Manager\-Data@{\-Initialize\-Connection\-Manager\-Data}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Initialize\-Connection\-Manager\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Initialize\-Connection\-Manager\-Data} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_afd7a513de61e9d83b59c3505733448b5}
+
+
+\-Definition at line 1259 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Initialize\-Class3\-Connection\-Data(), and \-Initialize\-Io\-Connection\-Data().
+
+
+
+\-Referenced by \-Connection\-Manager\-Init().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_afd7a513de61e9d83b59c3505733448b5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_afd7a513de61e9d83b59c3505733448b5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a2ca3eb3dc7fe805b410d849612720b4c}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Is\-Connected\-Output\-Assembly@{\-Is\-Connected\-Output\-Assembly}}
+\index{\-Is\-Connected\-Output\-Assembly@{\-Is\-Connected\-Output\-Assembly}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Is\-Connected\-Output\-Assembly}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Bool8} {\bf \-Is\-Connected\-Output\-Assembly} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{instance\-\_\-number}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a2ca3eb3dc7fe805b410d849612720b4c}
+
+
+\-Definition at line 1190 of file cipconnectionmanager.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, g\-\_\-active\-\_\-connection\-\_\-list, and connection\-\_\-object\-::next\-\_\-connection\-\_\-object.
+
+
+
+\-Referenced by \-Set\-Assembly\-Attribute\-Single().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a2ca3eb3dc7fe805b410d849612720b4c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_a96ebb3d0e93c8d4ee4a7d6529061ee68}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Parse\-Connection\-Path@{\-Parse\-Connection\-Path}}
+\index{\-Parse\-Connection\-Path@{\-Parse\-Connection\-Path}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Parse\-Connection\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint8} {\bf \-Parse\-Connection\-Path} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Eip\-Uint16} $\ast$}]{extended\-\_\-error}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_a96ebb3d0e93c8d4ee4a7d6529061ee68}
+
+
+\-Parse the connection path of a forward open request. 
+
+\-This function will take the connection object and the received data stream and parse the connection path. 
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & pointer to the connection object structure for which the connection should be established \\
+\hline
+{\em message\-\_\-router\-\_\-request} & pointer to the received request structure. \-The position of the data stream pointer has to be at the connection length entry \\
+\hline
+{\em extended\-\_\-status} & the extended error code in case an error happened \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+general status on the establishment
+\begin{DoxyItemize}
+\item \-E\-I\-P\-\_\-\-O\-K ... on success
+\item \-On an error the general status code to be put into the response 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+\-Definition at line 896 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Check\-Electronic\-Key\-Data(), \-Cip\-Connection\-Path\-::class\-\_\-id, connection\-\_\-object\-::connection\-\_\-path, connection\-\_\-object\-::connection\-\_\-path\-\_\-size, \-Cip\-Connection\-Path\-::connection\-\_\-point, \-Cip\-Message\-Router\-Request\-::data, \-Cip\-Message\-Router\-Request\-::data\-\_\-length, \-Cip\-Key\-Data\-::device\-\_\-type, connection\-\_\-object\-::electronic\-\_\-key, \-E\-Q\-L\-O\-G\-I\-C\-A\-L\-P\-A\-T\-H, g\-\_\-config\-\_\-data\-\_\-buffer, g\-\_\-config\-\_\-data\-\_\-length, g\-\_\-k\-Forward\-Open\-Header\-Length, \-Get\-Cip\-Class(), \-Get\-Cip\-Instance(), \-Get\-Int\-From\-Message(), \-Get\-Padded\-Logical\-Path(), k\-Cip\-Error\-Connection\-Failure, k\-Cip\-Error\-Not\-Enough\-Data, k\-Cip\-Error\-Path\-Segment\-Error, k\-Cip\-Error\-Too\-Much\-Data, k\-Connection\-Manager\-Status\-Code\-Error\-Invalid\-Segment\-Type\-In\-Path, k\-Connection\-Manager\-Status\-Code\-Inconsistent\-Application\-Path\-Combo, k\-Connection\-Trigger\-Type\-Cyclic\-Connection, k\-Connection\-Trigger\-Type\-Production\-Trigger\-Mask, k\-Data\-Segment\-Type\-Simple\-Data\-Message, k\-Eip\-Status\-Ok, \-Cip\-Electronic\-Key\-::key\-\_\-data, \-Cip\-Electronic\-Key\-::key\-\_\-format, k\-Production\-Time\-Inhibit\-Time\-Network\-Segment, \-Cip\-Key\-Data\-::major\-\_\-revision, \-Cip\-Key\-Data\-::minor\-\_\-revision, connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-network\-\_\-connection\-\_\-parameter, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-W\-A\-R\-N, \-Cip\-Key\-Data\-::product\-\_\-code, connection\-\_\-object\-::production\-\_\-inhibit\-\_\-time, \-Cip\-Electronic\-Key\-::segment\-\_\-type, connection\-\_\-object\-::t\-\_\-to\-\_\-o\-\_\-network\-\_\-connection\-\_\-parameter, connection\-\_\-object\-::transport\-\_\-type\-\_\-class\-\_\-trigger, and \-Cip\-Key\-Data\-::vendor\-\_\-id.
+
+
+
+\-Referenced by \-Forward\-Open().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a96ebb3d0e93c8d4ee4a7d6529061ee68_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_a96ebb3d0e93c8d4ee4a7d6529061ee68_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipconnectionmanager_8c_aef50a0eee3ff5df3320b49f872a7f3c4}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!\-Remove\-From\-Active\-Connections@{\-Remove\-From\-Active\-Connections}}
+\index{\-Remove\-From\-Active\-Connections@{\-Remove\-From\-Active\-Connections}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{\-Remove\-From\-Active\-Connections}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Remove\-From\-Active\-Connections} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Connection\-Object} $\ast$}]{connection\-\_\-object}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/cipconnectionmanager_8c_aef50a0eee3ff5df3320b49f872a7f3c4}
+
+
+\-Removes connection from the list of active connections. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & \-Connection object to be removed from the active connection list \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 1174 of file cipconnectionmanager.\-c.
+
+
+
+\-References connection\-\_\-object\-::first\-\_\-connection\-\_\-object, k\-Connection\-State\-Non\-Existent, connection\-\_\-object\-::next\-\_\-connection\-\_\-object, and connection\-\_\-object\-::state.
+
+
+
+\-Referenced by \-Close\-Communication\-Channels\-And\-Remove\-From\-Active\-Connections\-List(), \-Close\-Connection(), and \-Establish\-Class3\-Connection().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d35/cipconnectionmanager_8c_aef50a0eee3ff5df3320b49f872a7f3c4_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{cipconnectionmanager_8c_a4a26b0364996689eb8704fcde6090cbe}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!device\-\_\-type\-\_\-@{device\-\_\-type\-\_\-}}
+\index{device\-\_\-type\-\_\-@{device\-\_\-type\-\_\-}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{device\-\_\-type\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint16} {\bf device\-\_\-type\-\_\-}}}\label{d5/d35/cipconnectionmanager_8c_a4a26b0364996689eb8704fcde6090cbe}
+\-Attribute 2\-: \-Device \-Type 
+
+\-Definition at line 41 of file cipidentity.\-c.
+
+
+
+\-Referenced by \-Check\-Electronic\-Key\-Data(), \-Cip\-Identity\-Init(), and \-Encapsulate\-List\-Identy\-Response\-Message().
+
+\hypertarget{cipconnectionmanager_8c_a1fb6f4a00ea5c96694050b5be4e2501c}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!g\-\_\-active\-\_\-connection\-\_\-list@{g\-\_\-active\-\_\-connection\-\_\-list}}
+\index{g\-\_\-active\-\_\-connection\-\_\-list@{g\-\_\-active\-\_\-connection\-\_\-list}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{g\-\_\-active\-\_\-connection\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object}$\ast$ {\bf g\-\_\-active\-\_\-connection\-\_\-list} = \-N\-U\-L\-L}}\label{d5/d35/cipconnectionmanager_8c_a1fb6f4a00ea5c96694050b5be4e2501c}
+
+
+\-External globals needed from connectionmanager.\-c. 
+
+\-List holding all currently active connections 
+
+\-Definition at line 56 of file cipconnectionmanager.\-c.
+
+
+
+\-Referenced by \-Add\-New\-Active\-Connection(), \-Check\-And\-Handle\-Consuming\-Udp\-Sockets(), \-Check\-For\-Existing\-Connection(), \-Close\-All\-Connections(), \-Close\-All\-Connections\-For\-Input\-With\-Same\-Type(), \-Connection\-With\-Same\-Config\-Point\-Exists(), \-Forward\-Close(), \-Get\-Connected\-Object(), \-Get\-Connected\-Output\-Assembly(), \-Get\-Existing\-Producer\-Multicast\-Connection(), \-Get\-Next\-Non\-Control\-Master\-Connection(), \-Is\-Connected\-Output\-Assembly(), \-Manage\-Connections(), and \-Trigger\-Connections().
+
+\hypertarget{cipconnectionmanager_8c_a3bb02f514692122bef60811d57c0b5d3}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!g\-\_\-connection\-\_\-management\-\_\-list@{g\-\_\-connection\-\_\-management\-\_\-list}}
+\index{g\-\_\-connection\-\_\-management\-\_\-list@{g\-\_\-connection\-\_\-management\-\_\-list}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{g\-\_\-connection\-\_\-management\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Management\-Handling} {\bf g\-\_\-connection\-\_\-management\-\_\-list}\mbox{[}2+{\bf \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-A\-P\-P\-L\-I\-C\-A\-T\-I\-O\-N\-\_\-\-S\-P\-E\-C\-I\-F\-I\-C\-\_\-\-C\-O\-N\-N\-E\-C\-T\-A\-B\-L\-E\-\_\-\-O\-B\-J\-E\-C\-T\-S}\mbox{]}}}\label{d5/d35/cipconnectionmanager_8c_a3bb02f514692122bef60811d57c0b5d3}
+\-List holding information on the object classes and open/close function pointers to which connections may be established. 
+
+\-Definition at line 53 of file cipconnectionmanager.\-c.
+
+\hypertarget{cipconnectionmanager_8c_aefc06511ddd041d393627c29b419b0cc}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!g\-\_\-dummy\-\_\-connection\-\_\-object@{g\-\_\-dummy\-\_\-connection\-\_\-object}}
+\index{g\-\_\-dummy\-\_\-connection\-\_\-object@{g\-\_\-dummy\-\_\-connection\-\_\-object}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{g\-\_\-dummy\-\_\-connection\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Object} {\bf g\-\_\-dummy\-\_\-connection\-\_\-object}}}\label{d5/d35/cipconnectionmanager_8c_aefc06511ddd041d393627c29b419b0cc}
+buffer connection object needed for forward open 
+
+\-Definition at line 59 of file cipconnectionmanager.\-c.
+
+\hypertarget{cipconnectionmanager_8c_a4fa91981e220d2f8a83ad152cc8b750a}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!g\-\_\-incarnation\-\_\-id@{g\-\_\-incarnation\-\_\-id}}
+\index{g\-\_\-incarnation\-\_\-id@{g\-\_\-incarnation\-\_\-id}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{g\-\_\-incarnation\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint32} {\bf g\-\_\-incarnation\-\_\-id}}}\label{d5/d35/cipconnectionmanager_8c_a4fa91981e220d2f8a83ad152cc8b750a}
+
+
+\-Holds the connection \-I\-D's \char`\"{}incarnation I\-D\char`\"{} in the upper 16 bits. 
+
+
+
+\-Definition at line 62 of file cipconnectionmanager.\-c.
+
+
+
+\-Referenced by \-Connection\-Manager\-Init(), and \-Get\-Connection\-Id().
+
+\hypertarget{cipconnectionmanager_8c_af8eb9fc6b76aad632d89bcfaeb99444b}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!g\-\_\-k\-Forward\-Open\-Header\-Length@{g\-\_\-k\-Forward\-Open\-Header\-Length}}
+\index{g\-\_\-k\-Forward\-Open\-Header\-Length@{g\-\_\-k\-Forward\-Open\-Header\-Length}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{g\-\_\-k\-Forward\-Open\-Header\-Length}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf g\-\_\-k\-Forward\-Open\-Header\-Length} = 36}}\label{d5/d35/cipconnectionmanager_8c_af8eb9fc6b76aad632d89bcfaeb99444b}
+the length in bytes of the forward open command specific data till the start of the connection path (including con path size) 
+
+\-Definition at line 35 of file cipconnectionmanager.\-c.
+
+
+
+\-Referenced by \-Parse\-Connection\-Path().
+
+\hypertarget{cipconnectionmanager_8c_a952aaef238eb5c4b73eae1692f7e8112}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!product\-\_\-code\-\_\-@{product\-\_\-code\-\_\-}}
+\index{product\-\_\-code\-\_\-@{product\-\_\-code\-\_\-}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{product\-\_\-code\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint16} {\bf product\-\_\-code\-\_\-}}}\label{d5/d35/cipconnectionmanager_8c_a952aaef238eb5c4b73eae1692f7e8112}
+\-Attribute 3\-: \-Product \-Code 
+
+\-Definition at line 42 of file cipidentity.\-c.
+
+
+
+\-Referenced by \-Check\-Electronic\-Key\-Data(), \-Cip\-Identity\-Init(), and \-Encapsulate\-List\-Identy\-Response\-Message().
+
+\hypertarget{cipconnectionmanager_8c_aef2b62657ef56842d595877f2af6c64b}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!revision\-\_\-@{revision\-\_\-}}
+\index{revision\-\_\-@{revision\-\_\-}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{revision\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Revision} {\bf revision\-\_\-}}}\label{d5/d35/cipconnectionmanager_8c_aef2b62657ef56842d595877f2af6c64b}
+\-Attribute 4\-: \-Revision / \-U\-S\-I\-N\-T \-Major, \-U\-S\-I\-N\-T \-Minor 
+
+\-Definition at line 43 of file cipidentity.\-c.
+
+\hypertarget{cipconnectionmanager_8c_a4bc7452f53881ccfd18ac9724f811903}{\index{cipconnectionmanager.\-c@{cipconnectionmanager.\-c}!vendor\-\_\-id\-\_\-@{vendor\-\_\-id\-\_\-}}
+\index{vendor\-\_\-id\-\_\-@{vendor\-\_\-id\-\_\-}!cipconnectionmanager.c@{cipconnectionmanager.\-c}}
+\subsubsection[{vendor\-\_\-id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint16} {\bf vendor\-\_\-id\-\_\-}}}\label{d5/d35/cipconnectionmanager_8c_a4bc7452f53881ccfd18ac9724f811903}
+\-Attribute 1\-: \-Vendor \-I\-D 
+
+\-Definition at line 40 of file cipidentity.\-c.
+
+
+
+\-Referenced by \-Check\-Electronic\-Key\-Data(), \-Cip\-Identity\-Init(), and \-Encapsulate\-List\-Identy\-Response\-Message().
+

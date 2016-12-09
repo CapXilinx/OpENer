@@ -1,0 +1,373 @@
+\hypertarget{cipcommon_8c}{\section{src/cip/cipcommon.c \-File \-Reference}
+\label{d2/d3d/cipcommon_8c}\index{src/cip/cipcommon.\-c@{src/cip/cipcommon.\-c}}
+}
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include \char`\"{}cipcommon.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}opener\-\_\-user\-\_\-conf.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}opener\-\_\-api.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipidentity.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ciptcpipinterface.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipethernetlink.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipconnectionmanager.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}endianconv.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}encap.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ciperror.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipassembly.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipmessagerouter.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cpf.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}trace.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}appcontype.\-h\char`\"{}}\*
+\-Include dependency graph for cipcommon.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dc9/cipcommon_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_ga180023c8528628f7d83023e4db81287a}{\-Add\-C\-I\-P\-Instance} (\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const class, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Create one instance of a given class with a certain instance number. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_ga39dafca98f844a12511af11b1273d0a8}{\-Add\-Cip\-Instances} (\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const \hyperlink{structcip__class}{cip\-\_\-class}, const int number\-\_\-of\-\_\-instances)
+\begin{DoxyCompactList}\small\item\em \-Add a number of \-C\-I\-P instances to a given \-C\-I\-P class. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga5d4979945d124e28668b264c3823db1c}{\-Cip\-Stack\-Init} (const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} unique\-\_\-connection\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Initialize and setup the \-C\-I\-P-\/stack. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$ \hyperlink{group__CIP__API_ga446b7f612fe7baaf40d7f87274832922}{\-Create\-Cip\-Class} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-id, const int number\-\_\-of\-\_\-class\-\_\-attributes, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} get\-\_\-all\-\_\-class\-\_\-attributes\-\_\-mask, const int number\-\_\-of\-\_\-class\-\_\-services, const int number\-\_\-of\-\_\-instance\-\_\-attributes, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} get\-\_\-all\-\_\-instance\-\_\-attributes\-\_\-mask, const int number\-\_\-of\-\_\-instance\-\_\-services, const int number\-\_\-of\-\_\-instances, char $\ast$name, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} revision)
+\begin{DoxyCompactList}\small\item\em \-Allocate memory for new \-C\-I\-P \-Class and attributes. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_ga23ef471671180123d441d30895159a3c}{\-Decode\-Data} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} cip\-\_\-type, void $\ast$const data, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const message)
+\begin{DoxyCompactList}\small\item\em \-Retrieve the given data according to \-C\-I\-P encoding from the message buffer. \end{DoxyCompactList}\item 
+int \hyperlink{cipcommon_8c_ae7acee656656a60bf4e33f33369ac3a5}{\-Decode\-Padded\-E\-Path} (\hyperlink{structCipEpath}{\-Cip\-Epath} $\ast$epath, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$message)
+\begin{DoxyCompactList}\small\item\em \-Decodes padded \-E\-Path. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_gaece1b7dd2aeec306cb33b86b2ee21980}{\-Encode\-Data} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} cip\-\_\-type, const void $\ast$const cip\-\_\-data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$cip\-\_\-message)
+\begin{DoxyCompactList}\small\item\em \-Produce the data according to \-C\-I\-P encoding onto the message buffer. \end{DoxyCompactList}\item 
+int \hyperlink{cipcommon_8c_a6eec1752e2cffbbab16bff95fa145bd3}{\-Encode\-E\-Path} (\hyperlink{structCipEpath}{\-Cip\-Epath} $\ast$epath, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$message)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipcommon_8c_a8aa8e5e3dc4c505af8ba8ca4e37d9d3e}{\-Get\-Attribute\-All} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response)
+\begin{DoxyCompactList}\small\item\em \-Generic implementation of the \-Get\-Attribute\-All \-C\-I\-P service. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipcommon_8c_a92cbf8f0a7c9d1e251d22c046f0526bb}{\-Get\-Attribute\-Single} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$const message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$const message\-\_\-router\-\_\-response)
+\begin{DoxyCompactList}\small\item\em \-Generic implementation of the \-Get\-Attribute\-Single \-C\-I\-P service. \end{DoxyCompactList}\item 
+\hyperlink{structCipAttributeStruct}{\-Cip\-Attribute\-Struct} $\ast$ \hyperlink{group__CIP__API_ga5a14c8d76acacb09312b709bb0a76265}{\-Get\-Cip\-Attribute} (const \hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$const instance, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} attribute\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Get a pointer to an instance's attribute. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gac207feb53c1f98b45f3934bbea63d618}{\-Insert\-Attribute} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$const instance, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} attribute\-\_\-number, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} cip\-\_\-type, void $\ast$const data, const \hyperlink{typedefs_8h_a168bac8db7e7e6d944700e1ac4717ae3}{\-Eip\-Byte} cip\-\_\-flags)
+\begin{DoxyCompactList}\small\item\em \-Insert an attribute in an instance of a \-C\-I\-P class. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga35f639b135ec3c3903f49fd65daed307}{\-Insert\-Service} (const \hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$const class, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} service\-\_\-number, const \hyperlink{ciptypes_8h_af7606d2a9b86977aa0ac4ec9ccec3701}{\-Cip\-Service\-Function} service\-\_\-function, char $\ast$const service\-\_\-name)
+\begin{DoxyCompactList}\small\item\em \-Insert a service in an instance of a \-C\-I\-P object. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{cipcommon_8c_a9735d2a8c69d731b352381ff1d03d8a2}{\-Notify\-Class} (const \hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const \hyperlink{structcip__class}{cip\-\_\-class}, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$const message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$const message\-\_\-router\-\_\-response)
+\begin{DoxyCompactList}\small\item\em \-Check if requested service present in class/instance and call appropriate service. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gaa57b527530adc2acda6febc500fd6831}{\-Shutdown\-Cip\-Stack} (void)
+\begin{DoxyCompactList}\small\item\em \-Shutdown of the \-C\-I\-P stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} \hyperlink{cipcommon_8c_a5bd888b31f309543df6dc57652d2ac48}{g\-\_\-message\-\_\-data\-\_\-reply\-\_\-buffer} \mbox{[}\hyperlink{WIN32_2sample__application_2opener__user__conf_8h_ac3774576feaec4fbdf86d32044d38c89}{\-O\-P\-E\-N\-E\-R\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-P\-L\-Y\-\_\-\-B\-U\-F\-F\-E\-R}\mbox{]}
+\item 
+const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} \hyperlink{cipcommon_8c_a9af891490aec616cdbf62412d6bdee2f}{k\-Cip\-Uint\-Zero} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{cipcommon_8c_ae7acee656656a60bf4e33f33369ac3a5}{\index{cipcommon.\-c@{cipcommon.\-c}!\-Decode\-Padded\-E\-Path@{\-Decode\-Padded\-E\-Path}}
+\index{\-Decode\-Padded\-E\-Path@{\-Decode\-Padded\-E\-Path}!cipcommon.c@{cipcommon.\-c}}
+\subsubsection[{\-Decode\-Padded\-E\-Path}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Decode\-Padded\-E\-Path} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Epath} $\ast$}]{epath, }
+\item[{const {\bf \-Eip\-Uint8} $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{d2/d3d/cipcommon_8c_ae7acee656656a60bf4e33f33369ac3a5}
+
+
+\-Decodes padded \-E\-Path. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em epath} & \-E\-Path to the receiving element \\
+\hline
+{\em message} & \-C\-I\-P \-Message to decode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Number of decoded bytes 
+\end{DoxyReturn}
+
+
+\-Definition at line 743 of file cipcommon.\-c.
+
+
+
+\-References \-Cip\-Epath\-::attribute\-\_\-number, \-Cip\-Epath\-::class\-\_\-id, \-Get\-Int\-From\-Message(), \-Cip\-Epath\-::instance\-\_\-number, k\-Eip\-Status\-Error, k\-Logical\-Segment\-Logical\-Format\-Eight\-Bit\-Value, k\-Logical\-Segment\-Logical\-Format\-Sixteen\-Bit\-Value, k\-Logical\-Segment\-Logical\-Type\-Attribute\-Id, k\-Logical\-Segment\-Logical\-Type\-Class\-Id, k\-Logical\-Segment\-Logical\-Type\-Instance\-Id, k\-Segment\-Type\-Logical\-Segment, k\-Segment\-Type\-Segment\-Type\-Reserved, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, and \-Cip\-Epath\-::path\-\_\-size.
+
+
+
+\-Referenced by \-Create\-Message\-Router\-Request\-Structure().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{d2/d3d/cipcommon_8c_ae7acee656656a60bf4e33f33369ac3a5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/cipcommon_8c_ae7acee656656a60bf4e33f33369ac3a5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipcommon_8c_a6eec1752e2cffbbab16bff95fa145bd3}{\index{cipcommon.\-c@{cipcommon.\-c}!\-Encode\-E\-Path@{\-Encode\-E\-Path}}
+\index{\-Encode\-E\-Path@{\-Encode\-E\-Path}!cipcommon.c@{cipcommon.\-c}}
+\subsubsection[{\-Encode\-E\-Path}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Encode\-E\-Path} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Epath} $\ast$}]{epath, }
+\item[{{\bf \-Eip\-Uint8} $\ast$$\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{d2/d3d/cipcommon_8c_a6eec1752e2cffbbab16bff95fa145bd3}
+
+
+\-Definition at line 687 of file cipcommon.\-c.
+
+
+
+\-References \-Add\-Int\-To\-Message(), \-Cip\-Epath\-::attribute\-\_\-number, \-Cip\-Epath\-::class\-\_\-id, \-Cip\-Epath\-::instance\-\_\-number, and \-Cip\-Epath\-::path\-\_\-size.
+
+
+
+\-Referenced by \-Encode\-Data().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{d2/d3d/cipcommon_8c_a6eec1752e2cffbbab16bff95fa145bd3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/cipcommon_8c_a6eec1752e2cffbbab16bff95fa145bd3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipcommon_8c_a8aa8e5e3dc4c505af8ba8ca4e37d9d3e}{\index{cipcommon.\-c@{cipcommon.\-c}!\-Get\-Attribute\-All@{\-Get\-Attribute\-All}}
+\index{\-Get\-Attribute\-All@{\-Get\-Attribute\-All}!cipcommon.c@{cipcommon.\-c}}
+\subsubsection[{\-Get\-Attribute\-All}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Get\-Attribute\-All} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$}]{instance, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{d2/d3d/cipcommon_8c_a8aa8e5e3dc4c505af8ba8ca4e37d9d3e}
+
+
+\-Generic implementation of the \-Get\-Attribute\-All \-C\-I\-P service. 
+
+\-Copy all attributes from \-Object into the global message buffer. 
+\begin{DoxyParams}{\-Parameters}
+{\em instance} & pointer to object instance with data. \\
+\hline
+{\em message\-\_\-router\-\_\-request} & pointer to \-M\-R request. \\
+\hline
+{\em message\-\_\-router\-\_\-response} & pointer for \-M\-R response. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+length of data stream $>$0 .. success 0 .. no reply to send 
+\end{DoxyReturn}
+
+
+\-Definition at line 635 of file cipcommon.\-c.
+
+
+
+\-References \-Cip\-Epath\-::attribute\-\_\-number, \-Cip\-Attribute\-Struct\-::attribute\-\_\-number, cip\-\_\-instance\-::attributes, cip\-\_\-instance\-::cip\-\_\-class, \-Cip\-Message\-Router\-Response\-::data, \-Cip\-Message\-Router\-Response\-::data\-\_\-length, \-Cip\-Message\-Router\-Response\-::general\-\_\-status, cip\-\_\-class\-::get\-\_\-attribute\-\_\-all\-\_\-mask, cip\-\_\-instance\-::instance\-\_\-number, k\-Cip\-Error\-Service\-Not\-Supported, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Eip\-Status\-Ok\-Send, k\-Get\-Attribute\-Single, cip\-\_\-class\-::number\-\_\-of\-\_\-attributes, cip\-\_\-class\-::number\-\_\-of\-\_\-services, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, \-Cip\-Message\-Router\-Response\-::reply\-\_\-service, \-Cip\-Message\-Router\-Request\-::request\-\_\-path, \-Cip\-Message\-Router\-Request\-::service, cip\-\_\-service\-\_\-struct\-::service\-\_\-function, cip\-\_\-service\-\_\-struct\-::service\-\_\-number, cip\-\_\-class\-::services, and \-Cip\-Message\-Router\-Response\-::size\-\_\-of\-\_\-additional\-\_\-status.
+
+
+
+\-Referenced by \-Create\-Cip\-Class().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/cipcommon_8c_a8aa8e5e3dc4c505af8ba8ca4e37d9d3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipcommon_8c_a92cbf8f0a7c9d1e251d22c046f0526bb}{\index{cipcommon.\-c@{cipcommon.\-c}!\-Get\-Attribute\-Single@{\-Get\-Attribute\-Single}}
+\index{\-Get\-Attribute\-Single@{\-Get\-Attribute\-Single}!cipcommon.c@{cipcommon.\-c}}
+\subsubsection[{\-Get\-Attribute\-Single}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Get\-Attribute\-Single} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{instance, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$const}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$const}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{d2/d3d/cipcommon_8c_a92cbf8f0a7c9d1e251d22c046f0526bb}
+
+
+\-Generic implementation of the \-Get\-Attribute\-Single \-C\-I\-P service. 
+
+\-Check from class\-I\-D which \-Object requests an attribute, search if object has the appropriate attribute implemented. 
+\begin{DoxyParams}{\-Parameters}
+{\em instance} & pointer to instance. \\
+\hline
+{\em message\-\_\-router\-\_\-request} & pointer to request. \\
+\hline
+{\em message\-\_\-router\-\_\-response} & pointer to response. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+status $>$0 .. success -\/1 .. requested attribute not available 
+\end{DoxyReturn}
+
+
+\-Definition at line 353 of file cipcommon.\-c.
+
+
+
+\-References \-Cip\-Attribute\-Struct\-::attribute\-\_\-flags, \-Cip\-Epath\-::attribute\-\_\-number, \-Before\-Assembly\-Data\-Send(), \-Cip\-Message\-Router\-Response\-::data, \-Cip\-Attribute\-Struct\-::data, \-Cip\-Message\-Router\-Response\-::data\-\_\-length, \-Encode\-Data(), \-Cip\-Message\-Router\-Response\-::general\-\_\-status, \-Get\-Cip\-Attribute(), k\-Cip\-Byte\-Array, k\-Cip\-Error\-Attribute\-Not\-Supported, k\-Cip\-Error\-Success, k\-Eip\-Status\-Ok\-Send, k\-Getable\-All, k\-Getable\-Single, k\-Get\-Attribute\-All, k\-Not\-Set\-Or\-Getable, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, \-Cip\-Message\-Router\-Response\-::reply\-\_\-service, \-Cip\-Message\-Router\-Request\-::request\-\_\-path, \-Cip\-Message\-Router\-Request\-::service, \-Cip\-Message\-Router\-Response\-::size\-\_\-of\-\_\-additional\-\_\-status, and \-Cip\-Attribute\-Struct\-::type.
+
+
+
+\-Referenced by \-Create\-Cip\-Class(), and \-Get\-Attribute\-Single\-Tcp\-Ip\-Interface().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/cipcommon_8c_a92cbf8f0a7c9d1e251d22c046f0526bb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/cipcommon_8c_a92cbf8f0a7c9d1e251d22c046f0526bb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cipcommon_8c_a9735d2a8c69d731b352381ff1d03d8a2}{\index{cipcommon.\-c@{cipcommon.\-c}!\-Notify\-Class@{\-Notify\-Class}}
+\index{\-Notify\-Class@{\-Notify\-Class}!cipcommon.c@{cipcommon.\-c}}
+\subsubsection[{\-Notify\-Class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Notify\-Class} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{class, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$const}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$const}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{d2/d3d/cipcommon_8c_a9735d2a8c69d731b352381ff1d03d8a2}
+
+
+\-Check if requested service present in class/instance and call appropriate service. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em class} & class receiving the message \\
+\hline
+{\em message\-\_\-router\-\_\-request} & request message \\
+\hline
+{\em message\-\_\-router\-\_\-response} & reply message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\begin{DoxyItemize}
+\item k\-Eip\-Status\-Ok\-Send ... success
+\item k\-Eip\-Status\-Ok ... no reply to send back
+\item k\-Eip\-Status\-Error ... error 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+\-Definition at line 70 of file cipcommon.\-c.
+
+
+
+\-References cip\-\_\-instance\-::cip\-\_\-class, \-Cip\-Message\-Router\-Response\-::data\-\_\-length, \-Cip\-Message\-Router\-Response\-::general\-\_\-status, \-Get\-Cip\-Instance(), \-Cip\-Epath\-::instance\-\_\-number, k\-Cip\-Error\-Path\-Destination\-Unknown, k\-Cip\-Error\-Service\-Not\-Supported, k\-Eip\-Status\-Ok\-Send, cip\-\_\-service\-\_\-struct\-::name, cip\-\_\-class\-::number\-\_\-of\-\_\-services, \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-W\-A\-R\-N, \-Cip\-Message\-Router\-Response\-::reply\-\_\-service, \-Cip\-Message\-Router\-Request\-::request\-\_\-path, \-Cip\-Message\-Router\-Request\-::service, cip\-\_\-service\-\_\-struct\-::service\-\_\-function, cip\-\_\-service\-\_\-struct\-::service\-\_\-number, cip\-\_\-class\-::services, and \-Cip\-Message\-Router\-Response\-::size\-\_\-of\-\_\-additional\-\_\-status.
+
+
+
+\-Referenced by \-Notify\-Message\-Router().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{d2/d3d/cipcommon_8c_a9735d2a8c69d731b352381ff1d03d8a2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/cipcommon_8c_a9735d2a8c69d731b352381ff1d03d8a2_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{cipcommon_8c_a5bd888b31f309543df6dc57652d2ac48}{\index{cipcommon.\-c@{cipcommon.\-c}!g\-\_\-message\-\_\-data\-\_\-reply\-\_\-buffer@{g\-\_\-message\-\_\-data\-\_\-reply\-\_\-buffer}}
+\index{g\-\_\-message\-\_\-data\-\_\-reply\-\_\-buffer@{g\-\_\-message\-\_\-data\-\_\-reply\-\_\-buffer}!cipcommon.c@{cipcommon.\-c}}
+\subsubsection[{g\-\_\-message\-\_\-data\-\_\-reply\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint8} {\bf g\-\_\-message\-\_\-data\-\_\-reply\-\_\-buffer}\mbox{[}{\bf \-O\-P\-E\-N\-E\-R\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-P\-L\-Y\-\_\-\-B\-U\-F\-F\-E\-R}\mbox{]}}}\label{d2/d3d/cipcommon_8c_a5bd888b31f309543df6dc57652d2ac48}
+\-Reply buffer 
+
+\-Definition at line 26 of file cipcommon.\-c.
+
+
+
+\-Referenced by \-Assemble\-I\-O\-Message(), \-Cip\-Message\-Router\-Init(), \-Notify\-Message\-Router(), and \-Send\-Connected\-Data().
+
+\hypertarget{cipcommon_8c_a9af891490aec616cdbf62412d6bdee2f}{\index{cipcommon.\-c@{cipcommon.\-c}!k\-Cip\-Uint\-Zero@{k\-Cip\-Uint\-Zero}}
+\index{k\-Cip\-Uint\-Zero@{k\-Cip\-Uint\-Zero}!cipcommon.c@{cipcommon.\-c}}
+\subsubsection[{k\-Cip\-Uint\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Eip\-Uint16} {\bf k\-Cip\-Uint\-Zero} = 0}}\label{d2/d3d/cipcommon_8c_a9af891490aec616cdbf62412d6bdee2f}
+\-Zero value for returning the \-U\-I\-N\-T standard value 
+
+\-Definition at line 28 of file cipcommon.\-c.
+
+
+
+\-Referenced by \-Create\-Cip\-Class().
+

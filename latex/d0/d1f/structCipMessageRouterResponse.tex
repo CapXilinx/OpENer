@@ -1,0 +1,123 @@
+\hypertarget{structCipMessageRouterResponse}{\section{\-Cip\-Message\-Router\-Response \-Struct \-Reference}
+\label{d0/d1f/structCipMessageRouterResponse}\index{\-Cip\-Message\-Router\-Response@{\-Cip\-Message\-Router\-Response}}
+}
+
+
+\-C\-I\-P \-Message \-Router \-Response.  
+
+
+
+
+{\ttfamily \#include $<$ciptypes.\-h$>$}
+
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} \hyperlink{structCipMessageRouterResponse_ab779a25335c5fe122f7f6a87edd1288d}{additional\-\_\-status} \mbox{[}\hyperlink{ciptypes_8h_a76032ec3319954c70deea1f039deeb19}{\-M\-A\-X\-\_\-\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-A\-D\-D\-\_\-\-S\-T\-A\-T\-U\-S}\mbox{]}
+\item 
+\hyperlink{typedefs_8h_ab1d6828b2df519496de8762b3ffd54b1}{\-Cip\-Octet} $\ast$ \hyperlink{structCipMessageRouterResponse_a20feba97168b4551ba1e483e9cf568ec}{data}
+\item 
+\hyperlink{typedefs_8h_a3112f543eced50bf7680d12202c50f60}{\-Eip\-Int16} \hyperlink{structCipMessageRouterResponse_a1b6548497e7629c815b6f71b8dbaecbb}{data\-\_\-length}
+\item 
+\hyperlink{typedefs_8h_a378b726bef4c65cb2ec1c1cdf1205f52}{\-Cip\-Usint} \hyperlink{structCipMessageRouterResponse_ac41c087aef657407542cb640cdb44414}{general\-\_\-status}
+\item 
+\hyperlink{typedefs_8h_a378b726bef4c65cb2ec1c1cdf1205f52}{\-Cip\-Usint} \hyperlink{structCipMessageRouterResponse_a9bedd472cae3ed195d6fa894133bec6b}{reply\-\_\-service}
+\item 
+\hyperlink{typedefs_8h_ab1d6828b2df519496de8762b3ffd54b1}{\-Cip\-Octet} \hyperlink{structCipMessageRouterResponse_a76f1726a4fd8935f13ef55e6393398a9}{reserved}
+\item 
+\hyperlink{typedefs_8h_a378b726bef4c65cb2ec1c1cdf1205f52}{\-Cip\-Usint} \hyperlink{structCipMessageRouterResponse_a1b89b9d5962ad72516fb1c413857993a}{size\-\_\-of\-\_\-additional\-\_\-status}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-C\-I\-P \-Message \-Router \-Response. 
+
+
+
+\-Definition at line 259 of file ciptypes.\-h.
+
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structCipMessageRouterResponse_ab779a25335c5fe122f7f6a87edd1288d}{\index{\-Cip\-Message\-Router\-Response@{\-Cip\-Message\-Router\-Response}!additional\-\_\-status@{additional\-\_\-status}}
+\index{additional\-\_\-status@{additional\-\_\-status}!CipMessageRouterResponse@{\-Cip\-Message\-Router\-Response}}
+\subsubsection[{additional\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint16} {\bf \-Cip\-Message\-Router\-Response\-::additional\-\_\-status}\mbox{[}{\bf \-M\-A\-X\-\_\-\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-A\-D\-D\-\_\-\-S\-T\-A\-T\-U\-S}\mbox{]}}}\label{d0/d1f/structCipMessageRouterResponse_ab779a25335c5fe122f7f6a87edd1288d}
+\-Array of 16 bit words; \-Additional status; \-If \-Size\-Of\-Additional\-Status is 0. there is no \-Additional \-Status 
+
+\-Definition at line 267 of file ciptypes.\-h.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), \-Assemble\-Forward\-Open\-Response(), and \-Encode\-Extended\-Status\-Data\-Items().
+
+\hypertarget{structCipMessageRouterResponse_a20feba97168b4551ba1e483e9cf568ec}{\index{\-Cip\-Message\-Router\-Response@{\-Cip\-Message\-Router\-Response}!data@{data}}
+\index{data@{data}!CipMessageRouterResponse@{\-Cip\-Message\-Router\-Response}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Octet}$\ast$ {\bf \-Cip\-Message\-Router\-Response\-::data}}}\label{d0/d1f/structCipMessageRouterResponse_a20feba97168b4551ba1e483e9cf568ec}
+\-Array of octet; \-Response data per object definition from request 
+
+\-Definition at line 271 of file ciptypes.\-h.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), \-Assemble\-Forward\-Open\-Response(), \-Cip\-Message\-Router\-Init(), \-Encode\-Message\-Router\-Response\-Data(), \-Get\-Attribute\-All(), \-Get\-Attribute\-All\-Tcp\-Ip\-Interface(), \-Get\-Attribute\-Single(), and \-Notify\-Message\-Router().
+
+\hypertarget{structCipMessageRouterResponse_a1b6548497e7629c815b6f71b8dbaecbb}{\index{\-Cip\-Message\-Router\-Response@{\-Cip\-Message\-Router\-Response}!data\-\_\-length@{data\-\_\-length}}
+\index{data\-\_\-length@{data\-\_\-length}!CipMessageRouterResponse@{\-Cip\-Message\-Router\-Response}}
+\subsubsection[{data\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Int16} {\bf \-Cip\-Message\-Router\-Response\-::data\-\_\-length}}}\label{d0/d1f/structCipMessageRouterResponse_a1b6548497e7629c815b6f71b8dbaecbb}
+\-Supportative non-\/\-C\-I\-P variable, gives length of data segment 
+
+\-Definition at line 270 of file ciptypes.\-h.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), \-Assemble\-Forward\-Open\-Response(), \-Encode\-Connected\-Data\-Item\-Length(), \-Encode\-Message\-Router\-Response\-Data(), \-Encode\-Unconnected\-Data\-Item\-Length(), \-Get\-Attribute\-All(), \-Get\-Attribute\-All\-Tcp\-Ip\-Interface(), \-Get\-Attribute\-Single(), \-Notify\-Class(), \-Notify\-Message\-Router(), \-Set\-Assembly\-Attribute\-Single(), and \-Set\-Attribute\-Single\-Tcp().
+
+\hypertarget{structCipMessageRouterResponse_ac41c087aef657407542cb640cdb44414}{\index{\-Cip\-Message\-Router\-Response@{\-Cip\-Message\-Router\-Response}!general\-\_\-status@{general\-\_\-status}}
+\index{general\-\_\-status@{general\-\_\-status}!CipMessageRouterResponse@{\-Cip\-Message\-Router\-Response}}
+\subsubsection[{general\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Usint} {\bf \-Cip\-Message\-Router\-Response\-::general\-\_\-status}}}\label{d0/d1f/structCipMessageRouterResponse_ac41c087aef657407542cb640cdb44414}
+\-One of the \-General \-Status codes listed in \-C\-I\-P \-Specification \-Volume 1, \-Appendix \-B 
+
+\-Definition at line 263 of file ciptypes.\-h.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), \-Assemble\-Forward\-Open\-Response(), \-Encode\-General\-Status(), \-Get\-Attribute\-All(), \-Get\-Attribute\-Single(), \-Notify\-Class(), \-Notify\-Message\-Router(), \-Set\-Assembly\-Attribute\-Single(), and \-Set\-Attribute\-Single\-Tcp().
+
+\hypertarget{structCipMessageRouterResponse_a9bedd472cae3ed195d6fa894133bec6b}{\index{\-Cip\-Message\-Router\-Response@{\-Cip\-Message\-Router\-Response}!reply\-\_\-service@{reply\-\_\-service}}
+\index{reply\-\_\-service@{reply\-\_\-service}!CipMessageRouterResponse@{\-Cip\-Message\-Router\-Response}}
+\subsubsection[{reply\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Usint} {\bf \-Cip\-Message\-Router\-Response\-::reply\-\_\-service}}}\label{d0/d1f/structCipMessageRouterResponse_a9bedd472cae3ed195d6fa894133bec6b}
+\-Reply service code, the requested service code + 0x80 
+
+\-Definition at line 260 of file ciptypes.\-h.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), \-Assemble\-Forward\-Open\-Response(), \-Encode\-Reply\-Service(), \-Get\-Attribute\-All(), \-Get\-Attribute\-Single(), \-Notify\-Class(), \-Notify\-Message\-Router(), \-Set\-Assembly\-Attribute\-Single(), and \-Set\-Attribute\-Single\-Tcp().
+
+\hypertarget{structCipMessageRouterResponse_a76f1726a4fd8935f13ef55e6393398a9}{\index{\-Cip\-Message\-Router\-Response@{\-Cip\-Message\-Router\-Response}!reserved@{reserved}}
+\index{reserved@{reserved}!CipMessageRouterResponse@{\-Cip\-Message\-Router\-Response}}
+\subsubsection[{reserved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Octet} {\bf \-Cip\-Message\-Router\-Response\-::reserved}}}\label{d0/d1f/structCipMessageRouterResponse_a76f1726a4fd8935f13ef55e6393398a9}
+\-Reserved; \-Shall be zero 
+
+\-Definition at line 262 of file ciptypes.\-h.
+
+
+
+\-Referenced by \-Cip\-Message\-Router\-Init(), \-Encode\-Reserved\-Field\-Of\-Length\-Byte(), and \-Notify\-Message\-Router().
+
+\hypertarget{structCipMessageRouterResponse_a1b89b9d5962ad72516fb1c413857993a}{\index{\-Cip\-Message\-Router\-Response@{\-Cip\-Message\-Router\-Response}!size\-\_\-of\-\_\-additional\-\_\-status@{size\-\_\-of\-\_\-additional\-\_\-status}}
+\index{size\-\_\-of\-\_\-additional\-\_\-status@{size\-\_\-of\-\_\-additional\-\_\-status}!CipMessageRouterResponse@{\-Cip\-Message\-Router\-Response}}
+\subsubsection[{size\-\_\-of\-\_\-additional\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Usint} {\bf \-Cip\-Message\-Router\-Response\-::size\-\_\-of\-\_\-additional\-\_\-status}}}\label{d0/d1f/structCipMessageRouterResponse_a1b89b9d5962ad72516fb1c413857993a}
+\-Number of additional 16 bit words in \-Additional \-Status \-Array 
+
+\-Definition at line 265 of file ciptypes.\-h.
+
+
+
+\-Referenced by \-Assemble\-Forward\-Close\-Response(), \-Assemble\-Forward\-Open\-Response(), \-Encode\-Connected\-Data\-Item\-Length(), \-Encode\-Extended\-Status\-Data\-Items(), \-Encode\-Extended\-Status\-Length(), \-Encode\-Unconnected\-Data\-Item\-Length(), \-Get\-Attribute\-All(), \-Get\-Attribute\-Single(), \-Notify\-Class(), \-Notify\-Message\-Router(), \-Set\-Assembly\-Attribute\-Single(), and \-Set\-Attribute\-Single\-Tcp().
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/cip/\hyperlink{ciptypes_8h}{ciptypes.\-h}\end{DoxyCompactItemize}

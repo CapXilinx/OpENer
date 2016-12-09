@@ -1,0 +1,94 @@
+\hypertarget{POSIX_2networkhandler_8h}{\section{src/ports/\-P\-O\-S\-I\-X/networkhandler.h \-File \-Reference}
+\label{d6/d33/POSIX_2networkhandler_8h}\index{src/ports/\-P\-O\-S\-I\-X/networkhandler.\-h@{src/ports/\-P\-O\-S\-I\-X/networkhandler.\-h}}
+}
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$sys/socket.\-h$>$}\*
+{\ttfamily \#include \char`\"{}typedefs.\-h\char`\"{}}\*
+\-Include dependency graph for networkhandler.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{d1/d33/POSIX_2networkhandler_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{df/dc2/POSIX_2networkhandler_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{POSIX_2networkhandler_8h_a2812ba0ecd1fd9a5549fbca397d76e3e}{\-Close\-Socket\-Platform} (int socket\-\_\-handle)
+\item 
+\hyperlink{typedefs_8h_ae0a1fa16166bc8184543ffab114f2497}{\-Micro\-Seconds} \hyperlink{POSIX_2networkhandler_8h_af4f11a1fa3e652845dc5164d097e9e13}{\-Get\-Micro\-Seconds} (void)
+\begin{DoxyCompactList}\small\item\em \-This function shall return the current time in microseconds relative to epoch, and shall be implemented in a port specific networkhandler. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2972c9424f18b12265ca35d0548da82a}{\-Milli\-Seconds} \hyperlink{POSIX_2networkhandler_8h_a2d91de751b888e7b5a5c2e2692fd4492}{\-Get\-Milli\-Seconds} (void)
+\begin{DoxyCompactList}\small\item\em \-This function shall return the current time in milliseconds relative to epoch, and shall be implemented in a port specific networkhandler. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{POSIX_2networkhandler_8h_a443a5019c1bb91b2490f96b0d0158e04}{\-Network\-Handler\-Initialize\-Platform} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{POSIX_2networkhandler_8h_a2812ba0ecd1fd9a5549fbca397d76e3e}{\index{\-P\-O\-S\-I\-X/networkhandler.\-h@{\-P\-O\-S\-I\-X/networkhandler.\-h}!\-Close\-Socket\-Platform@{\-Close\-Socket\-Platform}}
+\index{\-Close\-Socket\-Platform@{\-Close\-Socket\-Platform}!POSIX/networkhandler.h@{\-P\-O\-S\-I\-X/networkhandler.\-h}}
+\subsubsection[{\-Close\-Socket\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Close\-Socket\-Platform} (
+\begin{DoxyParamCaption}
+\item[{int}]{socket\-\_\-handle}
+\end{DoxyParamCaption}
+)}}\label{d6/d33/POSIX_2networkhandler_8h_a2812ba0ecd1fd9a5549fbca397d76e3e}
+
+
+\-Definition at line 32 of file networkhandler.\-c.
+
+\hypertarget{POSIX_2networkhandler_8h_af4f11a1fa3e652845dc5164d097e9e13}{\index{\-P\-O\-S\-I\-X/networkhandler.\-h@{\-P\-O\-S\-I\-X/networkhandler.\-h}!\-Get\-Micro\-Seconds@{\-Get\-Micro\-Seconds}}
+\index{\-Get\-Micro\-Seconds@{\-Get\-Micro\-Seconds}!POSIX/networkhandler.h@{\-P\-O\-S\-I\-X/networkhandler.\-h}}
+\subsubsection[{\-Get\-Micro\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Micro\-Seconds} {\bf \-Get\-Micro\-Seconds} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/d33/POSIX_2networkhandler_8h_af4f11a1fa3e652845dc5164d097e9e13}
+
+
+\-This function shall return the current time in microseconds relative to epoch, and shall be implemented in a port specific networkhandler. 
+
+\begin{DoxyReturn}{\-Returns}
+\-Current time relative to epoch as \-Micro\-Seconds 
+\end{DoxyReturn}
+
+
+\-Definition at line 14 of file networkhandler.\-c.
+
+\hypertarget{POSIX_2networkhandler_8h_a2d91de751b888e7b5a5c2e2692fd4492}{\index{\-P\-O\-S\-I\-X/networkhandler.\-h@{\-P\-O\-S\-I\-X/networkhandler.\-h}!\-Get\-Milli\-Seconds@{\-Get\-Milli\-Seconds}}
+\index{\-Get\-Milli\-Seconds@{\-Get\-Milli\-Seconds}!POSIX/networkhandler.h@{\-P\-O\-S\-I\-X/networkhandler.\-h}}
+\subsubsection[{\-Get\-Milli\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Milli\-Seconds} {\bf \-Get\-Milli\-Seconds} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/d33/POSIX_2networkhandler_8h_a2d91de751b888e7b5a5c2e2692fd4492}
+
+
+\-This function shall return the current time in milliseconds relative to epoch, and shall be implemented in a port specific networkhandler. 
+
+\begin{DoxyReturn}{\-Returns}
+\-Current time relative to epoch as \-Milli\-Seconds 
+\end{DoxyReturn}
+
+
+\-Definition at line 22 of file networkhandler.\-c.
+
+\hypertarget{POSIX_2networkhandler_8h_a443a5019c1bb91b2490f96b0d0158e04}{\index{\-P\-O\-S\-I\-X/networkhandler.\-h@{\-P\-O\-S\-I\-X/networkhandler.\-h}!\-Network\-Handler\-Initialize\-Platform@{\-Network\-Handler\-Initialize\-Platform}}
+\index{\-Network\-Handler\-Initialize\-Platform@{\-Network\-Handler\-Initialize\-Platform}!POSIX/networkhandler.h@{\-P\-O\-S\-I\-X/networkhandler.\-h}}
+\subsubsection[{\-Network\-Handler\-Initialize\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Network\-Handler\-Initialize\-Platform} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/d33/POSIX_2networkhandler_8h_a443a5019c1bb91b2490f96b0d0158e04}
+
+
+\-Definition at line 26 of file networkhandler.\-c.
+

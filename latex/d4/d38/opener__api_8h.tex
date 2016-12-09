@@ -1,0 +1,136 @@
+\hypertarget{opener__api_8h}{\section{src/opener\-\_\-api.h \-File \-Reference}
+\label{d4/d38/opener__api_8h}\index{src/opener\-\_\-api.\-h@{src/opener\-\_\-api.\-h}}
+}
+{\ttfamily \#include $<$assert.\-h$>$}\*
+{\ttfamily \#include \char`\"{}typedefs.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ciptypes.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ciperror.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}opener\-\_\-user\-\_\-conf.\-h\char`\"{}}\*
+\-Include dependency graph for opener\-\_\-api.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d3b/opener__api_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d32/opener__api_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__CIP__API_ga754f77d4872724e212cf1d9d7d84d406}{\-Connection\-Close\-Function} )(struct \hyperlink{structconnection__object}{connection\-\_\-object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Function prototype for handling the closing of connections. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structconnection__object}{connection\-\_\-object} \hyperlink{opener__api_8h_a6df28653152020381371102e1993a3e1}{\-Connection\-Object}
+\item 
+typedef \hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status}($\ast$ \hyperlink{group__CIP__API_gaac5ac35ed35317f29e3455e92f450623}{\-Connection\-Receive\-Data\-Function} )(struct \hyperlink{structconnection__object}{connection\-\_\-object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object}, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$data, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} data\-\_\-length)
+\begin{DoxyCompactList}\small\item\em \-Function prototype for receiving data via a connection. \end{DoxyCompactList}\item 
+typedef \hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status}($\ast$ \hyperlink{group__CIP__API_gaa870412e93039a338e73edc08e9cd68a}{\-Connection\-Send\-Data\-Function} )(struct \hyperlink{structconnection__object}{connection\-\_\-object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Function prototype for sending data via a connection. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__CIP__API_gaffa28b7ae343af7c7d1c7c52d83bbbee}{\-Connection\-Timeout\-Function} )(struct \hyperlink{structconnection__object}{connection\-\_\-object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Function prototype for handling the timeout of connections. \end{DoxyCompactList}\item 
+typedef \hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status}($\ast$ \hyperlink{group__CIP__API_gaba609aaaca108b8d1b24da1ccbd7b375}{\-Open\-Connection\-Function} )(\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const \hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} $\ast$const extended\-\_\-error\-\_\-code)
+\begin{DoxyCompactList}\small\item\em \-Function prototype for handling the opening of connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_ga180023c8528628f7d83023e4db81287a}{\-Add\-C\-I\-P\-Instance} (\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const cip\-\_\-class\-\_\-to\-\_\-add\-\_\-instance, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Create one instance of a given class with a certain instance number. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_ga39dafca98f844a12511af11b1273d0a8}{\-Add\-Cip\-Instances} (\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const cip\-\_\-object\-\_\-to\-\_\-add\-\_\-instances, const int number\-\_\-of\-\_\-instances)
+\begin{DoxyCompactList}\small\item\em \-Add a number of \-C\-I\-P instances to a given \-C\-I\-P class. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_gac7db4d2927e83b6b3110f5dc66589b1e}{\-Add\-Connectable\-Object} (\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-id, \hyperlink{group__CIP__API_gaba609aaaca108b8d1b24da1ccbd7b375}{\-Open\-Connection\-Function} open\-\_\-connection\-\_\-function)
+\begin{DoxyCompactList}\small\item\em register open functions for an specific object. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__CALLBACK__API_ga5307d18b1bd79f151588391cb4ebf30a}{\-After\-Assembly\-Data\-Received} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$instance)
+\begin{DoxyCompactList}\small\item\em \-Call back function to inform application on received data for an assembly object. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__CALLBACK__API_gae93106eb1647bff3ad56a7752799d878}{\-Application\-Initialization} (void)
+\begin{DoxyCompactList}\small\item\em \-Callback for the application initialization. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_ab1d6967e091c10c240b250db768e78bc}{\-Eip\-Bool8} \hyperlink{group__CIP__CALLBACK__API_ga098272a8ae10facf3086c5c82a0080db}{\-Before\-Assembly\-Data\-Send} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$instance)
+\begin{DoxyCompactList}\small\item\em \-Inform the application that the data of an assembly object will be sent. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__CALLBACK__API_gac9c9ad2c2254b783e7b447bd84eba8c0}{\-Check\-Io\-Connection\-Event} (unsigned int output\-\_\-assembly\-\_\-id, unsigned int input\-\_\-assembly\-\_\-id, \hyperlink{ciptypes_8h_a1a7498137431124c4dde66e95095c2d2}{\-Io\-Connection\-Event} io\-\_\-connection\-\_\-event)
+\begin{DoxyCompactList}\small\item\em \-Inform the application on changes occurred for a connection. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group__CIP__CALLBACK__API_ga438b4350c32d6181990b1f0c83f2e343}{\-Cip\-Calloc} (unsigned int number\-\_\-of\-\_\-elements, unsigned int size\-\_\-of\-\_\-element)
+\begin{DoxyCompactList}\small\item\em \-Allocate memory for the \-C\-I\-P stack. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__CALLBACK__API_ga729165f94320800eb9537def5a0e6af8}{\-Cip\-Free} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em \-Free memory allocated by the \-Op\-E\-Ner. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga5d4979945d124e28668b264c3823db1c}{\-Cip\-Stack\-Init} (const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} unique\-\_\-connection\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Initialize and setup the \-C\-I\-P-\/stack. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gab9ff230d61fc6dedd90f8b95e9a27707}{\-Close\-Session} (int socket)
+\begin{DoxyCompactList}\small\item\em \-Inform the encapsulation layer that the remote host has closed the connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__CALLBACK__API_ga89293c1274a9092dec6be806b8d0779f}{\-Close\-Socket} (int socket)
+\begin{DoxyCompactList}\small\item\em \-Close the given socket and clean up the stack. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga388b872aa3290d7248bfbf4b61fc4f1e}{\-Configure\-Domain\-Name} (const char $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T domain\-\_\-name)
+\begin{DoxyCompactList}\small\item\em \-Configure the domain name of the device. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gad1826555a5a2c522bfd98496f31c7ab2}{\-Configure\-Exclusive\-Owner\-Connection\-Point} (const unsigned int connection\-\_\-number, const unsigned int output\-\_\-assembly\-\_\-id, const unsigned int input\-\_\-assembly\-\_\-id, const unsigned int configuration\-\_\-assembly\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Configures the connection point for an exclusive owner connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gab4a2d826ebe9be1b60c0206414a8f8ce}{\-Configure\-Host\-Name} (const char $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T host\-\_\-name)
+\begin{DoxyCompactList}\small\item\em \-Configure the host name of the device. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga1f81ca8040f02503c8374288a1453f52}{\-Configure\-Input\-Only\-Connection\-Point} (const unsigned int connection\-\_\-number, const unsigned int output\-\_\-assembly\-\_\-id, const unsigned int input\-\_\-assembly\-\_\-id, const unsigned int configuration\-\_\-assembly\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Configures the connection point for an input only connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga0ffe2fb2fa68e86bd2c0b3a94d7ad9bb}{\-Configure\-Listen\-Only\-Connection\-Point} (const unsigned int connection\-\_\-number, const unsigned int output\-\_\-assembly\-\_\-id, const unsigned int input\-\_\-assembly\-\_\-id, const unsigned int configuration\-\_\-assembly\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Configures the connection point for a listen only connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga33c5edc60fb8c9b878647ae5e3c03bc5}{\-Configure\-Mac\-Address} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$const mac\-\_\-address)
+\begin{DoxyCompactList}\small\item\em \-Configure the \-M\-A\-C address of the device. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga1f4f417cb95e75c439edabe7b8b91477}{\-Configure\-Network\-Interface} (const char $\ast$const ip\-\_\-address, const char $\ast$const subnet\-\_\-mask, const char $\ast$const gateway\-\_\-address)
+\begin{DoxyCompactList}\small\item\em \-Configure the data of the network interface of the device. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_gae61b613fed863d30428e78b2311bf593}{\-Create\-Assembly\-Object} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-number, \hyperlink{typedefs_8h_a168bac8db7e7e6d944700e1ac4717ae3}{\-Eip\-Byte} $\ast$const data, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} data\-\_\-length)
+\begin{DoxyCompactList}\small\item\em \-Create an instance of an assembly object. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$ \hyperlink{group__CIP__API_ga446b7f612fe7baaf40d7f87274832922}{\-Create\-Cip\-Class} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-id, const int number\-\_\-of\-\_\-class\-\_\-attributes, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-attributes\-\_\-get\-\_\-attribute\-\_\-all\-\_\-mask, const int number\-\_\-of\-\_\-class\-\_\-services, const int number\-\_\-of\-\_\-instance\-\_\-attributes, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-attributes\-\_\-get\-\_\-attributes\-\_\-all\-\_\-mask, const int number\-\_\-of\-\_\-instance\-\_\-services, const int number\-\_\-of\-\_\-instances, char $\ast$class\-\_\-name, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} class\-\_\-revision)
+\begin{DoxyCompactList}\small\item\em \-Allocate memory for new \-C\-I\-P \-Class and attributes. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__CALLBACK__API_gadae462526ab01253d39e4a54346f56ca}{\-Create\-Udp\-Socket} (\hyperlink{typedefs_8h_a354b9a030f385814dac5d61a8eec2e42}{\-Udp\-Communcation\-Direction} communication\-\_\-direction, struct sockaddr\-\_\-in $\ast$socket\-\_\-data)
+\begin{DoxyCompactList}\small\item\em create a producing or consuming \-U\-D\-P socket \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_ga23ef471671180123d441d30895159a3c}{\-Decode\-Data} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} cip\-\_\-type, void $\ast$const data, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const message)
+\begin{DoxyCompactList}\small\item\em \-Retrieve the given data according to \-C\-I\-P encoding from the message buffer. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_gaece1b7dd2aeec306cb33b86b2ee21980}{\-Encode\-Data} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} cip\-\_\-data\-\_\-type, const void $\ast$const cip\-\_\-data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$cip\-\_\-message)
+\begin{DoxyCompactList}\small\item\em \-Produce the data according to \-C\-I\-P encoding onto the message buffer. \end{DoxyCompactList}\item 
+\hyperlink{structCipAttributeStruct}{\-Cip\-Attribute\-Struct} $\ast$ \hyperlink{group__CIP__API_ga5a14c8d76acacb09312b709bb0a76265}{\-Get\-Cip\-Attribute} (const \hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$const \hyperlink{structcip__instance}{cip\-\_\-instance}, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} attribute\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Get a pointer to an instance's attribute. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$ \hyperlink{group__CIP__API_ga98bd609c80ece316406363575b4a89ea}{\-Get\-Cip\-Class} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Get a pointer to a \-C\-I\-P object with given class code. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_gaa50395aca91b378c297d6ad919df210e}{\-Get\-Cip\-Instance} (const \hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const cip\-\_\-object, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Get a pointer to an instance. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__CALLBACK__API_ga6d2ccae9a19ce418c77941dbe22b008d}{\-Handle\-Application} (void)
+\begin{DoxyCompactList}\small\item\em \-Allow the device specific application to perform its execution. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga34f1582ed424a2c875b8a317d828e181}{\-Handle\-Received\-Connected\-Data} (\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$received\-\_\-data, int received\-\_\-data\-\_\-length, struct sockaddr\-\_\-in $\ast$from\-\_\-address)
+\begin{DoxyCompactList}\small\item\em \-Notify the connection manager that data for a connection has been received. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_gacbbc9669d41357e1c8497c34ee8eeffb}{\-Handle\-Received\-Explict\-Tcp\-Data} (int socket, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$buffer, unsigned int buffer\-\_\-length, int $\ast$number\-\_\-of\-\_\-remaining\-\_\-bytes)
+\begin{DoxyCompactList}\small\item\em \-Notify the encapsulation layer that an explicit message has been received via \-T\-C\-P. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_gad2fa74193023adadbbffe5bf0ef7f6ee}{\-Handle\-Received\-Explict\-Udp\-Data} (int socket, struct sockaddr\-\_\-in $\ast$from\-\_\-address, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$buffer, unsigned int buffer\-\_\-length, int $\ast$number\-\_\-of\-\_\-remaining\-\_\-bytes, int unicast)
+\begin{DoxyCompactList}\small\item\em \-Notify the encapsulation layer that an explicit message has been received via \-U\-D\-P. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gac207feb53c1f98b45f3934bbea63d618}{\-Insert\-Attribute} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$const \hyperlink{structcip__instance}{cip\-\_\-instance}, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} attribute\-\_\-number, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} cip\-\_\-data\-\_\-type, void $\ast$const cip\-\_\-data, const \hyperlink{typedefs_8h_a168bac8db7e7e6d944700e1ac4717ae3}{\-Eip\-Byte} cip\-\_\-flags)
+\begin{DoxyCompactList}\small\item\em \-Insert an attribute in an instance of a \-C\-I\-P class. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga35f639b135ec3c3903f49fd65daed307}{\-Insert\-Service} (const \hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$const cip\-\_\-class\-\_\-to\-\_\-add\-\_\-service, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} service\-\_\-code, const \hyperlink{ciptypes_8h_af7606d2a9b86977aa0ac4ec9ccec3701}{\-Cip\-Service\-Function} service\-\_\-function, char $\ast$const service\-\_\-name)
+\begin{DoxyCompactList}\small\item\em \-Insert a service in an instance of a \-C\-I\-P object. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga9f57b09260efb5bfb188b9d0ca0c6091}{\-Manage\-Connections} (\hyperlink{typedefs_8h_a2972c9424f18b12265ca35d0548da82a}{\-Milli\-Seconds} elapsed\-\_\-time)
+\begin{DoxyCompactList}\small\item\em \-Check if any of the connection timers (\-Transmission\-Trigger or \-Watchdog\-Timeout) have timed out. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__CALLBACK__API_gacfb8706d76bc6fe1816546e122fdcac2}{\-Reset\-Device} (void)
+\begin{DoxyCompactList}\small\item\em \-Emulate as close a possible a power cycle of the device. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__CALLBACK__API_gabec9a29cf19789a6534814680c21f6e7}{\-Reset\-Device\-To\-Initial\-Configuration} (void)
+\begin{DoxyCompactList}\small\item\em \-Reset the device to the initial configuration and emulate as close as possible a power cycle of the device. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__CALLBACK__API_ga63bf35df0c11815a8a59d8a68ac4b569}{\-Run\-Idle\-Changed} (\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} run\-\_\-idle\-\_\-value)
+\begin{DoxyCompactList}\small\item\em \-Inform the application that the \-Run/\-Idle \-State has been changed by the originator. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__CALLBACK__API_gad1d5f56b277bf8b4ffc431e5b0523518}{\-Send\-Udp\-Data} (struct sockaddr\-\_\-in $\ast$socket\-\_\-data, int socket, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$data, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} data\-\_\-length)
+\begin{DoxyCompactList}\small\item\em create a producing or consuming \-U\-D\-P socket \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga696952d9dbc1b6fdedf517aa55f94323}{\-Set\-Device\-Serial\-Number} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} serial\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Set the serial number of the device's identity object. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga2113be94f1eab4f25770d975abe6015c}{\-Set\-Device\-Status} (const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} device\-\_\-status)
+\begin{DoxyCompactList}\small\item\em \-Set the current status of the device. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gaa57b527530adc2acda6febc500fd6831}{\-Shutdown\-Cip\-Stack} (void)
+\begin{DoxyCompactList}\small\item\em \-Shutdown of the \-C\-I\-P stack. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga286de29d4e88bd1fec0611e75c288faf}{\-Trigger\-Connections} (unsigned int output\-\_\-assembly\-\_\-id, unsigned int input\-\_\-assembly\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Trigger the production of an application triggered connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{opener__api_8h_a6df28653152020381371102e1993a3e1}{\index{opener\-\_\-api.\-h@{opener\-\_\-api.\-h}!\-Connection\-Object@{\-Connection\-Object}}
+\index{\-Connection\-Object@{\-Connection\-Object}!opener_api.h@{opener\-\_\-api.\-h}}
+\subsubsection[{\-Connection\-Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf connection\-\_\-object} {\bf \-Connection\-Object}}}\label{d4/d38/opener__api_8h_a6df28653152020381371102e1993a3e1}
+
+
+\-Definition at line 269 of file opener\-\_\-api.\-h.
+

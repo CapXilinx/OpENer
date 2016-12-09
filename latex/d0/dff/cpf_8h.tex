@@ -1,0 +1,70 @@
+\hypertarget{cpf_8h}{\section{src/enet\-\_\-encap/cpf.h \-File \-Reference}
+\label{d0/dff/cpf_8h}\index{src/enet\-\_\-encap/cpf.\-h@{src/enet\-\_\-encap/cpf.\-h}}
+}
+{\ttfamily \#include \char`\"{}typedefs.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ciptypes.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}encap.\-h\char`\"{}}\*
+\-Include dependency graph for cpf.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{d9/d4f/cpf_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d77/cpf_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structAddressData}{\-Address\-Data}
+\item 
+struct \hyperlink{structAddressItem}{\-Address\-Item}
+\item 
+struct \hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data}
+\item 
+struct \hyperlink{structDataItem}{\-Data\-Item}
+\item 
+struct \hyperlink{structSocketAddressInfoItem}{\-Socket\-Address\-Info\-Item}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__ENCAP_gafdcff621008b5e305165424c6ac4ea25}{\-Cip\-Item\-Id} \{ \*
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a7d3d1f2d6b2f4ed65dc34b792bfdaa4f}{k\-Cip\-Item\-Id\-Null\-Address} =  0x0000, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25aa082d77e86c75c44df304252971b4007}{k\-Cip\-Item\-Id\-List\-Identity\-Response} =  0x000\-C, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a0adf8007a319941f3aaa7d9624025c0f}{k\-Cip\-Item\-Id\-Connection\-Address} =  0x00\-A1, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a8761662aa0838fb723f8696e9ea4e217}{k\-Cip\-Item\-Id\-Connected\-Data\-Item} =  0x00\-B1, 
+\*
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a9b966ac289a5c11fc80a2ab274c99a19}{k\-Cip\-Item\-Id\-Unconnected\-Data\-Item} =  0x00\-B2, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a43d8fa4dfdd73a9a23c8a75330d7b162}{k\-Cip\-Item\-Id\-List\-Service\-Response} =  0x0100, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a93851549b6af1ed796409633e8071623}{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Originator\-To\-Target} =  0x8000, 
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25aef2e6ffe3e7443b14842d173c7f1e75d}{k\-Cip\-Item\-Id\-Socket\-Address\-Info\-Target\-To\-Originator} =  0x8001, 
+\*
+\hyperlink{group__ENCAP_ggafdcff621008b5e305165424c6ac4ea25a21abefabf9f64dba055671507015f2b1}{k\-Cip\-Item\-Id\-Sequenced\-Address\-Item} =  0x8002
+ \}
+\begin{DoxyCompactList}\small\item\em \-C\-P\-F is \-Common \-Packet \-Format \-C\-P\-F packet \-:= $<$number of=\char`\"{}\char`\"{} items$>$=\char`\"{}\char`\"{}$>$ \{$<$items$>$\} item \-:= $<$\-Type\-I\-D$>$ $<$\-Length$>$ $<$data$>$ $<$number of=\char`\"{}\char`\"{} items$>$=\char`\"{}\char`\"{}$>$ \-:= two bytes $<$\-Type\-I\-D$>$ \-:= two bytes $<$\-Length$>$ \-:= two bytes $<$data$>$ \-:= $<$the number=\char`\"{}\char`\"{} of=\char`\"{}\char`\"{} bytes=\char`\"{}\char`\"{} specified=\char`\"{}\char`\"{} by=\char`\"{}\char`\"{} length$>$=\char`\"{}\char`\"{}$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__ENCAP_gad61fa4f84989cf27086d57557ad552c4}{\-Assemble\-I\-O\-Message} (\hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$message)
+\item 
+int \hyperlink{group__ENCAP_gaa81c027561d86d2589b8002b36b88392}{\-Assemble\-Linear\-Message} (\hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response, \hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$message)
+\begin{DoxyCompactList}\small\item\em \-Copy data from message\-\_\-router\-\_\-response struct and common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item into linear memory in pa\-\_\-msg for transmission over in encapsulation. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__ENCAP_ga5fd76bfeb985480d68d6fd4d97129606}{\-Create\-Common\-Packet\-Format\-Structure} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$data, int data\-\_\-length, \hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} $\ast$common\-\_\-packet\-\_\-format\-\_\-data)
+\begin{DoxyCompactList}\small\item\em \-Creates \-Common \-Packet \-Format structure out of data. \end{DoxyCompactList}\item 
+int \hyperlink{group__ENCAP_ga401f152f47e54b0a6dddcfe723c086f9}{\-Notify\-Common\-Packet\-Format} (\hyperlink{encap_8h_ac4bf15574436ce32c449e9f41b69c994}{\-Encapsulation\-Data} $\ast$const received\-\_\-data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$const reply\-\_\-buffer)
+\item 
+int \hyperlink{group__ENCAP_ga045feac9b8747e049e2420df1ec0844b}{\-Notify\-Connected\-Common\-Packet\-Format} (\hyperlink{encap_8h_ac4bf15574436ce32c449e9f41b69c994}{\-Encapsulation\-Data} $\ast$received\-\_\-data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$reply\-\_\-buffer)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structCipCommonPacketFormatData}{\-Cip\-Common\-Packet\-Format\-Data} \hyperlink{group__ENCAP_gafaae5be8de81c633ea4df46fa8b957e0}{g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item}
+\begin{DoxyCompactList}\small\item\em \-Data storage for the any \-C\-P\-F data \-Currently we are single threaded and need only one \-C\-P\-F at the time. \-For future extensions towards multithreading maybe more \-C\-P\-F data items may be necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}

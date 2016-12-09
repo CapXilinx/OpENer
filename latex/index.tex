@@ -1,0 +1,38 @@
+\-Documentation
+
+\-Ether\-Net/\-I\-P stack for adapter devices (connection target); supports multiple \-I/\-O and explicit connections; includes features and objects required by the \-C\-I\-P specification to enable devices to comply with \-O\-D\-V\-A's conformance/ interoperability tests.\hypertarget{index_intro_sec}{}\section{\-Introduction}\label{index_intro_sec}
+\-This is the introduction.\hypertarget{index_install_sec}{}\section{\-Building}\label{index_install_sec}
+\-How to compile, install and run \-Op\-E\-Ner on a specific platform.\hypertarget{index_build_req_sec}{}\subsection{\-Requirements}\label{index_build_req_sec}
+\-Op\-E\-Ner has been developed to be highly portable. \-The default version targets \-P\-Cs with a \-P\-O\-S\-I\-X operating system and a \-B\-S\-D-\/socket network interface. \-To test this version we recommend a \-Linux \-P\-C or \-Windows with \-Cygwin installed. \-You will need to have the following installed\-:
+\begin{DoxyItemize}
+\item gcc, make, binutils, etc.
+\end{DoxyItemize}
+
+for normal building. \-These should be installed on most \-Linux installations and are part of the development packages of \-Cygwin.
+
+\-For the development itself we recommend the use of \-Eclipse with the \-C\-D\-T plugin. \-For your convenience \-Op\-E\-Ner already comes with an \-Eclipse project file. \-This allows to just import the \-Op\-E\-Ner source tree into \-Eclipse.\hypertarget{index_compile_pcs_sec}{}\subsection{\-Compile for P\-Cs}\label{index_compile_pcs_sec}
+
+\begin{DoxyEnumerate}
+\item \-Directly in the shell
+\begin{DoxyEnumerate}
+\item \-Go into the bin/pc directory
+\item \-Invoke make
+\item \-For invoking opener type\-:\par
+ ./opener ipaddress subnetmask gateway domainname hostaddress macaddress\par
+ e.\-g., ./opener 192.\-168.\-0.\-2 255.\-255.\-255.\-0 192.\-168.\-0.\-1 test.\-com testdevice 00 15 \-C5 \-B\-F \-D0 87
+\end{DoxyEnumerate}
+\item \-Within \-Eclipse
+\begin{DoxyEnumerate}
+\item \-Import the project
+\item \-Go to the bin/pc folder in the make targets view
+\item \-Choose all from the make targets
+\item \-The resulting executable will be in the directory ./bin/pc
+\item \-The command line parameters can be set in the run configuration dialog of \-Eclipse
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}\hypertarget{index_further_reading_sec}{}\section{\-Further Topics}\label{index_further_reading_sec}
+
+\begin{DoxyItemize}
+\item \hyperlink{porting}{\-Porting \-Op\-E\-Ner}
+\item \hyperlink{extending}{\-Extending \-Op\-E\-Ner}
+\item \hyperlink{license}{\-Op\-E\-Ner \-Open \-Source \-License} 
+\end{DoxyItemize}

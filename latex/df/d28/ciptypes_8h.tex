@@ -1,0 +1,744 @@
+\hypertarget{ciptypes_8h}{\section{src/cip/ciptypes.h \-File \-Reference}
+\label{df/d28/ciptypes_8h}\index{src/cip/ciptypes.\-h@{src/cip/ciptypes.\-h}}
+}
+{\ttfamily \#include \char`\"{}typedefs.\-h\char`\"{}}\*
+\-Include dependency graph for ciptypes.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{d7/d3f/ciptypes_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/de3/ciptypes_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcip__class}{cip\-\_\-class}
+\begin{DoxyCompactList}\small\item\em \-Class is a subclass of \-Instance. \end{DoxyCompactList}\item 
+struct \hyperlink{structcip__instance}{cip\-\_\-instance}
+\item 
+struct \hyperlink{structcip__service__struct}{cip\-\_\-service\-\_\-struct}
+\begin{DoxyCompactList}\small\item\em \-Service descriptor. \-These are stored in an array. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipAttributeStruct}{\-Cip\-Attribute\-Struct}
+\item 
+struct \hyperlink{structCipByteArray}{\-Cip\-Byte\-Array}
+\begin{DoxyCompactList}\small\item\em \-C\-I\-P \-Byte \-Array. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipConnectionPath}{\-Cip\-Connection\-Path}
+\begin{DoxyCompactList}\small\item\em \-C\-I\-P \-Connection \-Path. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipElectronicKey}{\-Cip\-Electronic\-Key}
+\begin{DoxyCompactList}\small\item\em \-C\-I\-P \-Electronic \-Key \-Segment struct. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipEpath}{\-Cip\-Epath}
+\begin{DoxyCompactList}\small\item\em \-Struct for padded \-E\-P\-A\-T\-Hs. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipKeyData}{\-Cip\-Key\-Data}
+\begin{DoxyCompactList}\small\item\em \-Struct representing the key data format of the electronic key segment. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request}
+\begin{DoxyCompactList}\small\item\em \-C\-I\-P \-Message \-Router \-Request. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response}
+\begin{DoxyCompactList}\small\item\em \-C\-I\-P \-Message \-Router \-Response. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipRevision}{\-Cip\-Revision}
+\begin{DoxyCompactList}\small\item\em \-Struct storing the \-C\-I\-P revision. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipRoutePath}{\-Cip\-Route\-Path}
+\item 
+struct \hyperlink{structCipShortString}{\-Cip\-Short\-String}
+\begin{DoxyCompactList}\small\item\em \-C\-I\-P \-Short \-String. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipString}{\-Cip\-String}
+\begin{DoxyCompactList}\small\item\em \-C\-I\-P \-String. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipTcpIpNetworkInterfaceConfiguration}{\-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration}
+\begin{DoxyCompactList}\small\item\em \-Struct for saving \-T\-C\-P/\-I\-P interface information. \end{DoxyCompactList}\item 
+struct \hyperlink{structCipUnconnectedSendParameter}{\-Cip\-Unconnected\-Send\-Parameter}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ciptypes_8h_ad9fac43b4ca1f5de07c809c6252948ee}{\-M\-A\-S\-K1}(a)~(1 $<$$<$ (a))
+\item 
+\#define \hyperlink{ciptypes_8h_a7850775dc0b4096b2e55939563b6b1d5}{\-M\-A\-S\-K2}(a, b)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b))
+\item 
+\#define \hyperlink{ciptypes_8h_a4c127984baf8f42fa1a4d6ff8eadaf39}{\-M\-A\-S\-K3}(a, b, c)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c))
+\item 
+\#define \hyperlink{ciptypes_8h_a95b414c0cb4e04b838d036cc812d33b7}{\-M\-A\-S\-K4}(a, b, c, d)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c) $|$ 1 $<$$<$ (d))
+\item 
+\#define \hyperlink{ciptypes_8h_aada5f8c7a7d4e599145bc0f3bbe25b47}{\-M\-A\-S\-K5}(a, b, c, d, e)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c) $|$ 1 $<$$<$ (d) $|$ 1 $<$$<$ (e))
+\item 
+\#define \hyperlink{ciptypes_8h_a4c5f900200a311c5c384608d29569c86}{\-M\-A\-S\-K6}(a, b, c, d, e, f)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c) $|$ 1 $<$$<$ (d) $|$ 1 $<$$<$ (e) $|$ 1 $<$$<$ (f))
+\item 
+\#define \hyperlink{ciptypes_8h_aac858c612d9a09818cc682a6df8e86e5}{\-M\-A\-S\-K7}(a, b, c, d, e, f, g)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c) $|$ 1 $<$$<$ (d) $|$ 1 $<$$<$ (e) $|$ 1 $<$$<$ (f) $|$ 1 $<$$<$ (g))
+\item 
+\#define \hyperlink{ciptypes_8h_aa45cc0e6c7a6b76a81c2ac3728420912}{\-M\-A\-S\-K8}(a, b, c, d, e, f, g, h)
+\item 
+\#define \hyperlink{ciptypes_8h_a76032ec3319954c70deea1f039deeb19}{\-M\-A\-X\-\_\-\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-A\-D\-D\-\_\-\-S\-T\-A\-T\-U\-S}~2 /$\ast$ for now we support extended status codes up to 2 16bit values there is mostly only one 16bit value used $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structcip__class}{cip\-\_\-class} \hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class}
+\begin{DoxyCompactList}\small\item\em \-Class is a subclass of \-Instance. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985}{cip\-\_\-data\-\_\-types} \hyperlink{ciptypes_8h_a22530082e67e6b7c97b74ebaecde3f61}{\-Cip\-Data\-Type}
+\begin{DoxyCompactList}\small\item\em \-Enum containing the encoding values for \-C\-I\-P data types for \-C\-I\-P \-Messages. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structcip__instance}{cip\-\_\-instance} \hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance}
+\item 
+typedef \hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status}($\ast$ \hyperlink{ciptypes_8h_af7606d2a9b86977aa0ac4ec9ccec3701}{\-Cip\-Service\-Function} )(\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$const instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$const message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$const message\-\_\-router\-\_\-response)
+\item 
+typedef struct \hyperlink{structcip__service__struct}{cip\-\_\-service\-\_\-struct} \hyperlink{ciptypes_8h_a8dcc43f5bab0798fbe107dc2cb757b09}{\-Cip\-Service\-Struct}
+\begin{DoxyCompactList}\small\item\em \-Service descriptor. \-These are stored in an array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985}{cip\-\_\-data\-\_\-types} \{ \*
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a829a575ae1ecfb9686c580f688d49db6}{k\-Cip\-Any} =  0x00, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a0c2fd033abd36fd30b2175d5fb601ee0}{k\-Cip\-Bool} =  0x\-C1, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a5a3a7c5b33ce7b095c6552f4a4385389}{k\-Cip\-Sint} =  0x\-C2, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a9b9ef0e53339cec126d6639fcd81cc84}{k\-Cip\-Int} =  0x\-C3, 
+\*
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a238bc5d3599a64e74b0420448aa5a9b4}{k\-Cip\-Dint} =  0x\-C4, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a4771f59affc5a0ca1d7a2419bc338590}{k\-Cip\-Lint} =  0x\-C5, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985aa88d0d60450eee947f20647a8c977bd3}{k\-Cip\-Usint} =  0x\-C6, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a0a27ee2736846092c289413a945524b1}{k\-Cip\-Uint} =  0x\-C7, 
+\*
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a27bf79ffe35ed7d8a9ba21eff19bee1a}{k\-Cip\-Udint} =  0x\-C8, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a2401cacdcc7d4422ef1a76c29589a9d9}{k\-Cip\-Ulint} =  0x\-C9, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a614d747715420e4017af54aed7a9eeed}{k\-Cip\-Real} =  0x\-C\-A, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a169b362efaf220765446380a4f68e886}{k\-Cip\-Lreal} =  0x\-C\-B, 
+\*
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a36e299d16087f3459de107454aab35c2}{k\-Cip\-Stime} =  0x\-C\-C, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985afeadcb6a5d897d88decbda98c5e6557c}{k\-Cip\-Date} =  0x\-C\-D, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a0461fca52778fd2d44403908d26af784}{k\-Cip\-Time\-Of\-Day} =  0x\-C\-E, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a2310a8759fe0ab1a79d313b76977859d}{k\-Cip\-Date\-And\-Time} =  0x\-C\-F, 
+\*
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a9289b361a3ff309323891078cc404756}{k\-Cip\-String} =  0x\-D0, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a979072ef7b156bf85c48be3f779869ce}{k\-Cip\-Byte} =  0x\-D1, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985ac8023521e67b842db29553ac45284603}{k\-Cip\-Word} =  0x\-D2, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a159dcd0c3d2cbd4d8020db67c9f6d423}{k\-Cip\-Dword} =  0x\-D3, 
+\*
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a280f39756e3273410cf19a1dddd197ac}{k\-Cip\-Lword} =  0x\-D4, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985aa1654d3998444c39dfd8302e057bc412}{k\-Cip\-String2} =  0x\-D5, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a8737536b9fb106d049d5007ee9e854bf}{k\-Cip\-Ftime} =  0x\-D6, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a200cb58686cacda9bf9e6175d167f4a4}{k\-Cip\-Ltime} =  0x\-D7, 
+\*
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985ae9a2666b05c35472f07588ac0473487d}{k\-Cip\-Itime} =  0x\-D8, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985aa4c9e671b17db02a98f1a3245b110cc2}{k\-Cip\-String\-N} =  0x\-D9, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985af2f8c1ad60e4b7e9137a99b761bfa25e}{k\-Cip\-Short\-String} =  0x\-D\-A, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a97d53fd3eb187df8c75cc67b5e06a3b7}{k\-Cip\-Time} =  0x\-D\-B, 
+\*
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a4eba99ad8e7efdf8411f53018d5925dd}{k\-Cip\-Epath} =  0x\-D\-C, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a3cbffb81f98a4ade5114c000b96370f9}{k\-Cip\-Eng\-Unit} =  0x\-D\-D, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a3df80ad0d2a0e4b5490d47f67e540b2a}{k\-Cip\-Usint\-Usint} =  0x\-A0, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a5149b2857cd16b6a1e2e704d91abcc21}{k\-Cip\-Udint\-Udint\-Udint\-Udint\-Udint\-String} =  0x\-A1, 
+\*
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a0e0654c72dd5461571fcdaac933f21ed}{k\-Cip6\-Usint} =  0x\-A2, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985af51f8e91f322db2771cd7879462417e2}{k\-Cip\-Member\-List} =  0x\-A3, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985aa449daa71d0cde48a1b8d99ba2d210cd}{k\-Cip\-Byte\-Array} =  0x\-A4, 
+\hyperlink{ciptypes_8h_a320130332b1a5062394fc0bd20723985a23ed8e6aaf60dbeb9a9bdab91ec05470}{k\-Internal\-Uint6} =  0x\-F0
+ \}
+\begin{DoxyCompactList}\small\item\em \-Enum containing the encoding values for \-C\-I\-P data types for \-C\-I\-P \-Messages. \end{DoxyCompactList}\item 
+enum \hyperlink{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779}{\-C\-I\-P\-Attribute\-Flag} \{ \*
+\hyperlink{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779a1e350cf2be43fc63ec9213856f03c512}{k\-Not\-Set\-Or\-Getable} =  0x00, 
+\hyperlink{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779ac2cb052685ef2248c7e3f1beaa0dcbd7}{k\-Getable\-All} =  0x01, 
+\hyperlink{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779a42aa9806b86d2459dedd76b415ab287a}{k\-Getable\-Single} =  0x02, 
+\hyperlink{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779acaa6743cbf7c4d938ac1024f6bfd2907}{k\-Setable} =  0x04, 
+\*
+\hyperlink{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779ab12c18c4b24e21c3bb016c9e5b959685}{k\-Set\-And\-Get\-Able} =  0x07, 
+\hyperlink{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779ac652f51f2ab659c8f6dead436d940822}{k\-Getable\-Single\-And\-All} =  0x03
+ \}
+\begin{DoxyCompactList}\small\item\em \-Definition of \-Get and \-Set \-Flags for \-C\-I\-P \-Attributes. \end{DoxyCompactList}\item 
+enum \hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26ef}{\-C\-I\-P\-Service\-Code} \{ \*
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa8519fb21fc3211b33419f4a305ce3a96}{k\-Get\-Attribute\-All} =  0x01, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa2a4a9ed60b45e637135429f3c3f3d216}{k\-Set\-Attribute\-All} =  0x02, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa86f7f1c654b775bdc3396b117fbaba6d}{k\-Get\-Attribute\-List} =  0x03, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efaddf7228ba7bf51c7173c98e83839f2da}{k\-Set\-Attribute\-List} =  0x04, 
+\*
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efaa71731e14e5f7db3d11a1b92d685324a}{k\-Reset} =  0x05, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efaaf95f6aef1f9f36214053d164ccb5ff8}{k\-Start} =  0x06, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa92a3db2f4ec71748a0b36b0f079a1e79}{k\-Stop} =  0x07, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efafd0bd5ad05a924adaa228bca0134a9ea}{k\-Create} =  0x08, 
+\*
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa1353e180a561ebdc23352ffb61476ad4}{k\-Delete} =  0x09, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa5dc1babeda5dcef8d0a5caafb61c447b}{k\-Multiple\-Service\-Packet} =  0x0\-A, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa8d9943feb4e11b716a2c3851b0835a2c}{k\-Apply\-Attributes} =  0x0\-D, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa581133006a50889c877f74eaf5cd539e}{k\-Get\-Attribute\-Single} =  0x0\-E, 
+\*
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efab16649a9a3dac3f31081de207ffa7b96}{k\-Set\-Attribute\-Single} =  0x10, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efae7628dd5e8e2d509846317a381671c0a}{k\-Find\-Next\-Object\-Instance} =  0x11, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efaff8572be7f43c631430a29539a0a96e2}{k\-Restore} =  0x15, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa000d03009c2e87a15d03b8ed29acb1e1}{k\-Save} =  0x16, 
+\*
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa79ca9eaa954dd29bb0671fb99e550439}{k\-No\-Operation} =  0x17, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa585abb17406caf0dab6267f5a47d7197}{k\-Get\-Member} =  0x18, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efaef3e61ba352db8b1283ba92942a8f7f2}{k\-Set\-Member} =  0x19, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa6a22637c20e9a56838779013471bef95}{k\-Insert\-Member} =  0x1\-A, 
+\*
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efaa01279dda9632cef75afd37a89de55c1}{k\-Remove\-Member} =  0x1\-B, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efae69e1c0943bb85f41813a185facc4515}{k\-Group\-Sync} =  0x1\-C, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efafb6afeda0d2d85a07bda2634ca92c1b5}{k\-Forward\-Open} =  0x54, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efa317c8ff219d61ed0a2561f653bcbcb64}{k\-Forward\-Close} =  0x4\-E, 
+\*
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efad0fb098596bc37a31fed44ee2d4d9fa3}{k\-Unconnected\-Send} =  0x52, 
+\hyperlink{ciptypes_8h_a2942916684f16954a536c220cffa26efadb129c891c32c6ecb2ab801bb26b09d8}{k\-Get\-Connection\-Owner} =  0x5\-A
+ \}
+\begin{DoxyCompactList}\small\item\em \-Definition of \-C\-I\-P service codes. \end{DoxyCompactList}\item 
+enum \hyperlink{ciptypes_8h_ae38442d795652cf3bc478fd181404d02}{\-Data\-Segment\-Type} \{ \hyperlink{ciptypes_8h_ae38442d795652cf3bc478fd181404d02a4628883518cd604bbe6239d93f38cf22}{k\-Data\-Segment\-Type\-Simple\-Data\-Message} =  k\-Segment\-Type\-Data\-Segment + 0x00, 
+\hyperlink{ciptypes_8h_ae38442d795652cf3bc478fd181404d02adb4f7e6e7e3ada178ce3851c88fe014d}{k\-Data\-Segment\-Type\-Ansi\-Extended\-Symbol\-Message} =  k\-Segment\-Type\-Data\-Segment + 0x11
+ \}
+\item 
+enum \hyperlink{ciptypes_8h_a1a7498137431124c4dde66e95095c2d2}{\-Io\-Connection\-Event} \{ \hyperlink{ciptypes_8h_a1a7498137431124c4dde66e95095c2d2a6516f9d6e660daf124379a38608434e2}{k\-Io\-Connection\-Event\-Opened}, 
+\hyperlink{ciptypes_8h_a1a7498137431124c4dde66e95095c2d2a91f5cbaf05e3e1e95b9c262a851ae931}{k\-Io\-Connection\-Event\-Timed\-Out}, 
+\hyperlink{ciptypes_8h_a1a7498137431124c4dde66e95095c2d2aef7d80152c2d6e1a5e7f64bf51801374}{k\-Io\-Connection\-Event\-Closed}
+ \}
+\item 
+enum \hyperlink{ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0}{\-Logical\-Segment\-Logical\-Format} \{ \hyperlink{ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0a1ba3da11ab05ed7ebfbe18a85a9d72bc}{k\-Logical\-Segment\-Logical\-Format\-Eight\-Bit\-Value} =  0x00, 
+\hyperlink{ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0a65d0cc0cb408138d380cf48599162019}{k\-Logical\-Segment\-Logical\-Format\-Sixteen\-Bit\-Value} =  0x01, 
+\hyperlink{ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0afba21e0c0ad07f050e38c1976dcb4fbf}{k\-Logical\-Segment\-Logical\-Format\-Thirty\-Two\-Bit\-Value} =  0x02
+ \}
+\begin{DoxyCompactList}\small\item\em \-Enum containing values how long the encoded value will be (8, 16, or 32 bit) \end{DoxyCompactList}\item 
+enum \hyperlink{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0a}{\-Logical\-Segment\-Logical\-Type} \{ \*
+\hyperlink{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aabbe56401854fdc1e6b9a8c9253ecada1}{k\-Logical\-Segment\-Logical\-Type\-Class\-Id} =  0x00, 
+\hyperlink{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa82918d2b1a5dd498857498989172eeb1}{k\-Logical\-Segment\-Logical\-Type\-Instance\-Id} =  0x04, 
+\hyperlink{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa984812c6913553cdbe54d8ea16958b54}{k\-Logical\-Segment\-Logical\-Type\-Member\-Id} =  0x08, 
+\hyperlink{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa259af3672821658d1ca9e95846ae1d81}{k\-Logical\-Segment\-Logical\-Type\-Connection\-Point} =  0x0\-C, 
+\*
+\hyperlink{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa9b4a126272ea57b7276c9c93b3bde381}{k\-Logical\-Segment\-Logical\-Type\-Attribute\-Id} =  0x10, 
+\hyperlink{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aad70ac17ea345f0e55c66d264385ea3da}{k\-Logical\-Segment\-Logical\-Type\-Special} =  0x14, 
+\hyperlink{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aaca0521998fa6ed63a1d533a22a9b6332}{k\-Logical\-Segment\-Logical\-Type\-Service} =  0x18, 
+\hyperlink{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa2f6eeca2d56eb1772edf87c209af8f02}{k\-Logical\-Segment\-Logical\-Type\-Extended\-Logical} =  0x1\-C
+ \}
+\begin{DoxyCompactList}\small\item\em \-Enum containing values which kind of logical segment is encoded. \end{DoxyCompactList}\item 
+enum \hyperlink{ciptypes_8h_aa639f8b0637e492951a8b722389e0868}{\-Network\-Segment\-Sub\-Type} \{ \hyperlink{ciptypes_8h_aa639f8b0637e492951a8b722389e0868a2b2bbd3b0593aebf81182423fef1eb69}{k\-Production\-Time\-Inhibit\-Time\-Network\-Segment} =  0x43
+ \}
+\item 
+enum \hyperlink{ciptypes_8h_a88dadddae51f173dc61922ed5932f17a}{\-Port\-Segment\-Flag} \{ \hyperlink{ciptypes_8h_a88dadddae51f173dc61922ed5932f17aa60c428a0d09d26e2ad82175e7ac082a7}{k\-Port\-Segment\-Flag\-Extended\-Link\-Address\-Size} =  0x10
+ \}
+\begin{DoxyCompactList}\small\item\em \-Port \-Segment flags. \end{DoxyCompactList}\item 
+enum \hyperlink{ciptypes_8h_a45f8c604b4008a278fe9bde5156489ee}{\-Segment\-Type} \{ \*
+\hyperlink{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea539497ec9d379e4c91a33c7d46191fe6}{k\-Segment\-Type\-Port\-Segment} =  0x00, 
+\hyperlink{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eeadd77eee21f105f21c41492f1e51039a2}{k\-Segment\-Type\-Logical\-Segment} =  0x20, 
+\hyperlink{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eeab45e61b95912a1c47536522c1aa88c42}{k\-Segment\-Type\-Network\-Segment} =  0x40, 
+\hyperlink{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eead00b0e4c9c38a15bcf474484103cfaf8}{k\-Segment\-Type\-Symbolic\-Segment} =  0x60, 
+\*
+\hyperlink{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea4e9d7549e27d1ee87033d512b8686232}{k\-Segment\-Type\-Data\-Segment} =  0x80, 
+\hyperlink{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea13a9d396729e21d0254c0c5e92480e8a}{k\-Segment\-Type\-Data\-Type\-Constructed} =  0x\-A0, 
+\hyperlink{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea10eed7f11b11469f41049069e08c06a6}{k\-Segment\-Type\-Data\-Type\-Elementary} =  0x\-C0, 
+\hyperlink{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eeab552f69c7cf4d5a444a5a7e2b202a17a}{k\-Segment\-Type\-Segment\-Type\-Reserved} =  0x\-E0
+ \}
+\begin{DoxyCompactList}\small\item\em \-Segment type \-Enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{ciptypes_8h_ad9fac43b4ca1f5de07c809c6252948ee}{\index{ciptypes.\-h@{ciptypes.\-h}!\-M\-A\-S\-K1@{\-M\-A\-S\-K1}}
+\index{\-M\-A\-S\-K1@{\-M\-A\-S\-K1}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-M\-A\-S\-K1}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-K1}(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~(1 $<$$<$ (a))}}\label{df/d28/ciptypes_8h_ad9fac43b4ca1f5de07c809c6252948ee}
+
+
+\-Definition at line 373 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a7850775dc0b4096b2e55939563b6b1d5}{\index{ciptypes.\-h@{ciptypes.\-h}!\-M\-A\-S\-K2@{\-M\-A\-S\-K2}}
+\index{\-M\-A\-S\-K2@{\-M\-A\-S\-K2}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-M\-A\-S\-K2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-K2}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b))}}\label{df/d28/ciptypes_8h_a7850775dc0b4096b2e55939563b6b1d5}
+
+
+\-Definition at line 374 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a4c127984baf8f42fa1a4d6ff8eadaf39}{\index{ciptypes.\-h@{ciptypes.\-h}!\-M\-A\-S\-K3@{\-M\-A\-S\-K3}}
+\index{\-M\-A\-S\-K3@{\-M\-A\-S\-K3}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-M\-A\-S\-K3}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-K3}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c))}}\label{df/d28/ciptypes_8h_a4c127984baf8f42fa1a4d6ff8eadaf39}
+
+
+\-Definition at line 375 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a95b414c0cb4e04b838d036cc812d33b7}{\index{ciptypes.\-h@{ciptypes.\-h}!\-M\-A\-S\-K4@{\-M\-A\-S\-K4}}
+\index{\-M\-A\-S\-K4@{\-M\-A\-S\-K4}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-M\-A\-S\-K4}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-K4}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c) $|$ 1 $<$$<$ (d))}}\label{df/d28/ciptypes_8h_a95b414c0cb4e04b838d036cc812d33b7}
+
+
+\-Definition at line 376 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_aada5f8c7a7d4e599145bc0f3bbe25b47}{\index{ciptypes.\-h@{ciptypes.\-h}!\-M\-A\-S\-K5@{\-M\-A\-S\-K5}}
+\index{\-M\-A\-S\-K5@{\-M\-A\-S\-K5}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-M\-A\-S\-K5}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-K5}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c) $|$ 1 $<$$<$ (d) $|$ 1 $<$$<$ (e))}}\label{df/d28/ciptypes_8h_aada5f8c7a7d4e599145bc0f3bbe25b47}
+
+
+\-Definition at line 377 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a4c5f900200a311c5c384608d29569c86}{\index{ciptypes.\-h@{ciptypes.\-h}!\-M\-A\-S\-K6@{\-M\-A\-S\-K6}}
+\index{\-M\-A\-S\-K6@{\-M\-A\-S\-K6}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-M\-A\-S\-K6}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-K6}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c) $|$ 1 $<$$<$ (d) $|$ 1 $<$$<$ (e) $|$ 1 $<$$<$ (f))}}\label{df/d28/ciptypes_8h_a4c5f900200a311c5c384608d29569c86}
+
+
+\-Definition at line 379 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_aac858c612d9a09818cc682a6df8e86e5}{\index{ciptypes.\-h@{ciptypes.\-h}!\-M\-A\-S\-K7@{\-M\-A\-S\-K7}}
+\index{\-M\-A\-S\-K7@{\-M\-A\-S\-K7}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-M\-A\-S\-K7}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-K7}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{g}
+\end{DoxyParamCaption}
+)~(1 $<$$<$ (a) $|$ 1 $<$$<$ (b) $|$ 1 $<$$<$ (c) $|$ 1 $<$$<$ (d) $|$ 1 $<$$<$ (e) $|$ 1 $<$$<$ (f) $|$ 1 $<$$<$ (g))}}\label{df/d28/ciptypes_8h_aac858c612d9a09818cc682a6df8e86e5}
+
+
+\-Definition at line 381 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_aa45cc0e6c7a6b76a81c2ac3728420912}{\index{ciptypes.\-h@{ciptypes.\-h}!\-M\-A\-S\-K8@{\-M\-A\-S\-K8}}
+\index{\-M\-A\-S\-K8@{\-M\-A\-S\-K8}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-M\-A\-S\-K8}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-K8}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{g, }
+\item[{}]{h}
+\end{DoxyParamCaption}
+)}}\label{df/d28/ciptypes_8h_aa45cc0e6c7a6b76a81c2ac3728420912}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+(1 << (a) | 1 << (b) | 1 << (c) | 1 << (d) | 1 << (e) | 1 << (f) | \
+   1 << (g) | 1 << (h))
+\end{DoxyCode}
+
+
+\-Definition at line 383 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a76032ec3319954c70deea1f039deeb19}{\index{ciptypes.\-h@{ciptypes.\-h}!\-M\-A\-X\-\_\-\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-A\-D\-D\-\_\-\-S\-T\-A\-T\-U\-S@{\-M\-A\-X\-\_\-\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-A\-D\-D\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{\-M\-A\-X\-\_\-\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-A\-D\-D\-\_\-\-S\-T\-A\-T\-U\-S@{\-M\-A\-X\-\_\-\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-A\-D\-D\-\_\-\-S\-T\-A\-T\-U\-S}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-M\-A\-X\-\_\-\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-A\-D\-D\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-X\-\_\-\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-A\-D\-D\-\_\-\-S\-T\-A\-T\-U\-S}~2 /$\ast$ for now we support extended status codes up to 2 16bit values there is mostly only one 16bit value used $\ast$/}}\label{df/d28/ciptypes_8h_a76032ec3319954c70deea1f039deeb19}
+
+
+\-Definition at line 254 of file ciptypes.\-h.
+
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Cip\-Class@{\-Cip\-Class}}
+\index{\-Cip\-Class@{\-Cip\-Class}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Cip\-Class}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf cip\-\_\-class}  {\bf \-Cip\-Class}}}\label{df/d28/ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}
+
+
+\-Class is a subclass of \-Instance. 
+
+\hypertarget{ciptypes_8h_a22530082e67e6b7c97b74ebaecde3f61}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Cip\-Data\-Type@{\-Cip\-Data\-Type}}
+\index{\-Cip\-Data\-Type@{\-Cip\-Data\-Type}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Cip\-Data\-Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf cip\-\_\-data\-\_\-types}  {\bf \-Cip\-Data\-Type}}}\label{df/d28/ciptypes_8h_a22530082e67e6b7c97b74ebaecde3f61}
+
+
+\-Enum containing the encoding values for \-C\-I\-P data types for \-C\-I\-P \-Messages. 
+
+\hypertarget{ciptypes_8h_aea7976be629e5ece275c993982186188}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Cip\-Instance@{\-Cip\-Instance}}
+\index{\-Cip\-Instance@{\-Cip\-Instance}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Cip\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf cip\-\_\-instance}  {\bf \-Cip\-Instance}}}\label{df/d28/ciptypes_8h_aea7976be629e5ece275c993982186188}
+\hypertarget{ciptypes_8h_af7606d2a9b86977aa0ac4ec9ccec3701}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Cip\-Service\-Function@{\-Cip\-Service\-Function}}
+\index{\-Cip\-Service\-Function@{\-Cip\-Service\-Function}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Cip\-Service\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-Eip\-Status}($\ast$ {\bf \-Cip\-Service\-Function})({\bf \-Cip\-Instance} $\ast$const instance, {\bf \-Cip\-Message\-Router\-Request} $\ast$const message\-\_\-router\-\_\-request, {\bf \-Cip\-Message\-Router\-Response} $\ast$const message\-\_\-router\-\_\-response)}}\label{df/d28/ciptypes_8h_af7606d2a9b86977aa0ac4ec9ccec3701}
+
+
+\-Definition at line 331 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a8dcc43f5bab0798fbe107dc2cb757b09}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Cip\-Service\-Struct@{\-Cip\-Service\-Struct}}
+\index{\-Cip\-Service\-Struct@{\-Cip\-Service\-Struct}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Cip\-Service\-Struct}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf cip\-\_\-service\-\_\-struct}  {\bf \-Cip\-Service\-Struct}}}\label{df/d28/ciptypes_8h_a8dcc43f5bab0798fbe107dc2cb757b09}
+
+
+\-Service descriptor. \-These are stored in an array. 
+
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985}{\index{ciptypes.\-h@{ciptypes.\-h}!cip\-\_\-data\-\_\-types@{cip\-\_\-data\-\_\-types}}
+\index{cip\-\_\-data\-\_\-types@{cip\-\_\-data\-\_\-types}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{cip\-\_\-data\-\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf cip\-\_\-data\-\_\-types}}}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985}
+
+
+\-Enum containing the encoding values for \-C\-I\-P data types for \-C\-I\-P \-Messages. 
+
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Cip\-Any@{k\-Cip\-Any}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Any@{k\-Cip\-Any}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a829a575ae1ecfb9686c580f688d49db6}{k\-Cip\-Any}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a829a575ae1ecfb9686c580f688d49db6}
+}]data type that can not be directly encoded \index{k\-Cip\-Bool@{k\-Cip\-Bool}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Bool@{k\-Cip\-Bool}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a0c2fd033abd36fd30b2175d5fb601ee0}{k\-Cip\-Bool}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a0c2fd033abd36fd30b2175d5fb601ee0}
+}]boolean data type \index{k\-Cip\-Sint@{k\-Cip\-Sint}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Sint@{k\-Cip\-Sint}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a5a3a7c5b33ce7b095c6552f4a4385389}{k\-Cip\-Sint}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a5a3a7c5b33ce7b095c6552f4a4385389}
+}]8-\/bit signed integer \index{k\-Cip\-Int@{k\-Cip\-Int}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Int@{k\-Cip\-Int}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a9b9ef0e53339cec126d6639fcd81cc84}{k\-Cip\-Int}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a9b9ef0e53339cec126d6639fcd81cc84}
+}]16-\/bit signed integer \index{k\-Cip\-Dint@{k\-Cip\-Dint}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Dint@{k\-Cip\-Dint}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a238bc5d3599a64e74b0420448aa5a9b4}{k\-Cip\-Dint}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a238bc5d3599a64e74b0420448aa5a9b4}
+}]32-\/bit signed integer \index{k\-Cip\-Lint@{k\-Cip\-Lint}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Lint@{k\-Cip\-Lint}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a4771f59affc5a0ca1d7a2419bc338590}{k\-Cip\-Lint}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a4771f59affc5a0ca1d7a2419bc338590}
+}]64-\/bit signed integer \index{k\-Cip\-Usint@{k\-Cip\-Usint}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Usint@{k\-Cip\-Usint}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985aa88d0d60450eee947f20647a8c977bd3}{k\-Cip\-Usint}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985aa88d0d60450eee947f20647a8c977bd3}
+}]8-\/bit unsigned integer \index{k\-Cip\-Uint@{k\-Cip\-Uint}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Uint@{k\-Cip\-Uint}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a0a27ee2736846092c289413a945524b1}{k\-Cip\-Uint}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a0a27ee2736846092c289413a945524b1}
+}]16-\/bit unsigned integer \index{k\-Cip\-Udint@{k\-Cip\-Udint}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Udint@{k\-Cip\-Udint}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a27bf79ffe35ed7d8a9ba21eff19bee1a}{k\-Cip\-Udint}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a27bf79ffe35ed7d8a9ba21eff19bee1a}
+}]32-\/bit unsigned integer \index{k\-Cip\-Ulint@{k\-Cip\-Ulint}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Ulint@{k\-Cip\-Ulint}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a2401cacdcc7d4422ef1a76c29589a9d9}{k\-Cip\-Ulint}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a2401cacdcc7d4422ef1a76c29589a9d9}
+}]64-\/bit unsigned integer \index{k\-Cip\-Real@{k\-Cip\-Real}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Real@{k\-Cip\-Real}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a614d747715420e4017af54aed7a9eeed}{k\-Cip\-Real}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a614d747715420e4017af54aed7a9eeed}
+}]\-Single precision floating point \index{k\-Cip\-Lreal@{k\-Cip\-Lreal}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Lreal@{k\-Cip\-Lreal}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a169b362efaf220765446380a4f68e886}{k\-Cip\-Lreal}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a169b362efaf220765446380a4f68e886}
+}]\-Double precision floating point \index{k\-Cip\-Stime@{k\-Cip\-Stime}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Stime@{k\-Cip\-Stime}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a36e299d16087f3459de107454aab35c2}{k\-Cip\-Stime}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a36e299d16087f3459de107454aab35c2}
+}]\-Synchronous time information$\ast$, type of \-D\-I\-N\-T \index{k\-Cip\-Date@{k\-Cip\-Date}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Date@{k\-Cip\-Date}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985afeadcb6a5d897d88decbda98c5e6557c}{k\-Cip\-Date}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985afeadcb6a5d897d88decbda98c5e6557c}
+}]\-Date only \index{k\-Cip\-Time\-Of\-Day@{k\-Cip\-Time\-Of\-Day}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Time\-Of\-Day@{k\-Cip\-Time\-Of\-Day}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a0461fca52778fd2d44403908d26af784}{k\-Cip\-Time\-Of\-Day}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a0461fca52778fd2d44403908d26af784}
+}]\-Time of day \index{k\-Cip\-Date\-And\-Time@{k\-Cip\-Date\-And\-Time}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Date\-And\-Time@{k\-Cip\-Date\-And\-Time}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a2310a8759fe0ab1a79d313b76977859d}{k\-Cip\-Date\-And\-Time}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a2310a8759fe0ab1a79d313b76977859d}
+}]\-Date and time of day \index{k\-Cip\-String@{k\-Cip\-String}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-String@{k\-Cip\-String}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a9289b361a3ff309323891078cc404756}{k\-Cip\-String}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a9289b361a3ff309323891078cc404756}
+}]\-Character string, 1 byte per character \index{k\-Cip\-Byte@{k\-Cip\-Byte}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Byte@{k\-Cip\-Byte}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a979072ef7b156bf85c48be3f779869ce}{k\-Cip\-Byte}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a979072ef7b156bf85c48be3f779869ce}
+}]8-\/bit bit string \index{k\-Cip\-Word@{k\-Cip\-Word}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Word@{k\-Cip\-Word}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985ac8023521e67b842db29553ac45284603}{k\-Cip\-Word}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985ac8023521e67b842db29553ac45284603}
+}]16-\/bit bit string \index{k\-Cip\-Dword@{k\-Cip\-Dword}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Dword@{k\-Cip\-Dword}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a159dcd0c3d2cbd4d8020db67c9f6d423}{k\-Cip\-Dword}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a159dcd0c3d2cbd4d8020db67c9f6d423}
+}]32-\/bit bit string \index{k\-Cip\-Lword@{k\-Cip\-Lword}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Lword@{k\-Cip\-Lword}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a280f39756e3273410cf19a1dddd197ac}{k\-Cip\-Lword}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a280f39756e3273410cf19a1dddd197ac}
+}]64-\/bit bit string \index{k\-Cip\-String2@{k\-Cip\-String2}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-String2@{k\-Cip\-String2}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985aa1654d3998444c39dfd8302e057bc412}{k\-Cip\-String2}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985aa1654d3998444c39dfd8302e057bc412}
+}]\-Character string, 2 byte per character \index{k\-Cip\-Ftime@{k\-Cip\-Ftime}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Ftime@{k\-Cip\-Ftime}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a8737536b9fb106d049d5007ee9e854bf}{k\-Cip\-Ftime}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a8737536b9fb106d049d5007ee9e854bf}
+}]\-Duration in micro-\/seconds, high resolution; range of \-D\-I\-N\-T \index{k\-Cip\-Ltime@{k\-Cip\-Ltime}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Ltime@{k\-Cip\-Ltime}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a200cb58686cacda9bf9e6175d167f4a4}{k\-Cip\-Ltime}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a200cb58686cacda9bf9e6175d167f4a4}
+}]\-Duration in micro-\/seconds, high resolution, range of \-L\-I\-N\-T \index{k\-Cip\-Itime@{k\-Cip\-Itime}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Itime@{k\-Cip\-Itime}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985ae9a2666b05c35472f07588ac0473487d}{k\-Cip\-Itime}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985ae9a2666b05c35472f07588ac0473487d}
+}]\-Duration in milli-\/seconds, short; range of \-I\-N\-T \index{k\-Cip\-String\-N@{k\-Cip\-String\-N}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-String\-N@{k\-Cip\-String\-N}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985aa4c9e671b17db02a98f1a3245b110cc2}{k\-Cip\-String\-N}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985aa4c9e671b17db02a98f1a3245b110cc2}
+}]\-Character string, \-N byte per character \index{k\-Cip\-Short\-String@{k\-Cip\-Short\-String}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Short\-String@{k\-Cip\-Short\-String}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985af2f8c1ad60e4b7e9137a99b761bfa25e}{k\-Cip\-Short\-String}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985af2f8c1ad60e4b7e9137a99b761bfa25e}
+}]\-Character string, 1 byte per character, 1 byte length indicator \index{k\-Cip\-Time@{k\-Cip\-Time}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Time@{k\-Cip\-Time}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a97d53fd3eb187df8c75cc67b5e06a3b7}{k\-Cip\-Time}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a97d53fd3eb187df8c75cc67b5e06a3b7}
+}]\-Duration in milli-\/seconds; range of \-D\-I\-N\-T \index{k\-Cip\-Epath@{k\-Cip\-Epath}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Epath@{k\-Cip\-Epath}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a4eba99ad8e7efdf8411f53018d5925dd}{k\-Cip\-Epath}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a4eba99ad8e7efdf8411f53018d5925dd}
+}]\-C\-I\-P path segments \index{k\-Cip\-Eng\-Unit@{k\-Cip\-Eng\-Unit}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Eng\-Unit@{k\-Cip\-Eng\-Unit}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a3cbffb81f98a4ade5114c000b96370f9}{k\-Cip\-Eng\-Unit}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a3cbffb81f98a4ade5114c000b96370f9}
+}]\-Engineering \-Units \index{k\-Cip\-Usint\-Usint@{k\-Cip\-Usint\-Usint}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Usint\-Usint@{k\-Cip\-Usint\-Usint}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a3df80ad0d2a0e4b5490d47f67e540b2a}{k\-Cip\-Usint\-Usint}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a3df80ad0d2a0e4b5490d47f67e540b2a}
+}]\-Used for \-C\-I\-P \-Identity attribute 4 \-Revision \index{k\-Cip\-Udint\-Udint\-Udint\-Udint\-Udint\-String@{k\-Cip\-Udint\-Udint\-Udint\-Udint\-Udint\-String}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Udint\-Udint\-Udint\-Udint\-Udint\-String@{k\-Cip\-Udint\-Udint\-Udint\-Udint\-Udint\-String}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a5149b2857cd16b6a1e2e704d91abcc21}{k\-Cip\-Udint\-Udint\-Udint\-Udint\-Udint\-String}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a5149b2857cd16b6a1e2e704d91abcc21}
+}]\-T\-C\-P/\-I\-P attribute 5 -\/ \-I\-P address, subnet mask, gateway, \-I\-P name server 1, \-I\-P name server 2, domain name \index{k\-Cip6\-Usint@{k\-Cip6\-Usint}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip6\-Usint@{k\-Cip6\-Usint}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a0e0654c72dd5461571fcdaac933f21ed}{k\-Cip6\-Usint}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a0e0654c72dd5461571fcdaac933f21ed}
+}]\-Struct for \-M\-A\-C \-Address (six \-U\-S\-I\-N\-Ts) \index{k\-Cip\-Member\-List@{k\-Cip\-Member\-List}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Member\-List@{k\-Cip\-Member\-List}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985af51f8e91f322db2771cd7879462417e2}{k\-Cip\-Member\-List}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985af51f8e91f322db2771cd7879462417e2}
+}]\index{k\-Cip\-Byte\-Array@{k\-Cip\-Byte\-Array}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Cip\-Byte\-Array@{k\-Cip\-Byte\-Array}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985aa449daa71d0cde48a1b8d99ba2d210cd}{k\-Cip\-Byte\-Array}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985aa449daa71d0cde48a1b8d99ba2d210cd}
+}]\index{k\-Internal\-Uint6@{k\-Internal\-Uint6}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Internal\-Uint6@{k\-Internal\-Uint6}}\item[{\em 
+\hypertarget{ciptypes_8h_a320130332b1a5062394fc0bd20723985a23ed8e6aaf60dbeb9a9bdab91ec05470}{k\-Internal\-Uint6}\label{df/d28/ciptypes_8h_a320130332b1a5062394fc0bd20723985a23ed8e6aaf60dbeb9a9bdab91ec05470}
+}]bogus hack, for port class attribute 9, \-T\-O\-D\-O figure out the right way to handle it \end{description}
+\end{Desc}
+
+
+
+\-Definition at line 64 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779}{\index{ciptypes.\-h@{ciptypes.\-h}!\-C\-I\-P\-Attribute\-Flag@{\-C\-I\-P\-Attribute\-Flag}}
+\index{\-C\-I\-P\-Attribute\-Flag@{\-C\-I\-P\-Attribute\-Flag}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-C\-I\-P\-Attribute\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-C\-I\-P\-Attribute\-Flag}}}\label{df/d28/ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779}
+
+
+\-Definition of \-Get and \-Set \-Flags for \-C\-I\-P \-Attributes. 
+
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Not\-Set\-Or\-Getable@{k\-Not\-Set\-Or\-Getable}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Not\-Set\-Or\-Getable@{k\-Not\-Set\-Or\-Getable}}\item[{\em 
+\hypertarget{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779a1e350cf2be43fc63ec9213856f03c512}{k\-Not\-Set\-Or\-Getable}\label{df/d28/ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779a1e350cf2be43fc63ec9213856f03c512}
+}]\-Neither set-\/able nor get-\/able \index{k\-Getable\-All@{k\-Getable\-All}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Getable\-All@{k\-Getable\-All}}\item[{\em 
+\hypertarget{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779ac2cb052685ef2248c7e3f1beaa0dcbd7}{k\-Getable\-All}\label{df/d28/ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779ac2cb052685ef2248c7e3f1beaa0dcbd7}
+}]\-Get-\/able, also part of \-Get \-Attribute \-All service \index{k\-Getable\-Single@{k\-Getable\-Single}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Getable\-Single@{k\-Getable\-Single}}\item[{\em 
+\hypertarget{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779a42aa9806b86d2459dedd76b415ab287a}{k\-Getable\-Single}\label{df/d28/ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779a42aa9806b86d2459dedd76b415ab287a}
+}]\-Get-\/able via \-Get \-Attribute \index{k\-Setable@{k\-Setable}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Setable@{k\-Setable}}\item[{\em 
+\hypertarget{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779acaa6743cbf7c4d938ac1024f6bfd2907}{k\-Setable}\label{df/d28/ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779acaa6743cbf7c4d938ac1024f6bfd2907}
+}]\-Set-\/able via \-Set \-Attribute \index{k\-Set\-And\-Get\-Able@{k\-Set\-And\-Get\-Able}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Set\-And\-Get\-Able@{k\-Set\-And\-Get\-Able}}\item[{\em 
+\hypertarget{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779ab12c18c4b24e21c3bb016c9e5b959685}{k\-Set\-And\-Get\-Able}\label{df/d28/ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779ab12c18c4b24e21c3bb016c9e5b959685}
+}]both set and get-\/able \index{k\-Getable\-Single\-And\-All@{k\-Getable\-Single\-And\-All}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Getable\-Single\-And\-All@{k\-Getable\-Single\-And\-All}}\item[{\em 
+\hypertarget{ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779ac652f51f2ab659c8f6dead436d940822}{k\-Getable\-Single\-And\-All}\label{df/d28/ciptypes_8h_a1e2feaa6e54b6217fe7d8ef02575d779ac652f51f2ab659c8f6dead436d940822}
+}]both single and all \end{description}
+\end{Desc}
+
+
+
+\-Definition at line 150 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26ef}{\index{ciptypes.\-h@{ciptypes.\-h}!\-C\-I\-P\-Service\-Code@{\-C\-I\-P\-Service\-Code}}
+\index{\-C\-I\-P\-Service\-Code@{\-C\-I\-P\-Service\-Code}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-C\-I\-P\-Service\-Code}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-C\-I\-P\-Service\-Code}}}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26ef}
+
+
+\-Definition of \-C\-I\-P service codes. 
+
+\-An \-Enum with all \-C\-I\-P service codes. \-Common services codes range from 0x01 to 0x1\-C \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Get\-Attribute\-All@{k\-Get\-Attribute\-All}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Get\-Attribute\-All@{k\-Get\-Attribute\-All}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa8519fb21fc3211b33419f4a305ce3a96}{k\-Get\-Attribute\-All}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa8519fb21fc3211b33419f4a305ce3a96}
+}]\index{k\-Set\-Attribute\-All@{k\-Set\-Attribute\-All}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Set\-Attribute\-All@{k\-Set\-Attribute\-All}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa2a4a9ed60b45e637135429f3c3f3d216}{k\-Set\-Attribute\-All}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa2a4a9ed60b45e637135429f3c3f3d216}
+}]\index{k\-Get\-Attribute\-List@{k\-Get\-Attribute\-List}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Get\-Attribute\-List@{k\-Get\-Attribute\-List}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa86f7f1c654b775bdc3396b117fbaba6d}{k\-Get\-Attribute\-List}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa86f7f1c654b775bdc3396b117fbaba6d}
+}]\index{k\-Set\-Attribute\-List@{k\-Set\-Attribute\-List}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Set\-Attribute\-List@{k\-Set\-Attribute\-List}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efaddf7228ba7bf51c7173c98e83839f2da}{k\-Set\-Attribute\-List}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efaddf7228ba7bf51c7173c98e83839f2da}
+}]\index{k\-Reset@{k\-Reset}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Reset@{k\-Reset}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efaa71731e14e5f7db3d11a1b92d685324a}{k\-Reset}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efaa71731e14e5f7db3d11a1b92d685324a}
+}]\index{k\-Start@{k\-Start}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Start@{k\-Start}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efaaf95f6aef1f9f36214053d164ccb5ff8}{k\-Start}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efaaf95f6aef1f9f36214053d164ccb5ff8}
+}]\index{k\-Stop@{k\-Stop}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Stop@{k\-Stop}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa92a3db2f4ec71748a0b36b0f079a1e79}{k\-Stop}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa92a3db2f4ec71748a0b36b0f079a1e79}
+}]\index{k\-Create@{k\-Create}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Create@{k\-Create}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efafd0bd5ad05a924adaa228bca0134a9ea}{k\-Create}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efafd0bd5ad05a924adaa228bca0134a9ea}
+}]\index{k\-Delete@{k\-Delete}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Delete@{k\-Delete}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa1353e180a561ebdc23352ffb61476ad4}{k\-Delete}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa1353e180a561ebdc23352ffb61476ad4}
+}]\index{k\-Multiple\-Service\-Packet@{k\-Multiple\-Service\-Packet}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Multiple\-Service\-Packet@{k\-Multiple\-Service\-Packet}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa5dc1babeda5dcef8d0a5caafb61c447b}{k\-Multiple\-Service\-Packet}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa5dc1babeda5dcef8d0a5caafb61c447b}
+}]\index{k\-Apply\-Attributes@{k\-Apply\-Attributes}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Apply\-Attributes@{k\-Apply\-Attributes}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa8d9943feb4e11b716a2c3851b0835a2c}{k\-Apply\-Attributes}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa8d9943feb4e11b716a2c3851b0835a2c}
+}]\index{k\-Get\-Attribute\-Single@{k\-Get\-Attribute\-Single}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Get\-Attribute\-Single@{k\-Get\-Attribute\-Single}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa581133006a50889c877f74eaf5cd539e}{k\-Get\-Attribute\-Single}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa581133006a50889c877f74eaf5cd539e}
+}]\index{k\-Set\-Attribute\-Single@{k\-Set\-Attribute\-Single}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Set\-Attribute\-Single@{k\-Set\-Attribute\-Single}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efab16649a9a3dac3f31081de207ffa7b96}{k\-Set\-Attribute\-Single}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efab16649a9a3dac3f31081de207ffa7b96}
+}]\index{k\-Find\-Next\-Object\-Instance@{k\-Find\-Next\-Object\-Instance}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Find\-Next\-Object\-Instance@{k\-Find\-Next\-Object\-Instance}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efae7628dd5e8e2d509846317a381671c0a}{k\-Find\-Next\-Object\-Instance}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efae7628dd5e8e2d509846317a381671c0a}
+}]\index{k\-Restore@{k\-Restore}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Restore@{k\-Restore}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efaff8572be7f43c631430a29539a0a96e2}{k\-Restore}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efaff8572be7f43c631430a29539a0a96e2}
+}]\index{k\-Save@{k\-Save}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Save@{k\-Save}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa000d03009c2e87a15d03b8ed29acb1e1}{k\-Save}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa000d03009c2e87a15d03b8ed29acb1e1}
+}]\index{k\-No\-Operation@{k\-No\-Operation}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-No\-Operation@{k\-No\-Operation}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa79ca9eaa954dd29bb0671fb99e550439}{k\-No\-Operation}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa79ca9eaa954dd29bb0671fb99e550439}
+}]\index{k\-Get\-Member@{k\-Get\-Member}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Get\-Member@{k\-Get\-Member}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa585abb17406caf0dab6267f5a47d7197}{k\-Get\-Member}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa585abb17406caf0dab6267f5a47d7197}
+}]\index{k\-Set\-Member@{k\-Set\-Member}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Set\-Member@{k\-Set\-Member}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efaef3e61ba352db8b1283ba92942a8f7f2}{k\-Set\-Member}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efaef3e61ba352db8b1283ba92942a8f7f2}
+}]\index{k\-Insert\-Member@{k\-Insert\-Member}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Insert\-Member@{k\-Insert\-Member}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa6a22637c20e9a56838779013471bef95}{k\-Insert\-Member}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa6a22637c20e9a56838779013471bef95}
+}]\index{k\-Remove\-Member@{k\-Remove\-Member}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Remove\-Member@{k\-Remove\-Member}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efaa01279dda9632cef75afd37a89de55c1}{k\-Remove\-Member}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efaa01279dda9632cef75afd37a89de55c1}
+}]\index{k\-Group\-Sync@{k\-Group\-Sync}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Group\-Sync@{k\-Group\-Sync}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efae69e1c0943bb85f41813a185facc4515}{k\-Group\-Sync}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efae69e1c0943bb85f41813a185facc4515}
+}]\index{k\-Forward\-Open@{k\-Forward\-Open}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Forward\-Open@{k\-Forward\-Open}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efafb6afeda0d2d85a07bda2634ca92c1b5}{k\-Forward\-Open}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efafb6afeda0d2d85a07bda2634ca92c1b5}
+}]\index{k\-Forward\-Close@{k\-Forward\-Close}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Forward\-Close@{k\-Forward\-Close}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efa317c8ff219d61ed0a2561f653bcbcb64}{k\-Forward\-Close}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efa317c8ff219d61ed0a2561f653bcbcb64}
+}]\index{k\-Unconnected\-Send@{k\-Unconnected\-Send}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Unconnected\-Send@{k\-Unconnected\-Send}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efad0fb098596bc37a31fed44ee2d4d9fa3}{k\-Unconnected\-Send}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efad0fb098596bc37a31fed44ee2d4d9fa3}
+}]\index{k\-Get\-Connection\-Owner@{k\-Get\-Connection\-Owner}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Get\-Connection\-Owner@{k\-Get\-Connection\-Owner}}\item[{\em 
+\hypertarget{ciptypes_8h_a2942916684f16954a536c220cffa26efadb129c891c32c6ecb2ab801bb26b09d8}{k\-Get\-Connection\-Owner}\label{df/d28/ciptypes_8h_a2942916684f16954a536c220cffa26efadb129c891c32c6ecb2ab801bb26b09d8}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 115 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_ae38442d795652cf3bc478fd181404d02}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Data\-Segment\-Type@{\-Data\-Segment\-Type}}
+\index{\-Data\-Segment\-Type@{\-Data\-Segment\-Type}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Data\-Segment\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Data\-Segment\-Type}}}\label{df/d28/ciptypes_8h_ae38442d795652cf3bc478fd181404d02}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Data\-Segment\-Type\-Simple\-Data\-Message@{k\-Data\-Segment\-Type\-Simple\-Data\-Message}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Data\-Segment\-Type\-Simple\-Data\-Message@{k\-Data\-Segment\-Type\-Simple\-Data\-Message}}\item[{\em 
+\hypertarget{ciptypes_8h_ae38442d795652cf3bc478fd181404d02a4628883518cd604bbe6239d93f38cf22}{k\-Data\-Segment\-Type\-Simple\-Data\-Message}\label{df/d28/ciptypes_8h_ae38442d795652cf3bc478fd181404d02a4628883518cd604bbe6239d93f38cf22}
+}]\index{k\-Data\-Segment\-Type\-Ansi\-Extended\-Symbol\-Message@{k\-Data\-Segment\-Type\-Ansi\-Extended\-Symbol\-Message}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Data\-Segment\-Type\-Ansi\-Extended\-Symbol\-Message@{k\-Data\-Segment\-Type\-Ansi\-Extended\-Symbol\-Message}}\item[{\em 
+\hypertarget{ciptypes_8h_ae38442d795652cf3bc478fd181404d02adb4f7e6e7e3ada178ce3851c88fe014d}{k\-Data\-Segment\-Type\-Ansi\-Extended\-Symbol\-Message}\label{df/d28/ciptypes_8h_ae38442d795652cf3bc478fd181404d02adb4f7e6e7e3ada178ce3851c88fe014d}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 57 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a1a7498137431124c4dde66e95095c2d2}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Io\-Connection\-Event@{\-Io\-Connection\-Event}}
+\index{\-Io\-Connection\-Event@{\-Io\-Connection\-Event}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Io\-Connection\-Event}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Io\-Connection\-Event}}}\label{df/d28/ciptypes_8h_a1a7498137431124c4dde66e95095c2d2}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Io\-Connection\-Event\-Opened@{k\-Io\-Connection\-Event\-Opened}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Io\-Connection\-Event\-Opened@{k\-Io\-Connection\-Event\-Opened}}\item[{\em 
+\hypertarget{ciptypes_8h_a1a7498137431124c4dde66e95095c2d2a6516f9d6e660daf124379a38608434e2}{k\-Io\-Connection\-Event\-Opened}\label{df/d28/ciptypes_8h_a1a7498137431124c4dde66e95095c2d2a6516f9d6e660daf124379a38608434e2}
+}]\index{k\-Io\-Connection\-Event\-Timed\-Out@{k\-Io\-Connection\-Event\-Timed\-Out}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Io\-Connection\-Event\-Timed\-Out@{k\-Io\-Connection\-Event\-Timed\-Out}}\item[{\em 
+\hypertarget{ciptypes_8h_a1a7498137431124c4dde66e95095c2d2a91f5cbaf05e3e1e95b9c262a851ae931}{k\-Io\-Connection\-Event\-Timed\-Out}\label{df/d28/ciptypes_8h_a1a7498137431124c4dde66e95095c2d2a91f5cbaf05e3e1e95b9c262a851ae931}
+}]\index{k\-Io\-Connection\-Event\-Closed@{k\-Io\-Connection\-Event\-Closed}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Io\-Connection\-Event\-Closed@{k\-Io\-Connection\-Event\-Closed}}\item[{\em 
+\hypertarget{ciptypes_8h_a1a7498137431124c4dde66e95095c2d2aef7d80152c2d6e1a5e7f64bf51801374}{k\-Io\-Connection\-Event\-Closed}\label{df/d28/ciptypes_8h_a1a7498137431124c4dde66e95095c2d2aef7d80152c2d6e1a5e7f64bf51801374}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 160 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Logical\-Segment\-Logical\-Format@{\-Logical\-Segment\-Logical\-Format}}
+\index{\-Logical\-Segment\-Logical\-Format@{\-Logical\-Segment\-Logical\-Format}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Logical\-Segment\-Logical\-Format}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Logical\-Segment\-Logical\-Format}}}\label{df/d28/ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0}
+
+
+\-Enum containing values how long the encoded value will be (8, 16, or 32 bit) 
+
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Logical\-Segment\-Logical\-Format\-Eight\-Bit\-Value@{k\-Logical\-Segment\-Logical\-Format\-Eight\-Bit\-Value}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Format\-Eight\-Bit\-Value@{k\-Logical\-Segment\-Logical\-Format\-Eight\-Bit\-Value}}\item[{\em 
+\hypertarget{ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0a1ba3da11ab05ed7ebfbe18a85a9d72bc}{k\-Logical\-Segment\-Logical\-Format\-Eight\-Bit\-Value}\label{df/d28/ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0a1ba3da11ab05ed7ebfbe18a85a9d72bc}
+}]\index{k\-Logical\-Segment\-Logical\-Format\-Sixteen\-Bit\-Value@{k\-Logical\-Segment\-Logical\-Format\-Sixteen\-Bit\-Value}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Format\-Sixteen\-Bit\-Value@{k\-Logical\-Segment\-Logical\-Format\-Sixteen\-Bit\-Value}}\item[{\em 
+\hypertarget{ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0a65d0cc0cb408138d380cf48599162019}{k\-Logical\-Segment\-Logical\-Format\-Sixteen\-Bit\-Value}\label{df/d28/ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0a65d0cc0cb408138d380cf48599162019}
+}]\index{k\-Logical\-Segment\-Logical\-Format\-Thirty\-Two\-Bit\-Value@{k\-Logical\-Segment\-Logical\-Format\-Thirty\-Two\-Bit\-Value}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Format\-Thirty\-Two\-Bit\-Value@{k\-Logical\-Segment\-Logical\-Format\-Thirty\-Two\-Bit\-Value}}\item[{\em 
+\hypertarget{ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0afba21e0c0ad07f050e38c1976dcb4fbf}{k\-Logical\-Segment\-Logical\-Format\-Thirty\-Two\-Bit\-Value}\label{df/d28/ciptypes_8h_a4fce5d16c12c27f55daf553e20a3f6a0afba21e0c0ad07f050e38c1976dcb4fbf}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 47 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0a}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Logical\-Segment\-Logical\-Type@{\-Logical\-Segment\-Logical\-Type}}
+\index{\-Logical\-Segment\-Logical\-Type@{\-Logical\-Segment\-Logical\-Type}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Logical\-Segment\-Logical\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Logical\-Segment\-Logical\-Type}}}\label{df/d28/ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0a}
+
+
+\-Enum containing values which kind of logical segment is encoded. 
+
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Logical\-Segment\-Logical\-Type\-Class\-Id@{k\-Logical\-Segment\-Logical\-Type\-Class\-Id}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Type\-Class\-Id@{k\-Logical\-Segment\-Logical\-Type\-Class\-Id}}\item[{\em 
+\hypertarget{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aabbe56401854fdc1e6b9a8c9253ecada1}{k\-Logical\-Segment\-Logical\-Type\-Class\-Id}\label{df/d28/ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aabbe56401854fdc1e6b9a8c9253ecada1}
+}]\-Class \-I\-D \index{k\-Logical\-Segment\-Logical\-Type\-Instance\-Id@{k\-Logical\-Segment\-Logical\-Type\-Instance\-Id}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Type\-Instance\-Id@{k\-Logical\-Segment\-Logical\-Type\-Instance\-Id}}\item[{\em 
+\hypertarget{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa82918d2b1a5dd498857498989172eeb1}{k\-Logical\-Segment\-Logical\-Type\-Instance\-Id}\label{df/d28/ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa82918d2b1a5dd498857498989172eeb1}
+}]\-Instance \-I\-D \index{k\-Logical\-Segment\-Logical\-Type\-Member\-Id@{k\-Logical\-Segment\-Logical\-Type\-Member\-Id}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Type\-Member\-Id@{k\-Logical\-Segment\-Logical\-Type\-Member\-Id}}\item[{\em 
+\hypertarget{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa984812c6913553cdbe54d8ea16958b54}{k\-Logical\-Segment\-Logical\-Type\-Member\-Id}\label{df/d28/ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa984812c6913553cdbe54d8ea16958b54}
+}]\-Member \-I\-D \index{k\-Logical\-Segment\-Logical\-Type\-Connection\-Point@{k\-Logical\-Segment\-Logical\-Type\-Connection\-Point}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Type\-Connection\-Point@{k\-Logical\-Segment\-Logical\-Type\-Connection\-Point}}\item[{\em 
+\hypertarget{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa259af3672821658d1ca9e95846ae1d81}{k\-Logical\-Segment\-Logical\-Type\-Connection\-Point}\label{df/d28/ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa259af3672821658d1ca9e95846ae1d81}
+}]\-Connection \-Point \index{k\-Logical\-Segment\-Logical\-Type\-Attribute\-Id@{k\-Logical\-Segment\-Logical\-Type\-Attribute\-Id}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Type\-Attribute\-Id@{k\-Logical\-Segment\-Logical\-Type\-Attribute\-Id}}\item[{\em 
+\hypertarget{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa9b4a126272ea57b7276c9c93b3bde381}{k\-Logical\-Segment\-Logical\-Type\-Attribute\-Id}\label{df/d28/ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa9b4a126272ea57b7276c9c93b3bde381}
+}]\-Attribute \-I\-D \index{k\-Logical\-Segment\-Logical\-Type\-Special@{k\-Logical\-Segment\-Logical\-Type\-Special}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Type\-Special@{k\-Logical\-Segment\-Logical\-Type\-Special}}\item[{\em 
+\hypertarget{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aad70ac17ea345f0e55c66d264385ea3da}{k\-Logical\-Segment\-Logical\-Type\-Special}\label{df/d28/ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aad70ac17ea345f0e55c66d264385ea3da}
+}]\-Special \index{k\-Logical\-Segment\-Logical\-Type\-Service@{k\-Logical\-Segment\-Logical\-Type\-Service}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Type\-Service@{k\-Logical\-Segment\-Logical\-Type\-Service}}\item[{\em 
+\hypertarget{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aaca0521998fa6ed63a1d533a22a9b6332}{k\-Logical\-Segment\-Logical\-Type\-Service}\label{df/d28/ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aaca0521998fa6ed63a1d533a22a9b6332}
+}]\-Service \-I\-D \index{k\-Logical\-Segment\-Logical\-Type\-Extended\-Logical@{k\-Logical\-Segment\-Logical\-Type\-Extended\-Logical}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Logical\-Segment\-Logical\-Type\-Extended\-Logical@{k\-Logical\-Segment\-Logical\-Type\-Extended\-Logical}}\item[{\em 
+\hypertarget{ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa2f6eeca2d56eb1772edf87c209af8f02}{k\-Logical\-Segment\-Logical\-Type\-Extended\-Logical}\label{df/d28/ciptypes_8h_a952173cc2fb61f8cba93966eba5a2e0aa2f6eeca2d56eb1772edf87c209af8f02}
+}]\-Extended \-Logical \end{description}
+\end{Desc}
+
+
+
+\-Definition at line 34 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_aa639f8b0637e492951a8b722389e0868}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Network\-Segment\-Sub\-Type@{\-Network\-Segment\-Sub\-Type}}
+\index{\-Network\-Segment\-Sub\-Type@{\-Network\-Segment\-Sub\-Type}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Network\-Segment\-Sub\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Network\-Segment\-Sub\-Type}}}\label{df/d28/ciptypes_8h_aa639f8b0637e492951a8b722389e0868}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Production\-Time\-Inhibit\-Time\-Network\-Segment@{k\-Production\-Time\-Inhibit\-Time\-Network\-Segment}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Production\-Time\-Inhibit\-Time\-Network\-Segment@{k\-Production\-Time\-Inhibit\-Time\-Network\-Segment}}\item[{\em 
+\hypertarget{ciptypes_8h_aa639f8b0637e492951a8b722389e0868a2b2bbd3b0593aebf81182423fef1eb69}{k\-Production\-Time\-Inhibit\-Time\-Network\-Segment}\label{df/d28/ciptypes_8h_aa639f8b0637e492951a8b722389e0868a2b2bbd3b0593aebf81182423fef1eb69}
+}]identifier indicating a production inhibit time network segment \end{description}
+\end{Desc}
+
+
+
+\-Definition at line 53 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a88dadddae51f173dc61922ed5932f17a}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Port\-Segment\-Flag@{\-Port\-Segment\-Flag}}
+\index{\-Port\-Segment\-Flag@{\-Port\-Segment\-Flag}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Port\-Segment\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Port\-Segment\-Flag}}}\label{df/d28/ciptypes_8h_a88dadddae51f173dc61922ed5932f17a}
+
+
+\-Port \-Segment flags. 
+
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Port\-Segment\-Flag\-Extended\-Link\-Address\-Size@{k\-Port\-Segment\-Flag\-Extended\-Link\-Address\-Size}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Port\-Segment\-Flag\-Extended\-Link\-Address\-Size@{k\-Port\-Segment\-Flag\-Extended\-Link\-Address\-Size}}\item[{\em 
+\hypertarget{ciptypes_8h_a88dadddae51f173dc61922ed5932f17aa60c428a0d09d26e2ad82175e7ac082a7}{k\-Port\-Segment\-Flag\-Extended\-Link\-Address\-Size}\label{df/d28/ciptypes_8h_a88dadddae51f173dc61922ed5932f17aa60c428a0d09d26e2ad82175e7ac082a7}
+}]\-Extended \-Link \-Address \-Size flag, \-Port segment \end{description}
+\end{Desc}
+
+
+
+\-Definition at line 29 of file ciptypes.\-h.
+
+\hypertarget{ciptypes_8h_a45f8c604b4008a278fe9bde5156489ee}{\index{ciptypes.\-h@{ciptypes.\-h}!\-Segment\-Type@{\-Segment\-Type}}
+\index{\-Segment\-Type@{\-Segment\-Type}!ciptypes.h@{ciptypes.\-h}}
+\subsubsection[{\-Segment\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Segment\-Type}}}\label{df/d28/ciptypes_8h_a45f8c604b4008a278fe9bde5156489ee}
+
+
+\-Segment type \-Enum. 
+
+\-Bits 7-\/5 in the \-Segment \-Type/\-Format byte \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-Segment\-Type\-Port\-Segment@{k\-Segment\-Type\-Port\-Segment}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Segment\-Type\-Port\-Segment@{k\-Segment\-Type\-Port\-Segment}}\item[{\em 
+\hypertarget{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea539497ec9d379e4c91a33c7d46191fe6}{k\-Segment\-Type\-Port\-Segment}\label{df/d28/ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea539497ec9d379e4c91a33c7d46191fe6}
+}]\-Port segment \index{k\-Segment\-Type\-Logical\-Segment@{k\-Segment\-Type\-Logical\-Segment}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Segment\-Type\-Logical\-Segment@{k\-Segment\-Type\-Logical\-Segment}}\item[{\em 
+\hypertarget{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eeadd77eee21f105f21c41492f1e51039a2}{k\-Segment\-Type\-Logical\-Segment}\label{df/d28/ciptypes_8h_a45f8c604b4008a278fe9bde5156489eeadd77eee21f105f21c41492f1e51039a2}
+}]\-Logical segment \index{k\-Segment\-Type\-Network\-Segment@{k\-Segment\-Type\-Network\-Segment}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Segment\-Type\-Network\-Segment@{k\-Segment\-Type\-Network\-Segment}}\item[{\em 
+\hypertarget{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eeab45e61b95912a1c47536522c1aa88c42}{k\-Segment\-Type\-Network\-Segment}\label{df/d28/ciptypes_8h_a45f8c604b4008a278fe9bde5156489eeab45e61b95912a1c47536522c1aa88c42}
+}]\-Network segment \index{k\-Segment\-Type\-Symbolic\-Segment@{k\-Segment\-Type\-Symbolic\-Segment}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Segment\-Type\-Symbolic\-Segment@{k\-Segment\-Type\-Symbolic\-Segment}}\item[{\em 
+\hypertarget{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eead00b0e4c9c38a15bcf474484103cfaf8}{k\-Segment\-Type\-Symbolic\-Segment}\label{df/d28/ciptypes_8h_a45f8c604b4008a278fe9bde5156489eead00b0e4c9c38a15bcf474484103cfaf8}
+}]\-Symbolic segment \index{k\-Segment\-Type\-Data\-Segment@{k\-Segment\-Type\-Data\-Segment}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Segment\-Type\-Data\-Segment@{k\-Segment\-Type\-Data\-Segment}}\item[{\em 
+\hypertarget{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea4e9d7549e27d1ee87033d512b8686232}{k\-Segment\-Type\-Data\-Segment}\label{df/d28/ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea4e9d7549e27d1ee87033d512b8686232}
+}]\-Data segment \index{k\-Segment\-Type\-Data\-Type\-Constructed@{k\-Segment\-Type\-Data\-Type\-Constructed}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Segment\-Type\-Data\-Type\-Constructed@{k\-Segment\-Type\-Data\-Type\-Constructed}}\item[{\em 
+\hypertarget{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea13a9d396729e21d0254c0c5e92480e8a}{k\-Segment\-Type\-Data\-Type\-Constructed}\label{df/d28/ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea13a9d396729e21d0254c0c5e92480e8a}
+}]\-Data type constructed \index{k\-Segment\-Type\-Data\-Type\-Elementary@{k\-Segment\-Type\-Data\-Type\-Elementary}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Segment\-Type\-Data\-Type\-Elementary@{k\-Segment\-Type\-Data\-Type\-Elementary}}\item[{\em 
+\hypertarget{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea10eed7f11b11469f41049069e08c06a6}{k\-Segment\-Type\-Data\-Type\-Elementary}\label{df/d28/ciptypes_8h_a45f8c604b4008a278fe9bde5156489eea10eed7f11b11469f41049069e08c06a6}
+}]\-Data type elementary \index{k\-Segment\-Type\-Segment\-Type\-Reserved@{k\-Segment\-Type\-Segment\-Type\-Reserved}!ciptypes.\-h@{ciptypes.\-h}}\index{ciptypes.\-h@{ciptypes.\-h}!k\-Segment\-Type\-Segment\-Type\-Reserved@{k\-Segment\-Type\-Segment\-Type\-Reserved}}\item[{\em 
+\hypertarget{ciptypes_8h_a45f8c604b4008a278fe9bde5156489eeab552f69c7cf4d5a444a5a7e2b202a17a}{k\-Segment\-Type\-Segment\-Type\-Reserved}\label{df/d28/ciptypes_8h_a45f8c604b4008a278fe9bde5156489eeab552f69c7cf4d5a444a5a7e2b202a17a}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 16 of file ciptypes.\-h.
+

@@ -1,0 +1,428 @@
+\hypertarget{ciptcpipinterface_8c}{\section{src/cip/ciptcpipinterface.c \-File \-Reference}
+\label{dd/d20/ciptcpipinterface_8c}\index{src/cip/ciptcpipinterface.\-c@{src/cip/ciptcpipinterface.\-c}}
+}
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include \char`\"{}ciptcpipinterface.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}opener\-\_\-user\-\_\-conf.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipcommon.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipmessagerouter.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ciperror.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}endianconv.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}cipethernetlink.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}opener\-\_\-api.\-h\char`\"{}}\*
+\-Include dependency graph for ciptcpipinterface.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dcd/ciptcpipinterface_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{ciptcpipinterface_8c_a30729bd683f7ee214bbb684de52456cd}{\-Cip\-Tcp\-Ip\-Interface\-Init} ()
+\begin{DoxyCompactList}\small\item\em \-Initializing the data structures of the \-T\-C\-P/\-I\-P interface object. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga388b872aa3290d7248bfbf4b61fc4f1e}{\-Configure\-Domain\-Name} (const char $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const domain\-\_\-name)
+\begin{DoxyCompactList}\small\item\em \-Configure the domain name of the device. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gab4a2d826ebe9be1b60c0206414a8f8ce}{\-Configure\-Host\-Name} (const char $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const hostname)
+\begin{DoxyCompactList}\small\item\em \-Configure the host name of the device. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga1f4f417cb95e75c439edabe7b8b91477}{\-Configure\-Network\-Interface} (const char $\ast$const ip\-\_\-address, const char $\ast$const subnet\-\_\-mask, const char $\ast$const gateway)
+\begin{DoxyCompactList}\small\item\em \-Configure the data of the network interface of the device. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{ciptcpipinterface_8c_afe7be65662a3542da6008a2ca78270e3}{\-Get\-Attribute\-All\-Tcp\-Ip\-Interface} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{ciptcpipinterface_8c_a35086299e6713b99a218e37f982ce676}{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{ciptcpipinterface_8c_ade73a247ea20e836a3336caee50caf41}{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const message\-\_\-router\-\_\-response)
+\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{ciptcpipinterface_8c_a3ce93313245a6e9c12c9958c176e9008}{\-Set\-Attribute\-Single\-Tcp} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$instance, \hyperlink{structCipMessageRouterRequest}{\-Cip\-Message\-Router\-Request} $\ast$message\-\_\-router\-\_\-request, \hyperlink{structCipMessageRouterResponse}{\-Cip\-Message\-Router\-Response} $\ast$message\-\_\-router\-\_\-response)
+\item 
+void \hyperlink{ciptcpipinterface_8c_a523c7909b1d929c0b9b288802189d391}{\-Shutdown\-Tcp\-Ip\-Interface} (void)
+\begin{DoxyCompactList}\small\item\em \-Clean up the allocated data of the \-T\-C\-P/\-I\-P interface object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_ac169b512f1c9d1ccf75af3eb09025452}{\-Cip\-Dword} \hyperlink{ciptcpipinterface_8c_a5577005a395dce41a8b759ee8e3d4b65}{configuration\-\_\-capability\-\_\-} = 0x04 $|$ 0x20
+\item 
+\hyperlink{typedefs_8h_ac169b512f1c9d1ccf75af3eb09025452}{\-Cip\-Dword} \hyperlink{ciptcpipinterface_8c_a3f53a7789de651102aa844c396dbc053}{configuration\-\_\-control\-\_\-} = 0
+\item 
+\hyperlink{ciptcpipinterface_8h_a588cf7cf0999441f3bb99fefbadf98dc}{\-Multicast\-Address\-Configuration} \hyperlink{ciptcpipinterface_8c_a3b13a18a3f6efcb8f2e651676096f4e5}{g\-\_\-multicast\-\_\-configuration}
+\begin{DoxyCompactList}\small\item\em \#9 \-The multicast configuration for this device \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} \hyperlink{ciptcpipinterface_8c_a80c0f3f25208a8befe2a112a78b15435}{g\-\_\-time\-\_\-to\-\_\-live\-\_\-value} = 1
+\begin{DoxyCompactList}\small\item\em \#8 the time to live value to be used for multi-\/cast connections \end{DoxyCompactList}\item 
+\hyperlink{structCipString}{\-Cip\-String} \hyperlink{ciptcpipinterface_8c_a09c1accbdcd35ed421a0d2b27baff3de}{hostname\-\_\-}
+\item 
+\hyperlink{structCipTcpIpNetworkInterfaceConfiguration}{\-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration} \hyperlink{ciptcpipinterface_8c_a635643a0d47842550c4d3cb5f4959cee}{interface\-\_\-configuration\-\_\-}
+\item 
+\hyperlink{structCipEpath}{\-Cip\-Epath} \hyperlink{ciptcpipinterface_8c_a65125af091b5294b816a52def6d0bc94}{physical\-\_\-link\-\_\-object\-\_\-}
+\item 
+\hyperlink{typedefs_8h_ac169b512f1c9d1ccf75af3eb09025452}{\-Cip\-Dword} \hyperlink{ciptcpipinterface_8c_a4e00b952fbc119903cda4a30494695b8}{tcp\-\_\-status\-\_\-} = 0x1
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{ciptcpipinterface_8c_a30729bd683f7ee214bbb684de52456cd}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!\-Cip\-Tcp\-Ip\-Interface\-Init@{\-Cip\-Tcp\-Ip\-Interface\-Init}}
+\index{\-Cip\-Tcp\-Ip\-Interface\-Init@{\-Cip\-Tcp\-Ip\-Interface\-Init}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{\-Cip\-Tcp\-Ip\-Interface\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Cip\-Tcp\-Ip\-Interface\-Init} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{dd/d20/ciptcpipinterface_8c_a30729bd683f7ee214bbb684de52456cd}
+
+
+\-Initializing the data structures of the \-T\-C\-P/\-I\-P interface object. 
+
+\begin{DoxyReturn}{\-Returns}
+k\-Eip\-Status\-Ok on success, otherwise k\-Eip\-Status\-Error 
+\end{DoxyReturn}
+
+
+\-Definition at line 143 of file ciptcpipinterface.\-c.
+
+
+
+\-References configuration\-\_\-capability\-\_\-, configuration\-\_\-control\-\_\-, \-Create\-Cip\-Class(), g\-\_\-time\-\_\-to\-\_\-live\-\_\-value, \-Get\-Attribute\-All\-Tcp\-Ip\-Interface(), \-Get\-Attribute\-Single\-Tcp\-Ip\-Interface(), \-Get\-Cip\-Instance(), \-Insert\-Attribute(), \-Insert\-Service(), k\-Cip\-Any, k\-Cip\-Dword, k\-Cip\-Epath, k\-Cip\-String, k\-Cip\-Udint\-Udint\-Udint\-Udint\-Udint\-String, k\-Cip\-Usint, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Getable\-Single\-And\-All, k\-Get\-Attribute\-All, k\-Get\-Attribute\-Single, k\-Set\-Attribute\-Single, \-Set\-Attribute\-Single\-Tcp(), and tcp\-\_\-status\-\_\-.
+
+
+
+\-Referenced by \-Cip\-Stack\-Init().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/ciptcpipinterface_8c_a30729bd683f7ee214bbb684de52456cd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/ciptcpipinterface_8c_a30729bd683f7ee214bbb684de52456cd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ciptcpipinterface_8c_afe7be65662a3542da6008a2ca78270e3}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!\-Get\-Attribute\-All\-Tcp\-Ip\-Interface@{\-Get\-Attribute\-All\-Tcp\-Ip\-Interface}}
+\index{\-Get\-Attribute\-All\-Tcp\-Ip\-Interface@{\-Get\-Attribute\-All\-Tcp\-Ip\-Interface}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{\-Get\-Attribute\-All\-Tcp\-Ip\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Get\-Attribute\-All\-Tcp\-Ip\-Interface} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$}]{instance, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{dd/d20/ciptcpipinterface_8c_afe7be65662a3542da6008a2ca78270e3}
+
+
+\-Definition at line 239 of file ciptcpipinterface.\-c.
+
+
+
+\-References \-Cip\-Epath\-::attribute\-\_\-number, \-Cip\-Attribute\-Struct\-::attribute\-\_\-number, cip\-\_\-instance\-::attributes, cip\-\_\-instance\-::cip\-\_\-class, \-Cip\-Message\-Router\-Response\-::data, \-Cip\-Message\-Router\-Response\-::data\-\_\-length, cip\-\_\-class\-::get\-\_\-attribute\-\_\-all\-\_\-mask, \-Get\-Attribute\-Single\-Tcp\-Ip\-Interface(), k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok\-Send, cip\-\_\-class\-::number\-\_\-of\-\_\-attributes, and \-Cip\-Message\-Router\-Request\-::request\-\_\-path.
+
+
+
+\-Referenced by \-Cip\-Tcp\-Ip\-Interface\-Init().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/ciptcpipinterface_8c_afe7be65662a3542da6008a2ca78270e3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/ciptcpipinterface_8c_afe7be65662a3542da6008a2ca78270e3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ciptcpipinterface_8c_a35086299e6713b99a218e37f982ce676}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface@{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface}}
+\index{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface@{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Get\-Attribute\-Single\-Tcp\-Ip\-Interface} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$}]{instance, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{dd/d20/ciptcpipinterface_8c_a35086299e6713b99a218e37f982ce676}
+
+
+\-Referenced by \-Cip\-Tcp\-Ip\-Interface\-Init(), and \-Get\-Attribute\-All\-Tcp\-Ip\-Interface().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/ciptcpipinterface_8c_a35086299e6713b99a218e37f982ce676_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ciptcpipinterface_8c_ade73a247ea20e836a3336caee50caf41}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface@{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface}}
+\index{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface@{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{\-Get\-Attribute\-Single\-Tcp\-Ip\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Get\-Attribute\-Single\-Tcp\-Ip\-Interface} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{instance, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{dd/d20/ciptcpipinterface_8c_ade73a247ea20e836a3336caee50caf41}
+
+
+\-Definition at line 202 of file ciptcpipinterface.\-c.
+
+
+
+\-References multicast\-\_\-address\-\_\-configuration\-::alloc\-\_\-control, \-Encode\-Data(), \-Get\-Attribute\-Single(), k\-Cip\-Error\-Success, k\-Cip\-Udint, k\-Cip\-Uint, k\-Cip\-Usint, k\-Eip\-Status\-Ok\-Send, multicast\-\_\-address\-\_\-configuration\-::number\-\_\-of\-\_\-allocated\-\_\-multicast\-\_\-addresses, multicast\-\_\-address\-\_\-configuration\-::reserved\-\_\-shall\-\_\-be\-\_\-zero, and multicast\-\_\-address\-\_\-configuration\-::starting\-\_\-multicast\-\_\-address.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/ciptcpipinterface_8c_ade73a247ea20e836a3336caee50caf41_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ciptcpipinterface_8c_a3ce93313245a6e9c12c9958c176e9008}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!\-Set\-Attribute\-Single\-Tcp@{\-Set\-Attribute\-Single\-Tcp}}
+\index{\-Set\-Attribute\-Single\-Tcp@{\-Set\-Attribute\-Single\-Tcp}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{\-Set\-Attribute\-Single\-Tcp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Set\-Attribute\-Single\-Tcp} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$}]{instance, }
+\item[{{\bf \-Cip\-Message\-Router\-Request} $\ast$}]{message\-\_\-router\-\_\-request, }
+\item[{{\bf \-Cip\-Message\-Router\-Response} $\ast$}]{message\-\_\-router\-\_\-response}
+\end{DoxyParamCaption}
+)}}\label{dd/d20/ciptcpipinterface_8c_a3ce93313245a6e9c12c9958c176e9008}
+
+
+\-Definition at line 119 of file ciptcpipinterface.\-c.
+
+
+
+\-References \-Cip\-Epath\-::attribute\-\_\-number, \-Cip\-Message\-Router\-Response\-::data\-\_\-length, \-Cip\-Message\-Router\-Response\-::general\-\_\-status, \-Get\-Cip\-Attribute(), k\-Cip\-Error\-Attribute\-Not\-Setable, k\-Cip\-Error\-Attribute\-Not\-Supported, k\-Eip\-Status\-Ok\-Send, \-Cip\-Message\-Router\-Response\-::reply\-\_\-service, \-Cip\-Message\-Router\-Request\-::request\-\_\-path, \-Cip\-Message\-Router\-Request\-::service, and \-Cip\-Message\-Router\-Response\-::size\-\_\-of\-\_\-additional\-\_\-status.
+
+
+
+\-Referenced by \-Cip\-Tcp\-Ip\-Interface\-Init().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{dd/d20/ciptcpipinterface_8c_a3ce93313245a6e9c12c9958c176e9008_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/ciptcpipinterface_8c_a3ce93313245a6e9c12c9958c176e9008_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ciptcpipinterface_8c_a523c7909b1d929c0b9b288802189d391}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!\-Shutdown\-Tcp\-Ip\-Interface@{\-Shutdown\-Tcp\-Ip\-Interface}}
+\index{\-Shutdown\-Tcp\-Ip\-Interface@{\-Shutdown\-Tcp\-Ip\-Interface}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{\-Shutdown\-Tcp\-Ip\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Shutdown\-Tcp\-Ip\-Interface} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{dd/d20/ciptcpipinterface_8c_a523c7909b1d929c0b9b288802189d391}
+
+
+\-Clean up the allocated data of the \-T\-C\-P/\-I\-P interface object. 
+
+\-Currently this is the host name string and the domain name string. 
+
+\-Definition at line 189 of file ciptcpipinterface.\-c.
+
+
+
+\-References \-Cip\-Free(), \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::domain\-\_\-name, and \-Cip\-String\-::string.
+
+
+
+\-Referenced by \-Shutdown\-Cip\-Stack().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{dd/d20/ciptcpipinterface_8c_a523c7909b1d929c0b9b288802189d391_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/ciptcpipinterface_8c_a523c7909b1d929c0b9b288802189d391_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{ciptcpipinterface_8c_a5577005a395dce41a8b759ee8e3d4b65}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!configuration\-\_\-capability\-\_\-@{configuration\-\_\-capability\-\_\-}}
+\index{configuration\-\_\-capability\-\_\-@{configuration\-\_\-capability\-\_\-}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{configuration\-\_\-capability\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Dword} {\bf configuration\-\_\-capability\-\_\-} = 0x04 $|$ 0x20}}\label{dd/d20/ciptcpipinterface_8c_a5577005a395dce41a8b759ee8e3d4b65}
+\#2 \-This is a default value meaning that it is a \-D\-H\-C\-P client see 5-\/3.\-2.\-2.\-2 \-E\-I\-P specification; 0x20 indicates \char`\"{}\-Hardware Configurable\char`\"{} 
+
+\-Definition at line 19 of file ciptcpipinterface.\-c.
+
+
+
+\-Referenced by \-Cip\-Tcp\-Ip\-Interface\-Init().
+
+\hypertarget{ciptcpipinterface_8c_a3f53a7789de651102aa844c396dbc053}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!configuration\-\_\-control\-\_\-@{configuration\-\_\-control\-\_\-}}
+\index{configuration\-\_\-control\-\_\-@{configuration\-\_\-control\-\_\-}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{configuration\-\_\-control\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Dword} {\bf configuration\-\_\-control\-\_\-} = 0}}\label{dd/d20/ciptcpipinterface_8c_a3f53a7789de651102aa844c396dbc053}
+\#3 \-This is a \-T\-C\-P/\-I\-P object attribute. \-For now it is always zero and is not used for anything. 
+
+\-Definition at line 20 of file ciptcpipinterface.\-c.
+
+
+
+\-Referenced by \-Cip\-Tcp\-Ip\-Interface\-Init().
+
+\hypertarget{ciptcpipinterface_8c_a3b13a18a3f6efcb8f2e651676096f4e5}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!g\-\_\-multicast\-\_\-configuration@{g\-\_\-multicast\-\_\-configuration}}
+\index{g\-\_\-multicast\-\_\-configuration@{g\-\_\-multicast\-\_\-configuration}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{g\-\_\-multicast\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Multicast\-Address\-Configuration} {\bf g\-\_\-multicast\-\_\-configuration}}}\label{dd/d20/ciptcpipinterface_8c_a3b13a18a3f6efcb8f2e651676096f4e5}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ { 0, 
+0, 
+1, 
+0 
+}
+\end{DoxyCode}
+
+
+\#9 \-The multicast configuration for this device 
+
+\-Currently we implement it non set-\/able and use the default allocation algorithm 
+
+\-Definition at line 50 of file ciptcpipinterface.\-c.
+
+
+
+\-Referenced by \-Create\-Udp\-Socket(), \-Open\-Multicast\-Connection(), and \-Open\-Producing\-Multicast\-Connection().
+
+\hypertarget{ciptcpipinterface_8c_a80c0f3f25208a8befe2a112a78b15435}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!g\-\_\-time\-\_\-to\-\_\-live\-\_\-value@{g\-\_\-time\-\_\-to\-\_\-live\-\_\-value}}
+\index{g\-\_\-time\-\_\-to\-\_\-live\-\_\-value@{g\-\_\-time\-\_\-to\-\_\-live\-\_\-value}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{g\-\_\-time\-\_\-to\-\_\-live\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Uint8} {\bf g\-\_\-time\-\_\-to\-\_\-live\-\_\-value} = 1}}\label{dd/d20/ciptcpipinterface_8c_a80c0f3f25208a8befe2a112a78b15435}
+
+
+\#8 the time to live value to be used for multi-\/cast connections 
+
+\-Currently we implement it non set-\/able and with the default value of 1. 
+
+\-Definition at line 43 of file ciptcpipinterface.\-c.
+
+
+
+\-Referenced by \-Cip\-Tcp\-Ip\-Interface\-Init(), and \-Create\-Udp\-Socket().
+
+\hypertarget{ciptcpipinterface_8c_a09c1accbdcd35ed421a0d2b27baff3de}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!hostname\-\_\-@{hostname\-\_\-}}
+\index{hostname\-\_\-@{hostname\-\_\-}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{hostname\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-String} {\bf hostname\-\_\-}}}\label{dd/d20/ciptcpipinterface_8c_a09c1accbdcd35ed421a0d2b27baff3de}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+
+{ 0, NULL }
+\end{DoxyCode}
+\#6 \-Hostname 
+
+\-Definition at line 37 of file ciptcpipinterface.\-c.
+
+\hypertarget{ciptcpipinterface_8c_a635643a0d47842550c4d3cb5f4959cee}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!interface\-\_\-configuration\-\_\-@{interface\-\_\-configuration\-\_\-}}
+\index{interface\-\_\-configuration\-\_\-@{interface\-\_\-configuration\-\_\-}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{interface\-\_\-configuration\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration} {\bf interface\-\_\-configuration\-\_\-}}}\label{dd/d20/ciptcpipinterface_8c_a635643a0d47842550c4d3cb5f4959cee}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+
+{ 0, 
+0, 
+0, 
+0, 
+0, 
+{ 
+0, NULL } }
+\end{DoxyCode}
+\#5 \-I\-P, network mask, gateway, name server 1 \& 2, domain name 
+
+\-Definition at line 28 of file ciptcpipinterface.\-c.
+
+
+
+\-Referenced by \-Network\-Handler\-Initialize().
+
+\hypertarget{ciptcpipinterface_8c_a65125af091b5294b816a52def6d0bc94}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!physical\-\_\-link\-\_\-object\-\_\-@{physical\-\_\-link\-\_\-object\-\_\-}}
+\index{physical\-\_\-link\-\_\-object\-\_\-@{physical\-\_\-link\-\_\-object\-\_\-}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{physical\-\_\-link\-\_\-object\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Epath} {\bf physical\-\_\-link\-\_\-object\-\_\-}}}\label{dd/d20/ciptcpipinterface_8c_a65125af091b5294b816a52def6d0bc94}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+
+{ 2, 
+CIP_ETHERNETLINK_CLASS_CODE, 
+1, 
+0 
+}
+\end{DoxyCode}
+\#4 
+
+\-Definition at line 21 of file ciptcpipinterface.\-c.
+
+\hypertarget{ciptcpipinterface_8c_a4e00b952fbc119903cda4a30494695b8}{\index{ciptcpipinterface.\-c@{ciptcpipinterface.\-c}!tcp\-\_\-status\-\_\-@{tcp\-\_\-status\-\_\-}}
+\index{tcp\-\_\-status\-\_\-@{tcp\-\_\-status\-\_\-}!ciptcpipinterface.c@{ciptcpipinterface.\-c}}
+\subsubsection[{tcp\-\_\-status\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Dword} {\bf tcp\-\_\-status\-\_\-} = 0x1}}\label{dd/d20/ciptcpipinterface_8c_a4e00b952fbc119903cda4a30494695b8}
+\#1 \-T\-C\-P status with 1 we indicate that we got a valid configuration from \-D\-H\-C\-P or \-B\-O\-O\-T\-P 
+
+\-Definition at line 18 of file ciptcpipinterface.\-c.
+
+
+
+\-Referenced by \-Cip\-Tcp\-Ip\-Interface\-Init().
+

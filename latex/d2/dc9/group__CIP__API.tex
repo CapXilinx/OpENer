@@ -1,0 +1,1730 @@
+\hypertarget{group__CIP__API}{\section{\-Op\-E\-Ner \-User interface}
+\label{d2/dc9/group__CIP__API}\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}}
+}
+
+
+\-This is the public interface of the \-Op\-E\-Ner. \-It provides all function needed to implement an \-Ether\-Net/\-I\-P enabled slave-\/device.  
+
+
+\-Collaboration diagram for \-Op\-E\-Ner \-User interface\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API}
+\end{center}
+\end{figure}
+\subsection*{\-Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__CIP__CALLBACK__API}{\-Callback Functions Demanded by Op\-E\-Ner}
+\begin{DoxyCompactList}\small\item\em \-These functions have to implemented in order to give the \-Op\-E\-Ner a method to inform the application on certain state changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__CIP__API_ga754f77d4872724e212cf1d9d7d84d406}{\-Connection\-Close\-Function} )(struct \hyperlink{structconnection__object}{connection\-\_\-object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Function prototype for handling the closing of connections. \end{DoxyCompactList}\item 
+typedef \hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status}($\ast$ \hyperlink{group__CIP__API_gaac5ac35ed35317f29e3455e92f450623}{\-Connection\-Receive\-Data\-Function} )(struct \hyperlink{structconnection__object}{connection\-\_\-object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object}, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$data, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} data\-\_\-length)
+\begin{DoxyCompactList}\small\item\em \-Function prototype for receiving data via a connection. \end{DoxyCompactList}\item 
+typedef \hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status}($\ast$ \hyperlink{group__CIP__API_gaa870412e93039a338e73edc08e9cd68a}{\-Connection\-Send\-Data\-Function} )(struct \hyperlink{structconnection__object}{connection\-\_\-object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Function prototype for sending data via a connection. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__CIP__API_gaffa28b7ae343af7c7d1c7c52d83bbbee}{\-Connection\-Timeout\-Function} )(struct \hyperlink{structconnection__object}{connection\-\_\-object} $\ast$\hyperlink{structconnection__object}{connection\-\_\-object})
+\begin{DoxyCompactList}\small\item\em \-Function prototype for handling the timeout of connections. \end{DoxyCompactList}\item 
+typedef \hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status}($\ast$ \hyperlink{group__CIP__API_gaba609aaaca108b8d1b24da1ccbd7b375}{\-Open\-Connection\-Function} )(\hyperlink{cipconnectionmanager_8h_a705e78f4613ecabcb6388951b73c4700}{\-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const \hyperlink{structconnection__object}{connection\-\_\-object}, \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} $\ast$const extended\-\_\-error\-\_\-code)
+\begin{DoxyCompactList}\small\item\em \-Function prototype for handling the opening of connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_ga180023c8528628f7d83023e4db81287a}{\-Add\-C\-I\-P\-Instance} (\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const cip\-\_\-class\-\_\-to\-\_\-add\-\_\-instance, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Create one instance of a given class with a certain instance number. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_ga39dafca98f844a12511af11b1273d0a8}{\-Add\-Cip\-Instances} (\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const cip\-\_\-object\-\_\-to\-\_\-add\-\_\-instances, const int number\-\_\-of\-\_\-instances)
+\begin{DoxyCompactList}\small\item\em \-Add a number of \-C\-I\-P instances to a given \-C\-I\-P class. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_gac7db4d2927e83b6b3110f5dc66589b1e}{\-Add\-Connectable\-Object} (\hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-id, \hyperlink{group__CIP__API_gaba609aaaca108b8d1b24da1ccbd7b375}{\-Open\-Connection\-Function} open\-\_\-connection\-\_\-function)
+\begin{DoxyCompactList}\small\item\em register open functions for an specific object. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga5d4979945d124e28668b264c3823db1c}{\-Cip\-Stack\-Init} (const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} unique\-\_\-connection\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Initialize and setup the \-C\-I\-P-\/stack. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gab9ff230d61fc6dedd90f8b95e9a27707}{\-Close\-Session} (int socket)
+\begin{DoxyCompactList}\small\item\em \-Inform the encapsulation layer that the remote host has closed the connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga388b872aa3290d7248bfbf4b61fc4f1e}{\-Configure\-Domain\-Name} (const char $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T domain\-\_\-name)
+\begin{DoxyCompactList}\small\item\em \-Configure the domain name of the device. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gad1826555a5a2c522bfd98496f31c7ab2}{\-Configure\-Exclusive\-Owner\-Connection\-Point} (const unsigned int connection\-\_\-number, const unsigned int output\-\_\-assembly\-\_\-id, const unsigned int input\-\_\-assembly\-\_\-id, const unsigned int configuration\-\_\-assembly\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Configures the connection point for an exclusive owner connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gab4a2d826ebe9be1b60c0206414a8f8ce}{\-Configure\-Host\-Name} (const char $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T host\-\_\-name)
+\begin{DoxyCompactList}\small\item\em \-Configure the host name of the device. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga1f81ca8040f02503c8374288a1453f52}{\-Configure\-Input\-Only\-Connection\-Point} (const unsigned int connection\-\_\-number, const unsigned int output\-\_\-assembly\-\_\-id, const unsigned int input\-\_\-assembly\-\_\-id, const unsigned int configuration\-\_\-assembly\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Configures the connection point for an input only connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga0ffe2fb2fa68e86bd2c0b3a94d7ad9bb}{\-Configure\-Listen\-Only\-Connection\-Point} (const unsigned int connection\-\_\-number, const unsigned int output\-\_\-assembly\-\_\-id, const unsigned int input\-\_\-assembly\-\_\-id, const unsigned int configuration\-\_\-assembly\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Configures the connection point for a listen only connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga33c5edc60fb8c9b878647ae5e3c03bc5}{\-Configure\-Mac\-Address} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$const mac\-\_\-address)
+\begin{DoxyCompactList}\small\item\em \-Configure the \-M\-A\-C address of the device. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga1f4f417cb95e75c439edabe7b8b91477}{\-Configure\-Network\-Interface} (const char $\ast$const ip\-\_\-address, const char $\ast$const subnet\-\_\-mask, const char $\ast$const gateway\-\_\-address)
+\begin{DoxyCompactList}\small\item\em \-Configure the data of the network interface of the device. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_gae61b613fed863d30428e78b2311bf593}{\-Create\-Assembly\-Object} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-number, \hyperlink{typedefs_8h_a168bac8db7e7e6d944700e1ac4717ae3}{\-Eip\-Byte} $\ast$const data, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} data\-\_\-length)
+\begin{DoxyCompactList}\small\item\em \-Create an instance of an assembly object. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$ \hyperlink{group__CIP__API_ga446b7f612fe7baaf40d7f87274832922}{\-Create\-Cip\-Class} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-id, const int number\-\_\-of\-\_\-class\-\_\-attributes, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-attributes\-\_\-get\-\_\-attribute\-\_\-all\-\_\-mask, const int number\-\_\-of\-\_\-class\-\_\-services, const int number\-\_\-of\-\_\-instance\-\_\-attributes, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-attributes\-\_\-get\-\_\-attributes\-\_\-all\-\_\-mask, const int number\-\_\-of\-\_\-instance\-\_\-services, const int number\-\_\-of\-\_\-instances, char $\ast$class\-\_\-name, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} class\-\_\-revision)
+\begin{DoxyCompactList}\small\item\em \-Allocate memory for new \-C\-I\-P \-Class and attributes. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_ga23ef471671180123d441d30895159a3c}{\-Decode\-Data} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} cip\-\_\-type, void $\ast$const data, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$const message)
+\begin{DoxyCompactList}\small\item\em \-Retrieve the given data according to \-C\-I\-P encoding from the message buffer. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_gaece1b7dd2aeec306cb33b86b2ee21980}{\-Encode\-Data} (const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} cip\-\_\-data\-\_\-type, const void $\ast$const cip\-\_\-data, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$$\ast$cip\-\_\-message)
+\begin{DoxyCompactList}\small\item\em \-Produce the data according to \-C\-I\-P encoding onto the message buffer. \end{DoxyCompactList}\item 
+\hyperlink{structCipAttributeStruct}{\-Cip\-Attribute\-Struct} $\ast$ \hyperlink{group__CIP__API_ga5a14c8d76acacb09312b709bb0a76265}{\-Get\-Cip\-Attribute} (const \hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$const \hyperlink{structcip__instance}{cip\-\_\-instance}, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} attribute\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Get a pointer to an instance's attribute. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$ \hyperlink{group__CIP__API_ga98bd609c80ece316406363575b4a89ea}{\-Get\-Cip\-Class} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} class\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Get a pointer to a \-C\-I\-P object with given class code. \end{DoxyCompactList}\item 
+\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$ \hyperlink{group__CIP__API_gaa50395aca91b378c297d6ad919df210e}{\-Get\-Cip\-Instance} (const \hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const cip\-\_\-object, const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} instance\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Get a pointer to an instance. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga34f1582ed424a2c875b8a317d828e181}{\-Handle\-Received\-Connected\-Data} (\hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$received\-\_\-data, int received\-\_\-data\-\_\-length, struct sockaddr\-\_\-in $\ast$from\-\_\-address)
+\begin{DoxyCompactList}\small\item\em \-Notify the connection manager that data for a connection has been received. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_gacbbc9669d41357e1c8497c34ee8eeffb}{\-Handle\-Received\-Explict\-Tcp\-Data} (int socket, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$buffer, unsigned int buffer\-\_\-length, int $\ast$number\-\_\-of\-\_\-remaining\-\_\-bytes)
+\begin{DoxyCompactList}\small\item\em \-Notify the encapsulation layer that an explicit message has been received via \-T\-C\-P. \end{DoxyCompactList}\item 
+int \hyperlink{group__CIP__API_gad2fa74193023adadbbffe5bf0ef7f6ee}{\-Handle\-Received\-Explict\-Udp\-Data} (int socket, struct sockaddr\-\_\-in $\ast$from\-\_\-address, \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} $\ast$buffer, unsigned int buffer\-\_\-length, int $\ast$number\-\_\-of\-\_\-remaining\-\_\-bytes, int unicast)
+\begin{DoxyCompactList}\small\item\em \-Notify the encapsulation layer that an explicit message has been received via \-U\-D\-P. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gac207feb53c1f98b45f3934bbea63d618}{\-Insert\-Attribute} (\hyperlink{ciptypes_8h_aea7976be629e5ece275c993982186188}{\-Cip\-Instance} $\ast$const \hyperlink{structcip__instance}{cip\-\_\-instance}, const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} attribute\-\_\-number, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} cip\-\_\-data\-\_\-type, void $\ast$const cip\-\_\-data, const \hyperlink{typedefs_8h_a168bac8db7e7e6d944700e1ac4717ae3}{\-Eip\-Byte} cip\-\_\-flags)
+\begin{DoxyCompactList}\small\item\em \-Insert an attribute in an instance of a \-C\-I\-P class. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga35f639b135ec3c3903f49fd65daed307}{\-Insert\-Service} (const \hyperlink{ciptypes_8h_a175191808b8fac50b47d9bbc9edc6051}{\-Cip\-Class} $\ast$const cip\-\_\-class\-\_\-to\-\_\-add\-\_\-service, const \hyperlink{typedefs_8h_aa0c108ee762a27720919a4634643040e}{\-Eip\-Uint8} service\-\_\-code, const \hyperlink{ciptypes_8h_af7606d2a9b86977aa0ac4ec9ccec3701}{\-Cip\-Service\-Function} service\-\_\-function, char $\ast$const service\-\_\-name)
+\begin{DoxyCompactList}\small\item\em \-Insert a service in an instance of a \-C\-I\-P object. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga9f57b09260efb5bfb188b9d0ca0c6091}{\-Manage\-Connections} (\hyperlink{typedefs_8h_a2972c9424f18b12265ca35d0548da82a}{\-Milli\-Seconds} elapsed\-\_\-time)
+\begin{DoxyCompactList}\small\item\em \-Check if any of the connection timers (\-Transmission\-Trigger or \-Watchdog\-Timeout) have timed out. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga696952d9dbc1b6fdedf517aa55f94323}{\-Set\-Device\-Serial\-Number} (const \hyperlink{typedefs_8h_abf2dd49262551294eb990ef8746a2767}{\-Eip\-Uint32} serial\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Set the serial number of the device's identity object. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_ga2113be94f1eab4f25770d975abe6015c}{\-Set\-Device\-Status} (const \hyperlink{typedefs_8h_ac1b4cfa25b4f5def62f23b455dd395d8}{\-Eip\-Uint16} device\-\_\-status)
+\begin{DoxyCompactList}\small\item\em \-Set the current status of the device. \end{DoxyCompactList}\item 
+void \hyperlink{group__CIP__API_gaa57b527530adc2acda6febc500fd6831}{\-Shutdown\-Cip\-Stack} (void)
+\begin{DoxyCompactList}\small\item\em \-Shutdown of the \-C\-I\-P stack. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a3dcc5f7837c120360f8cc88a76781709}{\-Eip\-Status} \hyperlink{group__CIP__API_ga286de29d4e88bd1fec0611e75c288faf}{\-Trigger\-Connections} (unsigned int output\-\_\-assembly\-\_\-id, unsigned int input\-\_\-assembly\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Trigger the production of an application triggered connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is the public interface of the \-Op\-E\-Ner. \-It provides all function needed to implement an \-Ether\-Net/\-I\-P enabled slave-\/device. 
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{group__CIP__API_ga754f77d4872724e212cf1d9d7d84d406}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Connection\-Close\-Function@{\-Connection\-Close\-Function}}
+\index{\-Connection\-Close\-Function@{\-Connection\-Close\-Function}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Connection\-Close\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf \-Connection\-Close\-Function})(struct {\bf connection\-\_\-object} $\ast${\bf connection\-\_\-object})}}\label{d2/dc9/group__CIP__API_ga754f77d4872724e212cf1d9d7d84d406}
+
+
+\-Function prototype for handling the closing of connections. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & \-The connection object which is closing the connection \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 289 of file opener\-\_\-api.\-h.
+
+\hypertarget{group__CIP__API_gaac5ac35ed35317f29e3455e92f450623}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Connection\-Receive\-Data\-Function@{\-Connection\-Receive\-Data\-Function}}
+\index{\-Connection\-Receive\-Data\-Function@{\-Connection\-Receive\-Data\-Function}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Connection\-Receive\-Data\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-Eip\-Status}($\ast$ {\bf \-Connection\-Receive\-Data\-Function})(struct {\bf connection\-\_\-object} $\ast${\bf connection\-\_\-object}, const {\bf \-Eip\-Uint8} $\ast$data, const {\bf \-Eip\-Uint16} data\-\_\-length)}}\label{d2/dc9/group__CIP__API_gaac5ac35ed35317f29e3455e92f450623}
+
+
+\-Function prototype for receiving data via a connection. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & \-The connection object which connection timed out \\
+\hline
+{\em data} & \-The payload of the \-C\-I\-P message \\
+\hline
+{\em data\-\_\-length} & \-Length of the payload\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Stack status 
+\end{DoxyReturn}
+
+
+\-Definition at line 319 of file opener\-\_\-api.\-h.
+
+\hypertarget{group__CIP__API_gaa870412e93039a338e73edc08e9cd68a}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Connection\-Send\-Data\-Function@{\-Connection\-Send\-Data\-Function}}
+\index{\-Connection\-Send\-Data\-Function@{\-Connection\-Send\-Data\-Function}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Connection\-Send\-Data\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-Eip\-Status}($\ast$ {\bf \-Connection\-Send\-Data\-Function})(struct {\bf connection\-\_\-object} $\ast${\bf connection\-\_\-object})}}\label{d2/dc9/group__CIP__API_gaa870412e93039a338e73edc08e9cd68a}
+
+
+\-Function prototype for sending data via a connection. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & \-The connection object which connection timed out\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-E\-I\-P stack status 
+\end{DoxyReturn}
+
+
+\-Definition at line 307 of file opener\-\_\-api.\-h.
+
+\hypertarget{group__CIP__API_gaffa28b7ae343af7c7d1c7c52d83bbbee}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Connection\-Timeout\-Function@{\-Connection\-Timeout\-Function}}
+\index{\-Connection\-Timeout\-Function@{\-Connection\-Timeout\-Function}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Connection\-Timeout\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf \-Connection\-Timeout\-Function})(struct {\bf connection\-\_\-object} $\ast${\bf connection\-\_\-object})}}\label{d2/dc9/group__CIP__API_gaffa28b7ae343af7c7d1c7c52d83bbbee}
+
+
+\-Function prototype for handling the timeout of connections. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & \-The connection object which connection timed out \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 297 of file opener\-\_\-api.\-h.
+
+\hypertarget{group__CIP__API_gaba609aaaca108b8d1b24da1ccbd7b375}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Open\-Connection\-Function@{\-Open\-Connection\-Function}}
+\index{\-Open\-Connection\-Function@{\-Open\-Connection\-Function}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Open\-Connection\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-Eip\-Status}($\ast$ {\bf \-Open\-Connection\-Function})({\bf \-Connection\-Object} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const {\bf connection\-\_\-object}, {\bf \-Eip\-Uint16} $\ast$const extended\-\_\-error\-\_\-code)}}\label{d2/dc9/group__CIP__API_gaba609aaaca108b8d1b24da1ccbd7b375}
+
+
+\-Function prototype for handling the opening of connections. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structconnection__object}{connection\-\_\-object}} & \-The connection object which is opening the connection \\
+\hline
+{\em extended\-\_\-error\-\_\-code} & \-The returned error code of the connection object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-C\-I\-P error code 
+\end{DoxyReturn}
+
+
+\-Definition at line 280 of file opener\-\_\-api.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{group__CIP__API_ga180023c8528628f7d83023e4db81287a}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Add\-C\-I\-P\-Instance@{\-Add\-C\-I\-P\-Instance}}
+\index{\-Add\-C\-I\-P\-Instance@{\-Add\-C\-I\-P\-Instance}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Add\-C\-I\-P\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Instance}$\ast$ {\bf \-Add\-C\-I\-P\-Instance} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{cip\-\_\-class\-\_\-to\-\_\-add\-\_\-instance, }
+\item[{const {\bf \-Eip\-Uint32}}]{instance\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga180023c8528628f7d83023e4db81287a}
+
+
+\-Create one instance of a given class with a certain instance number. 
+
+\-This function can be used for creating out of order instance numbers 
+\begin{DoxyParams}{\-Parameters}
+{\em pa\-\_\-pst\-C\-I\-P\-Class} & the class the instance should be created for \\
+\hline
+{\em pa\-\_\-n\-Instance\-Id} & the instance id of the created instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+pointer to the created instance, if an instance with the given id already exists the existing is returned an no new instance is created 
+\end{DoxyReturn}
+
+
+\-Definition at line 161 of file cipcommon.\-c.
+
+
+
+\-References \-Add\-Cip\-Instances(), \-Get\-Cip\-Instance(), and cip\-\_\-instance\-::instance\-\_\-number.
+
+
+
+\-Referenced by \-Create\-Assembly\-Object().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga180023c8528628f7d83023e4db81287a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga180023c8528628f7d83023e4db81287a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga39dafca98f844a12511af11b1273d0a8}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Add\-Cip\-Instances@{\-Add\-Cip\-Instances}}
+\index{\-Add\-Cip\-Instances@{\-Add\-Cip\-Instances}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Add\-Cip\-Instances}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Instance}$\ast$ {\bf \-Add\-Cip\-Instances} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{cip\-\_\-object\-\_\-to\-\_\-add\-\_\-instances, }
+\item[{const int}]{number\-\_\-of\-\_\-instances}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga39dafca98f844a12511af11b1273d0a8}
+
+
+\-Add a number of \-C\-I\-P instances to a given \-C\-I\-P class. 
+
+\-The required number of instances are created in a block, but are attached to the class as a linked list. \-The instances are numbered sequentially -\/-\/ i.\-e. the first node in the chain is instance 1, the second is 2, and so on. \-You can add new instances at any time (you do not have to create all the instances of a class at the same time) deleting instances once they have been created is not supported out-\/of-\/order instance numbers are not supported running out of memory while creating new instances causes an assert.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em cip\-\_\-object\-\_\-to\-\_\-add\-\_\-instances} & \-C\-I\-P object the instances should be added \\
+\hline
+{\em number\-\_\-of\-\_\-instances} & number of instances to be generated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+pointer to the first of the new instances 0 on error 
+\end{DoxyReturn}
+
+
+\-Definition at line 117 of file cipcommon.\-c.
+
+
+
+\-References cip\-\_\-instance\-::attributes, cip\-\_\-instance\-::cip\-\_\-class, \-Cip\-Calloc(), cip\-\_\-instance\-::instance\-\_\-number, cip\-\_\-instance\-::next, \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T, and \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O.
+
+
+
+\-Referenced by \-Add\-C\-I\-P\-Instance(), and \-Create\-Cip\-Class().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{d2/dc9/group__CIP__API_ga39dafca98f844a12511af11b1273d0a8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga39dafca98f844a12511af11b1273d0a8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gac7db4d2927e83b6b3110f5dc66589b1e}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Add\-Connectable\-Object@{\-Add\-Connectable\-Object}}
+\index{\-Add\-Connectable\-Object@{\-Add\-Connectable\-Object}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Add\-Connectable\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Add\-Connectable\-Object} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eip\-Uint32}}]{class\-\_\-id, }
+\item[{{\bf \-Open\-Connection\-Function}}]{open\-\_\-connection\-\_\-function}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gac7db4d2927e83b6b3110f5dc66589b1e}
+
+
+register open functions for an specific object. 
+
+\-With this function any object can be enabled to be a target for forward open/close request. 
+\begin{DoxyParams}{\-Parameters}
+{\em class\-\_\-id} & \-The class \-I\-D \\
+\hline
+{\em open\-\_\-connection\-\_\-function} & pointer to the function handling the open process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-E\-I\-P\-\_\-\-O\-K on success 
+\end{DoxyReturn}
+
+
+\-Definition at line 1205 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Connection\-Management\-Handling\-::class\-\_\-id, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, and \-Connection\-Management\-Handling\-::open\-\_\-connection\-\_\-function.
+
+
+
+\-Referenced by \-Connection\-Manager\-Init().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gac7db4d2927e83b6b3110f5dc66589b1e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga5d4979945d124e28668b264c3823db1c}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Cip\-Stack\-Init@{\-Cip\-Stack\-Init}}
+\index{\-Cip\-Stack\-Init@{\-Cip\-Stack\-Init}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Cip\-Stack\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Cip\-Stack\-Init} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint16}}]{unique\-\_\-connection\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga5d4979945d124e28668b264c3823db1c}
+
+
+\-Initialize and setup the \-C\-I\-P-\/stack. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em unique\-\_\-connection\-\_\-id} & value passed to \-Connection\-\_\-\-Manager\-\_\-\-Init() to form a \char`\"{}per boot\char`\"{} unique connection \-I\-D. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 33 of file cipcommon.\-c.
+
+
+
+\-References \-Application\-Initialization(), \-Cip\-Assembly\-Initialize(), \-Cip\-Ethernet\-Link\-Init(), \-Cip\-Identity\-Init(), \-Cip\-Message\-Router\-Init(), \-Cip\-Tcp\-Ip\-Interface\-Init(), \-Connection\-Manager\-Init(), \-Encapsulation\-Init(), k\-Eip\-Status\-Ok, and \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T.
+
+
+
+\-Referenced by main().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga5d4979945d124e28668b264c3823db1c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{d2/dc9/group__CIP__API_ga5d4979945d124e28668b264c3823db1c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gab9ff230d61fc6dedd90f8b95e9a27707}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Close\-Session@{\-Close\-Session}}
+\index{\-Close\-Session@{\-Close\-Session}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Close\-Session}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Close\-Session} (
+\begin{DoxyParamCaption}
+\item[{int}]{socket}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gab9ff230d61fc6dedd90f8b95e9a27707}
+
+
+\-Inform the encapsulation layer that the remote host has closed the connection. 
+
+\-According to the specifications that will clean up and close the session in the encapsulation layer. 
+\begin{DoxyParams}{\-Parameters}
+{\em socket\-\_\-handle} & the handler to the socket of the closed connection \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 621 of file encap.\-c.
+
+
+
+\-References g\-\_\-registered\-\_\-sessions, \-I\-App\-\_\-\-Close\-Socket\-\_\-tcp(), and \-O\-P\-E\-N\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-S\-E\-S\-S\-I\-O\-N\-S.
+
+
+
+\-Referenced by \-Network\-Handler\-Process\-Once().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gab9ff230d61fc6dedd90f8b95e9a27707_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gab9ff230d61fc6dedd90f8b95e9a27707_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga388b872aa3290d7248bfbf4b61fc4f1e}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Configure\-Domain\-Name@{\-Configure\-Domain\-Name}}
+\index{\-Configure\-Domain\-Name@{\-Configure\-Domain\-Name}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Configure\-Domain\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Configure\-Domain\-Name} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T}]{domain\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga388b872aa3290d7248bfbf4b61fc4f1e}
+
+
+\-Configure the domain name of the device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em domain\-\_\-name} & the domain name to be used \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 85 of file ciptcpipinterface.\-c.
+
+
+
+\-References \-Cip\-Calloc(), \-Cip\-Free(), \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::domain\-\_\-name, \-Cip\-String\-::length, and \-Cip\-String\-::string.
+
+
+
+\-Referenced by main().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{d2/dc9/group__CIP__API_ga388b872aa3290d7248bfbf4b61fc4f1e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{d2/dc9/group__CIP__API_ga388b872aa3290d7248bfbf4b61fc4f1e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gad1826555a5a2c522bfd98496f31c7ab2}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Configure\-Exclusive\-Owner\-Connection\-Point@{\-Configure\-Exclusive\-Owner\-Connection\-Point}}
+\index{\-Configure\-Exclusive\-Owner\-Connection\-Point@{\-Configure\-Exclusive\-Owner\-Connection\-Point}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Configure\-Exclusive\-Owner\-Connection\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Configure\-Exclusive\-Owner\-Connection\-Point} (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{connection\-\_\-number, }
+\item[{const unsigned int}]{output\-\_\-assembly\-\_\-id, }
+\item[{const unsigned int}]{input\-\_\-assembly\-\_\-id, }
+\item[{const unsigned int}]{configuration\-\_\-assembly\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gad1826555a5a2c522bfd98496f31c7ab2}
+
+
+\-Configures the connection point for an exclusive owner connection. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em connection\-\_\-number} & \-The number of the exclusive owner connection. \-The enumeration starts with 0. \-Has to be smaller than \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-E\-X\-L\-U\-S\-I\-V\-E\-\_\-\-O\-W\-N\-E\-R\-\_\-\-C\-O\-N\-N\-S. \\
+\hline
+{\em output\-\_\-assembly\-\_\-id} & \-I\-D of the \-O-\/to-\/\-T point to be used for this connection \\
+\hline
+{\em input\-\_\-assembly\-\_\-id} & \-I\-D of the \-T-\/to-\/\-O point to be used for this connection \\
+\hline
+{\em configuration\-\_\-assembly\-\_\-id} & \-I\-D of the configuration point to be used for this connection \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 57 of file appcontype.\-c.
+
+
+
+\-References \-Exclusive\-Owner\-Connection\-::config\-\_\-assembly, \-Exclusive\-Owner\-Connection\-::input\-\_\-assembly, \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-E\-X\-L\-U\-S\-I\-V\-E\-\_\-\-O\-W\-N\-E\-R\-\_\-\-C\-O\-N\-N\-S, and \-Exclusive\-Owner\-Connection\-::output\-\_\-assembly.
+
+
+
+\-Referenced by \-Application\-Initialization().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gad1826555a5a2c522bfd98496f31c7ab2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gab4a2d826ebe9be1b60c0206414a8f8ce}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Configure\-Host\-Name@{\-Configure\-Host\-Name}}
+\index{\-Configure\-Host\-Name@{\-Configure\-Host\-Name}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Configure\-Host\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Configure\-Host\-Name} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$const \-R\-E\-S\-T\-R\-I\-C\-T}]{host\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gab4a2d826ebe9be1b60c0206414a8f8ce}
+
+
+\-Configure the host name of the device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em host\-\_\-name} & the host name to be used \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 102 of file ciptcpipinterface.\-c.
+
+
+
+\-References \-Cip\-Calloc(), \-Cip\-Free(), \-Cip\-String\-::length, and \-Cip\-String\-::string.
+
+
+
+\-Referenced by main().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{d2/dc9/group__CIP__API_gab4a2d826ebe9be1b60c0206414a8f8ce_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{d2/dc9/group__CIP__API_gab4a2d826ebe9be1b60c0206414a8f8ce_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga1f81ca8040f02503c8374288a1453f52}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Configure\-Input\-Only\-Connection\-Point@{\-Configure\-Input\-Only\-Connection\-Point}}
+\index{\-Configure\-Input\-Only\-Connection\-Point@{\-Configure\-Input\-Only\-Connection\-Point}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Configure\-Input\-Only\-Connection\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Configure\-Input\-Only\-Connection\-Point} (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{connection\-\_\-number, }
+\item[{const unsigned int}]{output\-\_\-assembly\-\_\-id, }
+\item[{const unsigned int}]{input\-\_\-assembly\-\_\-id, }
+\item[{const unsigned int}]{configuration\-\_\-assembly\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga1f81ca8040f02503c8374288a1453f52}
+
+
+\-Configures the connection point for an input only connection. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em connection\-\_\-number} & \-The number of the input only connection. \-The enumeration starts with 0. \-Has to be smaller than \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-I\-N\-P\-U\-T\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S. \\
+\hline
+{\em output\-\_\-assembly\-\_\-id} & \-I\-D of the \-O-\/to-\/\-T point to be used for this connection \\
+\hline
+{\em input\-\_\-assembly\-\_\-id} & \-I\-D of the \-T-\/to-\/\-O point to be used for this connection \\
+\hline
+{\em configuration\-\_\-assembly\-\_\-id} & \-I\-D of the configuration point to be used for this connection \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 71 of file appcontype.\-c.
+
+
+
+\-References \-Input\-Only\-Connection\-::config\-\_\-assembly, \-Input\-Only\-Connection\-::input\-\_\-assembly, \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-I\-N\-P\-U\-T\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S, and \-Input\-Only\-Connection\-::output\-\_\-assembly.
+
+
+
+\-Referenced by \-Application\-Initialization().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga1f81ca8040f02503c8374288a1453f52_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga0ffe2fb2fa68e86bd2c0b3a94d7ad9bb}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Configure\-Listen\-Only\-Connection\-Point@{\-Configure\-Listen\-Only\-Connection\-Point}}
+\index{\-Configure\-Listen\-Only\-Connection\-Point@{\-Configure\-Listen\-Only\-Connection\-Point}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Configure\-Listen\-Only\-Connection\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Configure\-Listen\-Only\-Connection\-Point} (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{connection\-\_\-number, }
+\item[{const unsigned int}]{output\-\_\-assembly\-\_\-id, }
+\item[{const unsigned int}]{input\-\_\-assembly\-\_\-id, }
+\item[{const unsigned int}]{configuration\-\_\-assembly\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga0ffe2fb2fa68e86bd2c0b3a94d7ad9bb}
+
+
+\-Configures the connection point for a listen only connection. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em connection\-\_\-number} & \-The number of the input only connection. \-The enumeration starts with 0. \-Has to be smaller than \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-L\-I\-S\-T\-E\-N\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S. \\
+\hline
+{\em output\-\_\-assembly\-\_\-id} & \-I\-D of the \-O-\/to-\/\-T point to be used for this connection \\
+\hline
+{\em input\-\_\-assembly\-\_\-id} & \-I\-D of the \-T-\/to-\/\-O point to be used for this connection \\
+\hline
+{\em configuration\-\_\-assembly\-\_\-id} & \-I\-D of the configuration point to be used for this connection \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 84 of file appcontype.\-c.
+
+
+
+\-References \-Listen\-Only\-Connection\-::config\-\_\-assembly, \-Listen\-Only\-Connection\-::input\-\_\-assembly, \-O\-P\-E\-N\-E\-R\-\_\-\-C\-I\-P\-\_\-\-N\-U\-M\-\_\-\-L\-I\-S\-T\-E\-N\-\_\-\-O\-N\-L\-Y\-\_\-\-C\-O\-N\-N\-S, and \-Listen\-Only\-Connection\-::output\-\_\-assembly.
+
+
+
+\-Referenced by \-Application\-Initialization().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga0ffe2fb2fa68e86bd2c0b3a94d7ad9bb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga33c5edc60fb8c9b878647ae5e3c03bc5}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Configure\-Mac\-Address@{\-Configure\-Mac\-Address}}
+\index{\-Configure\-Mac\-Address@{\-Configure\-Mac\-Address}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Configure\-Mac\-Address}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Configure\-Mac\-Address} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint8} $\ast$const}]{mac\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga33c5edc60fb8c9b878647ae5e3c03bc5}
+
+
+\-Configure the \-M\-A\-C address of the device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em mac\-\_\-address} & the hardware \-M\-A\-C address of the network interface\\
+\hline
+\end{DoxyParams}
+\-Configures the \-M\-A\-C address of the \-Ethernet \-Link object$\ast$
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em mac\-\_\-address} & \-The \-M\-A\-C address of the \-Ethernet \-Link \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 30 of file cipethernetlink.\-c.
+
+
+
+\-References \-Cip\-Ethernet\-Link\-Object\-::physical\-\_\-address.
+
+
+
+\-Referenced by main().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{d2/dc9/group__CIP__API_ga33c5edc60fb8c9b878647ae5e3c03bc5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga1f4f417cb95e75c439edabe7b8b91477}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Configure\-Network\-Interface@{\-Configure\-Network\-Interface}}
+\index{\-Configure\-Network\-Interface@{\-Configure\-Network\-Interface}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Configure\-Network\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Configure\-Network\-Interface} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$const}]{ip\-\_\-address, }
+\item[{const char $\ast$const}]{subnet\-\_\-mask, }
+\item[{const char $\ast$const}]{gateway\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga1f4f417cb95e75c439edabe7b8b91477}
+
+
+\-Configure the data of the network interface of the device. 
+
+\-This function setup the data of the network interface needed by \-Op\-E\-Ner. \-The multicast address is automatically calculated from he given data.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ip\-\_\-address} & the current \-I\-P address of the device \\
+\hline
+{\em subnet\-\_\-mask} & the subnet mask to be used \\
+\hline
+{\em gateway\-\_\-address} & the gateway address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-E\-I\-P\-\_\-\-O\-K if the configuring worked otherwise \-E\-I\-P\-\_\-\-E\-R\-R\-O\-R 
+\end{DoxyReturn}
+
+
+\-Definition at line 65 of file ciptcpipinterface.\-c.
+
+
+
+\-References \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::gateway, \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::ip\-\_\-address, k\-Eip\-Status\-Ok, \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::network\-\_\-mask, and multicast\-\_\-address\-\_\-configuration\-::starting\-\_\-multicast\-\_\-address.
+
+
+
+\-Referenced by main().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{d2/dc9/group__CIP__API_ga1f4f417cb95e75c439edabe7b8b91477_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gae61b613fed863d30428e78b2311bf593}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Create\-Assembly\-Object@{\-Create\-Assembly\-Object}}
+\index{\-Create\-Assembly\-Object@{\-Create\-Assembly\-Object}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Create\-Assembly\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Instance}$\ast$ {\bf \-Create\-Assembly\-Object} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{instance\-\_\-number, }
+\item[{{\bf \-Eip\-Byte} $\ast$const}]{data, }
+\item[{const {\bf \-Eip\-Uint16}}]{data\-\_\-length}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gae61b613fed863d30428e78b2311bf593}
+
+
+\-Create an instance of an assembly object. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em instance\-\_\-number} & instance number of the assembly object to create \\
+\hline
+{\em data} & pointer to the data the assembly object should contain \\
+\hline
+{\em data\-\_\-length} & length of the assembly object's data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+pointer to the instance of the created assembly object. \-N\-U\-L\-L on error
+\end{DoxyReturn}
+\-Assembly \-Objects for \-Configuration \-Data\-:
+
+\-The \-C\-I\-P stack treats configuration assembly objects the same way as any other assembly object. \-In order to support a configuration assembly object it has to be created with this function. \-The notification on received configuration data is handled with the \-I\-App\-\_\-after\-\_\-receive function. 
+
+\-Definition at line 71 of file cipassembly.\-c.
+
+
+
+\-References \-Add\-C\-I\-P\-Instance(), \-Cip\-Calloc(), \-Create\-Assembly\-Class(), \-Cip\-Byte\-Array\-::data, \-Get\-Cip\-Class(), \-Insert\-Attribute(), k\-Cip\-Byte\-Array, k\-Cip\-Uint, k\-Getable\-Single, k\-Set\-And\-Get\-Able, and \-Cip\-Byte\-Array\-::length.
+
+
+
+\-Referenced by \-Application\-Initialization().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gae61b613fed863d30428e78b2311bf593_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gae61b613fed863d30428e78b2311bf593_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga446b7f612fe7baaf40d7f87274832922}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Create\-Cip\-Class@{\-Create\-Cip\-Class}}
+\index{\-Create\-Cip\-Class@{\-Create\-Cip\-Class}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Create\-Cip\-Class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Class}$\ast$ {\bf \-Create\-Cip\-Class} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{class\-\_\-id, }
+\item[{const int}]{number\-\_\-of\-\_\-class\-\_\-attributes, }
+\item[{const {\bf \-Eip\-Uint32}}]{class\-\_\-attributes\-\_\-get\-\_\-attribute\-\_\-all\-\_\-mask, }
+\item[{const int}]{number\-\_\-of\-\_\-class\-\_\-services, }
+\item[{const int}]{number\-\_\-of\-\_\-instance\-\_\-attributes, }
+\item[{const {\bf \-Eip\-Uint32}}]{instance\-\_\-attributes\-\_\-get\-\_\-attributes\-\_\-all\-\_\-mask, }
+\item[{const int}]{number\-\_\-of\-\_\-instance\-\_\-services, }
+\item[{const int}]{number\-\_\-of\-\_\-instances, }
+\item[{char $\ast$}]{class\-\_\-name, }
+\item[{const {\bf \-Eip\-Uint16}}]{class\-\_\-revision}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga446b7f612fe7baaf40d7f87274832922}
+
+
+\-Allocate memory for new \-C\-I\-P \-Class and attributes. 
+
+\-The new \-C\-I\-P class will be registered at the stack to be able for receiving explicit messages.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em class\-\_\-id} & class \-I\-D of the new class \\
+\hline
+{\em number\-\_\-of\-\_\-class\-\_\-attributes} & number of class attributes \\
+\hline
+{\em get\-\_\-attribute\-\_\-all\-\_\-mask} & mask of which attributes are included in the class get\-Attribute\-All. \-If the mask is 0 the get\-Attribute\-All service will not be added as class service \\
+\hline
+{\em number\-\_\-of\-\_\-class\-\_\-services} & number of class services \\
+\hline
+{\em number\-\_\-of\-\_\-instance\-\_\-attributes} & number of attributes of each instance \\
+\hline
+{\em instance\-\_\-attributes\-\_\-get\-\_\-attributes\-\_\-all\-\_\-mask} & mask of which attributes are included in the instance get\-Attribute\-All \-If the mask is 0 the get\-Attribute\-All service will not be added as class service \\
+\hline
+{\em number\-\_\-of\-\_\-instance\-\_\-services} & number of instance services \\
+\hline
+{\em number\-\_\-of\-\_\-instances} & number of initial instances to create \\
+\hline
+{\em class\-\_\-name} & class name (for debugging class structure) \\
+\hline
+{\em class\-\_\-revision} & class revision \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+pointer to new class object 0 on error 
+\end{DoxyReturn}
+
+
+\-Definition at line 171 of file cipcommon.\-c.
+
+
+
+\-References \-Add\-Cip\-Instances(), \-Cip\-Calloc(), cip\-\_\-class\-::class\-\_\-id, \-Get\-Attribute\-All(), \-Get\-Attribute\-Single(), \-Get\-Cip\-Class(), \-Insert\-Attribute(), \-Insert\-Service(), k\-Cip\-Uint, k\-Cip\-Uint\-Zero, k\-Eip\-Status\-Error, k\-Getable\-All, k\-Getable\-Single\-And\-All, k\-Get\-Attribute\-All, k\-Get\-Attribute\-Single, \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, \-Register\-Cip\-Class(), and cip\-\_\-class\-::revision.
+
+
+
+\-Referenced by \-Cip\-Ethernet\-Link\-Init(), \-Cip\-Identity\-Init(), \-Cip\-Message\-Router\-Init(), \-Cip\-Tcp\-Ip\-Interface\-Init(), \-Connection\-Manager\-Init(), and \-Create\-Assembly\-Class().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga446b7f612fe7baaf40d7f87274832922_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga446b7f612fe7baaf40d7f87274832922_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga23ef471671180123d441d30895159a3c}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Decode\-Data@{\-Decode\-Data}}
+\index{\-Decode\-Data@{\-Decode\-Data}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Decode\-Data}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Decode\-Data} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint8}}]{cip\-\_\-type, }
+\item[{void $\ast$const}]{data, }
+\item[{const {\bf \-Eip\-Uint8} $\ast$$\ast$const}]{message}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga23ef471671180123d441d30895159a3c}
+
+
+\-Retrieve the given data according to \-C\-I\-P encoding from the message buffer. 
+
+\-This function may be used in in own services for handling data from the requester (e.\-g., set\-Attribute\-Single). 
+\begin{DoxyParams}{\-Parameters}
+{\em cip\-\_\-data\-\_\-type} & the \-C\-I\-P type to decode \\
+\hline
+{\em cip\-\_\-data} & pointer to data value to written. \\
+\hline
+{\em cip\-\_\-message} & pointer to memory where the data should be taken from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+length of taken bytes -\/1 .. error 
+\end{DoxyReturn}
+
+
+\-Definition at line 562 of file cipcommon.\-c.
+
+
+
+\-References \-Get\-Dint\-From\-Message(), \-Get\-Int\-From\-Message(), k\-Cip\-Bool, k\-Cip\-Byte, k\-Cip\-Dint, k\-Cip\-Dword, k\-Cip\-Int, k\-Cip\-Lint, k\-Cip\-Lword, k\-Cip\-Short\-String, k\-Cip\-Sint, k\-Cip\-String, k\-Cip\-Udint, k\-Cip\-Uint, k\-Cip\-Ulint, k\-Cip\-Usint, k\-Cip\-Word, \-Cip\-Short\-String\-::length, \-Cip\-String\-::length, \-Cip\-Short\-String\-::string, and \-Cip\-String\-::string.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{d2/dc9/group__CIP__API_ga23ef471671180123d441d30895159a3c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gaece1b7dd2aeec306cb33b86b2ee21980}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Encode\-Data@{\-Encode\-Data}}
+\index{\-Encode\-Data@{\-Encode\-Data}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Encode\-Data}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Encode\-Data} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint8}}]{cip\-\_\-data\-\_\-type, }
+\item[{const void $\ast$const}]{cip\-\_\-data, }
+\item[{{\bf \-Eip\-Uint8} $\ast$$\ast$}]{cip\-\_\-message}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gaece1b7dd2aeec306cb33b86b2ee21980}
+
+
+\-Produce the data according to \-C\-I\-P encoding onto the message buffer. 
+
+\-This function may be used in own services for sending data back to the requester (e.\-g., get\-Attribute\-Single for special structs). 
+\begin{DoxyParams}{\-Parameters}
+{\em cip\-\_\-data\-\_\-type} & the cip type to encode \\
+\hline
+{\em cip\-\_\-data} & pointer to data value. \\
+\hline
+{\em cip\-\_\-message} & pointer to memory where response should be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+length of attribute in bytes -\/1 .. error 
+\end{DoxyReturn}
+
+
+\-Definition at line 404 of file cipcommon.\-c.
+
+
+
+\-References \-Add\-Dint\-To\-Message(), \-Add\-Int\-To\-Message(), \-Add\-Sint\-To\-Message(), \-Cip\-Byte\-Array\-::data, \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::domain\-\_\-name, \-Encode\-Data(), \-Encode\-E\-Path(), \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::gateway, \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::ip\-\_\-address, k\-Cip6\-Usint, k\-Cip\-Bool, k\-Cip\-Byte, k\-Cip\-Byte\-Array, k\-Cip\-Date, k\-Cip\-Date\-And\-Time, k\-Cip\-Dint, k\-Cip\-Dword, k\-Cip\-Eng\-Unit, k\-Cip\-Epath, k\-Cip\-Ftime, k\-Cip\-Int, k\-Cip\-Itime, k\-Cip\-Lint, k\-Cip\-Lreal, k\-Cip\-Ltime, k\-Cip\-Lword, k\-Cip\-Member\-List, k\-Cip\-Real, k\-Cip\-Short\-String, k\-Cip\-Sint, k\-Cip\-Stime, k\-Cip\-String, k\-Cip\-String2, k\-Cip\-String\-N, k\-Cip\-Time, k\-Cip\-Time\-Of\-Day, k\-Cip\-Udint, k\-Cip\-Udint\-Udint\-Udint\-Udint\-Udint\-String, k\-Cip\-Uint, k\-Cip\-Ulint, k\-Cip\-Usint, k\-Cip\-Usint\-Usint, k\-Cip\-Word, k\-Internal\-Uint6, \-Cip\-Byte\-Array\-::length, \-Cip\-Short\-String\-::length, \-Cip\-String\-::length, \-Cip\-Revision\-::major\-\_\-revision, \-Cip\-Revision\-::minor\-\_\-revision, \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::name\-\_\-server, \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::name\-\_\-server\-\_\-2, \-Cip\-Tcp\-Ip\-Network\-Interface\-Configuration\-::network\-\_\-mask, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, cip\-\_\-class\-::revision, \-Cip\-Short\-String\-::string, and \-Cip\-String\-::string.
+
+
+
+\-Referenced by \-Encode\-Data(), \-Get\-Attribute\-Single(), and \-Get\-Attribute\-Single\-Tcp\-Ip\-Interface().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gaece1b7dd2aeec306cb33b86b2ee21980_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gaece1b7dd2aeec306cb33b86b2ee21980_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga5a14c8d76acacb09312b709bb0a76265}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Get\-Cip\-Attribute@{\-Get\-Cip\-Attribute}}
+\index{\-Get\-Cip\-Attribute@{\-Get\-Cip\-Attribute}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Get\-Cip\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Attribute\-Struct}$\ast$ {\bf \-Get\-Cip\-Attribute} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Cip\-Instance} $\ast$const}]{cip\-\_\-instance, }
+\item[{const {\bf \-Eip\-Uint16}}]{attribute\-\_\-number}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga5a14c8d76acacb09312b709bb0a76265}
+
+
+\-Get a pointer to an instance's attribute. 
+
+\-As instances and objects are selfsimilar this function can also be used to retrieve the attribute of an object. 
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structcip__instance}{cip\-\_\-instance}} & pointer to the instance the attribute belongs to \\
+\hline
+{\em attribute\-\_\-number} & number of the attribute to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+pointer to attribute 0 if instance is not in the object 
+\end{DoxyReturn}
+
+
+\-Definition at line 336 of file cipcommon.\-c.
+
+
+
+\-References \-Cip\-Attribute\-Struct\-::attribute\-\_\-number, cip\-\_\-instance\-::attributes, cip\-\_\-instance\-::cip\-\_\-class, cip\-\_\-class\-::number\-\_\-of\-\_\-attributes, and \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-W\-A\-R\-N.
+
+
+
+\-Referenced by \-Establish\-Io\-Connction(), \-Get\-Attribute\-Single(), \-Handle\-Config\-Data(), \-Set\-Assembly\-Attribute\-Single(), \-Set\-Attribute\-Single\-Tcp(), and \-Shutdown\-Assemblies().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga5a14c8d76acacb09312b709bb0a76265_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga98bd609c80ece316406363575b4a89ea}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Get\-Cip\-Class@{\-Get\-Cip\-Class}}
+\index{\-Get\-Cip\-Class@{\-Get\-Cip\-Class}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Get\-Cip\-Class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Class}$\ast$ {\bf \-Get\-Cip\-Class} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{class\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga98bd609c80ece316406363575b4a89ea}
+
+
+\-Get a pointer to a \-C\-I\-P object with given class code. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em class\-\_\-id} & class \-I\-D of the object to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+pointer to \-C\-I\-P \-Object 0 if object is not present in the stack 
+\end{DoxyReturn}
+
+
+\-Definition at line 92 of file cipmessagerouter.\-c.
+
+
+
+\-References cip\-\_\-message\-\_\-router\-\_\-object\-::cip\-\_\-class, and \-Get\-Registered\-Object().
+
+
+
+\-Referenced by \-Create\-Assembly\-Object(), \-Create\-Cip\-Class(), \-Establish\-Io\-Connction(), \-Parse\-Connection\-Path(), and \-Shutdown\-Assemblies().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{d2/dc9/group__CIP__API_ga98bd609c80ece316406363575b4a89ea_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga98bd609c80ece316406363575b4a89ea_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gaa50395aca91b378c297d6ad919df210e}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Get\-Cip\-Instance@{\-Get\-Cip\-Instance}}
+\index{\-Get\-Cip\-Instance@{\-Get\-Cip\-Instance}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Get\-Cip\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cip\-Instance}$\ast$ {\bf \-Get\-Cip\-Instance} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Cip\-Class} $\ast$\-R\-E\-S\-T\-R\-I\-C\-T const}]{cip\-\_\-object, }
+\item[{const {\bf \-Eip\-Uint32}}]{instance\-\_\-number}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gaa50395aca91b378c297d6ad919df210e}
+
+
+\-Get a pointer to an instance. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em cip\-\_\-object} & pointer to the object the instance belongs to \\
+\hline
+{\em instance\-\_\-number} & number of the instance to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+pointer to \-C\-I\-P \-Instance 0 if instance is not in the object 
+\end{DoxyReturn}
+
+
+\-Definition at line 101 of file cipmessagerouter.\-c.
+
+
+
+\-References cip\-\_\-message\-\_\-router\-\_\-object\-::cip\-\_\-class, and cip\-\_\-instance\-::next.
+
+
+
+\-Referenced by \-Add\-C\-I\-P\-Instance(), \-Cip\-Ethernet\-Link\-Init(), \-Cip\-Identity\-Init(), \-Cip\-Tcp\-Ip\-Interface\-Init(), \-Establish\-Io\-Connction(), \-Handle\-Config\-Data(), \-Notify\-Class(), and \-Parse\-Connection\-Path().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gaa50395aca91b378c297d6ad919df210e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga34f1582ed424a2c875b8a317d828e181}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Handle\-Received\-Connected\-Data@{\-Handle\-Received\-Connected\-Data}}
+\index{\-Handle\-Received\-Connected\-Data@{\-Handle\-Received\-Connected\-Data}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Handle\-Received\-Connected\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Handle\-Received\-Connected\-Data} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eip\-Uint8} $\ast$}]{received\-\_\-data, }
+\item[{int}]{received\-\_\-data\-\_\-length, }
+\item[{struct sockaddr\-\_\-in $\ast$}]{from\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga34f1582ed424a2c875b8a317d828e181}
+
+
+\-Notify the connection manager that data for a connection has been received. 
+
+\-This function should be invoked by the network layer. 
+\begin{DoxyParams}{\-Parameters}
+{\em received\-\_\-data} & pointer to the buffer of data that has been received \\
+\hline
+{\em received\-\_\-data\-\_\-length} & number of bytes in the data buffer \\
+\hline
+{\em from\-\_\-address} & address from which the data has been received. \-Only data from the connections originator may be accepted. \-Avoids connection hijacking \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-E\-I\-P\-\_\-\-O\-K on success 
+\end{DoxyReturn}
+
+
+\-Definition at line 199 of file cipconnectionmanager.\-c.
+
+
+
+\-References \-Cip\-Common\-Packet\-Format\-Data\-::address\-\_\-item, \-Address\-Data\-::connection\-\_\-identifier, connection\-\_\-object\-::connection\-\_\-receive\-\_\-data\-\_\-function, connection\-\_\-object\-::connection\-\_\-timeout\-\_\-multiplier, \-Create\-Common\-Packet\-Format\-Structure(), \-Address\-Item\-::data, \-Data\-Item\-::data, \-Cip\-Common\-Packet\-Format\-Data\-::data\-\_\-item, connection\-\_\-object\-::eip\-\_\-level\-\_\-sequence\-\_\-count\-\_\-consuming, g\-\_\-common\-\_\-packet\-\_\-format\-\_\-data\-\_\-item, \-Get\-Connected\-Object(), connection\-\_\-object\-::inactivity\-\_\-watchdog\-\_\-timer, k\-Cip\-Item\-Id\-Connected\-Data\-Item, k\-Cip\-Item\-Id\-Connection\-Address, k\-Cip\-Item\-Id\-Sequenced\-Address\-Item, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, \-Data\-Item\-::length, connection\-\_\-object\-::o\-\_\-to\-\_\-t\-\_\-requested\-\_\-packet\-\_\-interval, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-W\-A\-R\-N, connection\-\_\-object\-::originator\-\_\-address, \-S\-E\-Q\-\_\-\-G\-T32, \-Address\-Data\-::sequence\-\_\-number, \-Address\-Item\-::type\-\_\-id, and \-Data\-Item\-::type\-\_\-id.
+
+
+
+\-Referenced by \-Check\-And\-Handle\-Consuming\-Udp\-Sockets().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga34f1582ed424a2c875b8a317d828e181_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga34f1582ed424a2c875b8a317d828e181_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gacbbc9669d41357e1c8497c34ee8eeffb}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Handle\-Received\-Explict\-Tcp\-Data@{\-Handle\-Received\-Explict\-Tcp\-Data}}
+\index{\-Handle\-Received\-Explict\-Tcp\-Data@{\-Handle\-Received\-Explict\-Tcp\-Data}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Handle\-Received\-Explict\-Tcp\-Data}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Handle\-Received\-Explict\-Tcp\-Data} (
+\begin{DoxyParamCaption}
+\item[{int}]{socket, }
+\item[{{\bf \-Eip\-Uint8} $\ast$}]{buffer, }
+\item[{unsigned int}]{buffer\-\_\-length, }
+\item[{int $\ast$}]{number\-\_\-of\-\_\-remaining\-\_\-bytes}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gacbbc9669d41357e1c8497c34ee8eeffb}
+
+
+\-Notify the encapsulation layer that an explicit message has been received via \-T\-C\-P. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em socket\-\_\-handle} & socket handle from which data is received. \\
+\hline
+{\em buffer} & buffer that contains the received data. \-This buffer will also contain the response if one is to be sent. \\
+\hline
+{\em buffer} & length of the data in buffer. \\
+\hline
+{\em number\-\_\-of\-\_\-remaining\-\_\-bytes} & return how many bytes of the input are left over after we're done here \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+length of reply that need to be sent back 
+\end{DoxyReturn}
+
+
+\-Definition at line 152 of file encap.\-c.
+
+
+
+\-References encapsulation\-\_\-data\-::command\-\_\-code, \-Create\-Encapsulation\-Structure(), encapsulation\-\_\-data\-::data\-\_\-length, \-Encapsulate\-Data(), \-Handle\-Received\-List\-Identity\-Command\-Tcp(), \-Handle\-Received\-List\-Interfaces\-Command(), \-Handle\-Received\-List\-Services\-Command(), \-Handle\-Received\-Register\-Session\-Command(), \-Handle\-Received\-Send\-Request\-Response\-Data\-Command(), \-Handle\-Received\-Send\-Unit\-Data\-Command(), \-Handle\-Received\-Unregister\-Session\-Command(), k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Eip\-Status\-Ok\-Send, k\-Encapsulation\-Command\-List\-Identity, k\-Encapsulation\-Command\-List\-Interfaces, k\-Encapsulation\-Command\-List\-Services, k\-Encapsulation\-Command\-No\-Operation, k\-Encapsulation\-Command\-Register\-Session, k\-Encapsulation\-Command\-Send\-Request\-Reply\-Data, k\-Encapsulation\-Command\-Send\-Unit\-Data, k\-Encapsulation\-Command\-Unregister\-Session, k\-Encapsulation\-Header\-Options\-Flag, k\-Encapsulation\-Protocol\-Invalid\-Command, k\-Encapsulation\-Protocol\-Success, encapsulation\-\_\-data\-::options, and encapsulation\-\_\-data\-::status.
+
+
+
+\-Referenced by \-Handle\-Data\-On\-Tcp\-Socket().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gacbbc9669d41357e1c8497c34ee8eeffb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gacbbc9669d41357e1c8497c34ee8eeffb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gad2fa74193023adadbbffe5bf0ef7f6ee}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Handle\-Received\-Explict\-Udp\-Data@{\-Handle\-Received\-Explict\-Udp\-Data}}
+\index{\-Handle\-Received\-Explict\-Udp\-Data@{\-Handle\-Received\-Explict\-Udp\-Data}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Handle\-Received\-Explict\-Udp\-Data}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Handle\-Received\-Explict\-Udp\-Data} (
+\begin{DoxyParamCaption}
+\item[{int}]{socket, }
+\item[{struct sockaddr\-\_\-in $\ast$}]{from\-\_\-address, }
+\item[{{\bf \-Eip\-Uint8} $\ast$}]{buffer, }
+\item[{unsigned int}]{buffer\-\_\-length, }
+\item[{int $\ast$}]{number\-\_\-of\-\_\-remaining\-\_\-bytes, }
+\item[{int}]{unicast}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gad2fa74193023adadbbffe5bf0ef7f6ee}
+
+
+\-Notify the encapsulation layer that an explicit message has been received via \-U\-D\-P. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em socket\-\_\-handle} & socket handle from which data is received. \\
+\hline
+{\em from\-\_\-address} & remote address from which the data is received. \\
+\hline
+{\em buffer} & buffer that contains the received data. \-This buffer will also contain the response if one is to be sent. \\
+\hline
+{\em buffer\-\_\-length} & length of the data in buffer. \\
+\hline
+{\em number\-\_\-of\-\_\-remaining\-\_\-bytes} & return how many bytes of the input are left over after we're done here \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+length of reply that need to be sent back 
+\end{DoxyReturn}
+
+
+\-Definition at line 226 of file encap.\-c.
+
+
+
+\-References encapsulation\-\_\-data\-::command\-\_\-code, \-Create\-Encapsulation\-Structure(), encapsulation\-\_\-data\-::data\-\_\-length, \-Encapsulate\-Data(), \-Handle\-Received\-List\-Identity\-Command\-Tcp(), \-Handle\-Received\-List\-Identity\-Command\-Udp(), \-Handle\-Received\-List\-Interfaces\-Command(), \-Handle\-Received\-List\-Services\-Command(), k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Eip\-Status\-Ok\-Send, k\-Encapsulation\-Command\-List\-Identity, k\-Encapsulation\-Command\-List\-Interfaces, k\-Encapsulation\-Command\-List\-Services, k\-Encapsulation\-Command\-No\-Operation, k\-Encapsulation\-Command\-Register\-Session, k\-Encapsulation\-Command\-Send\-Request\-Reply\-Data, k\-Encapsulation\-Command\-Send\-Unit\-Data, k\-Encapsulation\-Command\-Unregister\-Session, k\-Encapsulation\-Header\-Options\-Flag, k\-Encapsulation\-Protocol\-Invalid\-Command, k\-Encapsulation\-Protocol\-Success, encapsulation\-\_\-data\-::options, and encapsulation\-\_\-data\-::status.
+
+
+
+\-Referenced by \-Check\-And\-Handle\-Udp\-Global\-Broadcast\-Socket(), and \-Check\-And\-Handle\-Udp\-Unicast\-Socket().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gad2fa74193023adadbbffe5bf0ef7f6ee_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gad2fa74193023adadbbffe5bf0ef7f6ee_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_gac207feb53c1f98b45f3934bbea63d618}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Insert\-Attribute@{\-Insert\-Attribute}}
+\index{\-Insert\-Attribute@{\-Insert\-Attribute}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Insert\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Insert\-Attribute} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Cip\-Instance} $\ast$const}]{cip\-\_\-instance, }
+\item[{const {\bf \-Eip\-Uint16}}]{attribute\-\_\-number, }
+\item[{const {\bf \-Eip\-Uint8}}]{cip\-\_\-data\-\_\-type, }
+\item[{void $\ast$const}]{cip\-\_\-data, }
+\item[{const {\bf \-Eip\-Byte}}]{cip\-\_\-flags}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gac207feb53c1f98b45f3934bbea63d618}
+
+
+\-Insert an attribute in an instance of a \-C\-I\-P class. 
+
+\-Note that attributes are stored in an array pointer in the instance the attributes array is not expandable if you insert an attributes that has already been defined, the previous attributes will be replaced
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pa\-\_\-p\-Instance} & pointer to \-C\-I\-P class. (may be also instance 0) \\
+\hline
+{\em pa\-\_\-n\-Attribute\-Nr} & number of attribute to be inserted. \\
+\hline
+{\em cip\-\_\-data\-\_\-type} & type of attribute to be inserted. \\
+\hline
+{\em cip\-\_\-data} & pointer to data of attribute. \\
+\hline
+{\em cip\-\_\-flags} & flags to indicate set-\/ability and get-\/ability of attribute. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 285 of file cipcommon.\-c.
+
+
+
+\-References \-Cip\-Attribute\-Struct\-::attribute\-\_\-flags, \-Cip\-Attribute\-Struct\-::attribute\-\_\-number, cip\-\_\-instance\-::attributes, cip\-\_\-instance\-::cip\-\_\-class, cip\-\_\-class\-::class\-\_\-instance, \-Cip\-Attribute\-Struct\-::data, cip\-\_\-class\-::highest\-\_\-attribute\-\_\-number, cip\-\_\-instance\-::instance\-\_\-number, cip\-\_\-class\-::number\-\_\-of\-\_\-attributes, \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, and \-Cip\-Attribute\-Struct\-::type.
+
+
+
+\-Referenced by \-Cip\-Ethernet\-Link\-Init(), \-Cip\-Identity\-Init(), \-Cip\-Tcp\-Ip\-Interface\-Init(), \-Create\-Assembly\-Object(), and \-Create\-Cip\-Class().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gac207feb53c1f98b45f3934bbea63d618_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga35f639b135ec3c3903f49fd65daed307}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Insert\-Service@{\-Insert\-Service}}
+\index{\-Insert\-Service@{\-Insert\-Service}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Insert\-Service}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Insert\-Service} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Cip\-Class} $\ast$const}]{cip\-\_\-class\-\_\-to\-\_\-add\-\_\-service, }
+\item[{const {\bf \-Eip\-Uint8}}]{service\-\_\-code, }
+\item[{const {\bf \-Cip\-Service\-Function}}]{service\-\_\-function, }
+\item[{char $\ast$const}]{service\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga35f639b135ec3c3903f49fd65daed307}
+
+
+\-Insert a service in an instance of a \-C\-I\-P object. 
+
+\-Note that services are stored in an array pointer in the class object the service array is not expandable if you insert a service that has already been defined, the previous service will be replaced
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em cip\-\_\-class\-\_\-to\-\_\-add\-\_\-service} & pointer to \-C\-I\-P object. (may be also instance\# 0) \\
+\hline
+{\em service\-\_\-code} & service code of service to be inserted. \\
+\hline
+{\em service\-\_\-function} & pointer to function which represents the service. \\
+\hline
+{\em service\-\_\-name} & name of the service \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 315 of file cipcommon.\-c.
+
+
+
+\-References cip\-\_\-service\-\_\-struct\-::name, \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T, cip\-\_\-service\-\_\-struct\-::service\-\_\-function, and cip\-\_\-service\-\_\-struct\-::service\-\_\-number.
+
+
+
+\-Referenced by \-Cip\-Identity\-Init(), \-Cip\-Tcp\-Ip\-Interface\-Init(), \-Connection\-Manager\-Init(), \-Create\-Assembly\-Class(), and \-Create\-Cip\-Class().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga35f639b135ec3c3903f49fd65daed307_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga9f57b09260efb5bfb188b9d0ca0c6091}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Manage\-Connections@{\-Manage\-Connections}}
+\index{\-Manage\-Connections@{\-Manage\-Connections}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Manage\-Connections}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Manage\-Connections} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Milli\-Seconds}}]{elapsed\-\_\-time}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga9f57b09260efb5bfb188b9d0ca0c6091}
+
+
+\-Check if any of the connection timers (\-Transmission\-Trigger or \-Watchdog\-Timeout) have timed out. 
+
+\-If the a timeout occurs the function performs the necessary action. \-This function should be called periodically once every \-O\-P\-E\-N\-E\-R\-\_\-\-T\-I\-M\-E\-R\-\_\-\-T\-I\-C\-K milliseconds.
+
+\begin{DoxyReturn}{\-Returns}
+\-E\-I\-P\-\_\-\-O\-K on success 
+\end{DoxyReturn}
+
+
+\-Definition at line 526 of file cipconnectionmanager.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-send\-\_\-data\-\_\-function, connection\-\_\-object\-::connection\-\_\-timeout\-\_\-function, connection\-\_\-object\-::consuming\-\_\-instance, connection\-\_\-object\-::expected\-\_\-packet\-\_\-rate, g\-\_\-active\-\_\-connection\-\_\-list, \-Handle\-Application(), connection\-\_\-object\-::inactivity\-\_\-watchdog\-\_\-timer, k\-Connection\-State\-Established, k\-Connection\-Trigger\-Type\-Cyclic\-Connection, k\-Connection\-Trigger\-Type\-Production\-Trigger\-Mask, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, k\-Udp\-Communcation\-Direction\-Producing, \-Manage\-Encapsulation\-Messages(), connection\-\_\-object\-::next\-\_\-connection\-\_\-object, \-O\-P\-E\-N\-E\-R\-\_\-\-A\-S\-S\-E\-R\-T, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-E\-R\-R, \-O\-P\-E\-N\-E\-R\-\_\-\-T\-R\-A\-C\-E\-\_\-\-I\-N\-F\-O, connection\-\_\-object\-::production\-\_\-inhibit\-\_\-time, connection\-\_\-object\-::production\-\_\-inhibit\-\_\-timer, connection\-\_\-object\-::socket, connection\-\_\-object\-::state, connection\-\_\-object\-::transmission\-\_\-trigger\-\_\-timer, and connection\-\_\-object\-::transport\-\_\-type\-\_\-class\-\_\-trigger.
+
+
+
+\-Referenced by \-Network\-Handler\-Process\-Once().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga9f57b09260efb5bfb188b9d0ca0c6091_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_ga9f57b09260efb5bfb188b9d0ca0c6091_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga696952d9dbc1b6fdedf517aa55f94323}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Set\-Device\-Serial\-Number@{\-Set\-Device\-Serial\-Number}}
+\index{\-Set\-Device\-Serial\-Number@{\-Set\-Device\-Serial\-Number}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Set\-Device\-Serial\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Set\-Device\-Serial\-Number} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint32}}]{serial\-\_\-number}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga696952d9dbc1b6fdedf517aa55f94323}
+
+
+\-Set the serial number of the device's identity object. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em serial\-\_\-number} & unique 32 bit number identifying the device\\
+\hline
+\end{DoxyParams}
+\-Private functions, sets the devices serial number 
+\begin{DoxyParams}{\-Parameters}
+{\em serial\-\_\-number} & \-The serial number of the device \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 53 of file cipidentity.\-c.
+
+
+
+\-References serial\-\_\-number\-\_\-.
+
+
+
+\-Referenced by main().
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{d2/dc9/group__CIP__API_ga696952d9dbc1b6fdedf517aa55f94323_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga2113be94f1eab4f25770d975abe6015c}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Set\-Device\-Status@{\-Set\-Device\-Status}}
+\index{\-Set\-Device\-Status@{\-Set\-Device\-Status}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Set\-Device\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Set\-Device\-Status} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eip\-Uint16}}]{status}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga2113be94f1eab4f25770d975abe6015c}
+
+
+\-Set the current status of the device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device\-\_\-status} & the new status value\\
+\hline
+\end{DoxyParams}
+\-Set the current status of the device.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em status} & \-The serial number of the device \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 60 of file cipidentity.\-c.
+
+
+
+\-References status\-\_\-.
+
+\hypertarget{group__CIP__API_gaa57b527530adc2acda6febc500fd6831}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Shutdown\-Cip\-Stack@{\-Shutdown\-Cip\-Stack}}
+\index{\-Shutdown\-Cip\-Stack@{\-Shutdown\-Cip\-Stack}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Shutdown\-Cip\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Shutdown\-Cip\-Stack} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_gaa57b527530adc2acda6febc500fd6831}
+
+
+\-Shutdown of the \-C\-I\-P stack. 
+
+\-This will
+\begin{DoxyItemize}
+\item close all open \-I/\-O connections,
+\item close all open explicit connections, and
+\item free all memory allocated by the stack.
+\end{DoxyItemize}
+
+\-Memory allocated by the application will not be freed. \-This has to be done by the application! 
+
+\-Definition at line 56 of file cipcommon.\-c.
+
+
+
+\-References \-Close\-All\-Connections(), \-Delete\-All\-Classes(), \-Encapsulation\-Shut\-Down(), \-Shutdown\-Assemblies(), and \-Shutdown\-Tcp\-Ip\-Interface().
+
+
+
+\-Referenced by main().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc9/group__CIP__API_gaa57b527530adc2acda6febc500fd6831_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{d2/dc9/group__CIP__API_gaa57b527530adc2acda6febc500fd6831_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__CIP__API_ga286de29d4e88bd1fec0611e75c288faf}{\index{\-Op\-E\-Ner User interface@{\-Op\-E\-Ner User interface}!\-Trigger\-Connections@{\-Trigger\-Connections}}
+\index{\-Trigger\-Connections@{\-Trigger\-Connections}!OpENer User interface@{\-Op\-E\-Ner User interface}}
+\subsubsection[{\-Trigger\-Connections}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eip\-Status} {\bf \-Trigger\-Connections} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{output\-\_\-assembly\-\_\-id, }
+\item[{unsigned int}]{input\-\_\-assembly\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{d2/dc9/group__CIP__API_ga286de29d4e88bd1fec0611e75c288faf}
+
+
+\-Trigger the production of an application triggered connection. 
+
+\-This will issue the production of the specified connection at the next possible occasion. \-Depending on the values for the \-R\-P\-I and the production inhibit timer. \-The application is informed via the \-E\-I\-P\-\_\-\-B\-O\-O\-L8 \-Before\-Assembly\-Data\-Send(\-S\-\_\-\-C\-I\-P\-\_\-\-Instance $\ast$pa\-\_\-pst\-Instance) callback function when the production will happen. \-This function should only be invoked from void \hyperlink{group__CIP__CALLBACK__API_ga6d2ccae9a19ce418c77941dbe22b008d}{\-Handle\-Application(void)}.
+
+\-The connection can only be triggered if the application is established and it is of application application triggered type.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em output\-\_\-assembly\-\_\-id} & the output assembly connection point of the connection \\
+\hline
+{\em input\-\_\-assembly\-\_\-id} & the input assembly connection point of the connection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-E\-I\-P\-\_\-\-O\-K on success 
+\end{DoxyReturn}
+
+
+\-Definition at line 1237 of file cipconnectionmanager.\-c.
+
+
+
+\-References connection\-\_\-object\-::connection\-\_\-path, \-Cip\-Connection\-Path\-::connection\-\_\-point, g\-\_\-active\-\_\-connection\-\_\-list, k\-Connection\-Trigger\-Type\-Application\-Triggered\-Connection, k\-Connection\-Trigger\-Type\-Production\-Trigger\-Mask, k\-Eip\-Status\-Error, k\-Eip\-Status\-Ok, connection\-\_\-object\-::production\-\_\-inhibit\-\_\-timer, connection\-\_\-object\-::transmission\-\_\-trigger\-\_\-timer, and connection\-\_\-object\-::transport\-\_\-type\-\_\-class\-\_\-trigger.
+

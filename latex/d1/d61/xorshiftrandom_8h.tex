@@ -1,0 +1,91 @@
+\hypertarget{xorshiftrandom_8h}{\section{src/utils/xorshiftrandom.h \-File \-Reference}
+\label{d1/d61/xorshiftrandom_8h}\index{src/utils/xorshiftrandom.\-h@{src/utils/xorshiftrandom.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\*
+\-Include dependency graph for xorshiftrandom.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{dc/d2f/xorshiftrandom_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{d5/d71/xorshiftrandom_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{xorshiftrandom_8h_a1fed45698fc382c8eac0d4384ab3eaff}{\-Next\-Xor\-Shift\-Uint32} (void)
+\begin{DoxyCompactList}\small\item\em \-Returns the next generated pseudo-\/random number. \end{DoxyCompactList}\item 
+void \hyperlink{xorshiftrandom_8h_aba2875aae8a8e22bc903edeebe63138b}{\-Set\-Xor\-Shift\-Seed} (uint32\-\_\-t seed)
+\begin{DoxyCompactList}\small\item\em \-Sets the initial seed for the \-X\-O\-R shift pseudo-\/random algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The public interface of the \-X\-O\-R shift pseudo-\/random number generator 
+
+\-Definition in file \hyperlink{xorshiftrandom_8h_source}{xorshiftrandom.\-h}.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{xorshiftrandom_8h_a1fed45698fc382c8eac0d4384ab3eaff}{\index{xorshiftrandom.\-h@{xorshiftrandom.\-h}!\-Next\-Xor\-Shift\-Uint32@{\-Next\-Xor\-Shift\-Uint32}}
+\index{\-Next\-Xor\-Shift\-Uint32@{\-Next\-Xor\-Shift\-Uint32}!xorshiftrandom.h@{xorshiftrandom.\-h}}
+\subsubsection[{\-Next\-Xor\-Shift\-Uint32}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Next\-Xor\-Shift\-Uint32} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{d1/d61/xorshiftrandom_8h_a1fed45698fc382c8eac0d4384ab3eaff}
+
+
+\-Returns the next generated pseudo-\/random number. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The next pseudo-\/random number 
+\end{DoxyReturn}
+
+
+\-Definition at line 26 of file xorshiftrandom.\-c.
+
+
+
+\-References \-Calculate\-Next\-Seed().
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{d1/d61/xorshiftrandom_8h_a1fed45698fc382c8eac0d4384ab3eaff_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{xorshiftrandom_8h_aba2875aae8a8e22bc903edeebe63138b}{\index{xorshiftrandom.\-h@{xorshiftrandom.\-h}!\-Set\-Xor\-Shift\-Seed@{\-Set\-Xor\-Shift\-Seed}}
+\index{\-Set\-Xor\-Shift\-Seed@{\-Set\-Xor\-Shift\-Seed}!xorshiftrandom.h@{xorshiftrandom.\-h}}
+\subsubsection[{\-Set\-Xor\-Shift\-Seed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Set\-Xor\-Shift\-Seed} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{seed}
+\end{DoxyParamCaption}
+)}}\label{d1/d61/xorshiftrandom_8h_aba2875aae8a8e22bc903edeebe63138b}
+
+
+\-Sets the initial seed for the \-X\-O\-R shift pseudo-\/random algorithm. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pa\-\_\-n\-Seed} & \-The initial seed value\\
+\hline
+\end{DoxyParams}
+$<$ \-File-\/global variable holding the current seed 
+
+\-Definition at line 12 of file xorshiftrandom.\-c.
+
